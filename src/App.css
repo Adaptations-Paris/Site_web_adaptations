@@ -1,0 +1,13 @@
+#ui {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+input[type="color"] {
+  margin: 10px;
+}
