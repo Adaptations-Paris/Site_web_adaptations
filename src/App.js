@@ -1,30 +1,13 @@
-import React, { useState } from 'react';
-import SketchComponent from './Sketch';
-import UI from './components/UI';
+import React from 'react';
+import Home from './components/Home';
+import './App.css';
 
-const App = () => {
-  const [bgColor, setBgColor] = useState("#acb8b5");
-  const [shapeColor, setShapeColor] = useState("#caff00");
-
-  const sliders = {
-    bgColor: bgColor,
-    shapeColor: shapeColor,
-    handleBgColorChange: (e) => setBgColor(e.target.value),
-    handleShapeColorChange: (e) => setShapeColor(e.target.value),
-  };
-
-  const buttons = [
-    { label: 'Rotation', onClick: () => {/* toggle rotate */} },
-    { label: 'Pulsation', onClick: () => {/* toggle scale */} },
-    { label: 'Vague', onClick: () => {/* toggle wave */} },
-  ];
-
+function App() {
   return (
-    <div>
-      <SketchComponent />
-      <UI sliders={sliders} buttons={buttons} />
+    <div className="App">
+      <Home />
     </div>
   );
-};
+}
 
 export default App;
