@@ -8,18 +8,18 @@ const ResourceContent = ({ activeTab }) => {
         <img src="/images/warehouse.png" alt="Infrastructure" />
       </div>
       <div className="resource-text">
-        <h2>Diagnostic d'infrastructure</h2>
+        <h2>Infrastructure Assessment</h2>
         <div className="resource-block">
-          <strong>Résilience de vos infrastructures</strong>
-          <p>Analyse complète de vos infrastructures face aux risques climatiques : évaluation de la vulnérabilité et proposition de solutions d'adaptation.</p>
+          <strong>Infrastructure Resilience</strong>
+          <p>Comprehensive analysis of your infrastructure against climate risks: vulnerability assessment and adaptation solutions.</p>
         </div>
         <div className="resource-block">
-          <strong>Modélisation</strong>
-          <p>Évaluation des impacts sur vos installations et coûts associés</p>
+          <strong>Modeling</strong>
+          <p>Assessment of impacts on your facilities and associated costs</p>
         </div>
         <div className="resource-block">
-          <strong>Stratégie d'adaptation</strong>
-          <p>Plan d'action pour renforcer la résilience de vos infrastructures</p>
+          <strong>Adaptation Strategy</strong>
+          <p>Action plan to strengthen your infrastructure resilience</p>
         </div>
         <button className="resource-btn">LET'S TALK <span className="arrow">→</span></button>
       </div>
@@ -32,18 +32,18 @@ const ResourceContent = ({ activeTab }) => {
         <img src="/images/warehouse.png" alt="Finance" />
       </div>
       <div className="resource-text">
-        <h2>Diagnostic financier</h2>
+        <h2>Financial Assessment</h2>
         <div className="resource-block">
-          <strong>Analyse financière 360°</strong>
-          <p>Évaluation complète de l'impact financier des risques climatiques sur votre entreprise.</p>
+          <strong>360° Financial Analysis</strong>
+          <p>Comprehensive assessment of climate risks' financial impact on your business.</p>
         </div>
         <div className="resource-block">
-          <strong>Modélisation</strong>
-          <p>Projections financières et analyse des coûts d'adaptation</p>
+          <strong>Modeling</strong>
+          <p>Financial projections and adaptation cost analysis</p>
         </div>
         <div className="resource-block">
-          <strong>Stratégie financière</strong>
-          <p>Plan de financement pour vos projets d'adaptation</p>
+          <strong>Financial Strategy</strong>
+          <p>Financing plan for your adaptation projects</p>
         </div>
         <button className="resource-btn">LET'S TALK <span className="arrow">→</span></button>
       </div>
@@ -56,18 +56,18 @@ const ResourceContent = ({ activeTab }) => {
         <img src="/images/warehouse.png" alt="Warehouse" />
       </div>
       <div className="resource-text">
-        <h2>Diagnostic de vulnérabilité</h2>
+        <h2>Vulnerability Assessment</h2>
         <div className="resource-block">
-          <strong>Résilience de votre chaîne d'approvisionnement</strong>
-          <p>Les ressources sur rang face aux risques physiques climatiques : création d'une équipe dédiée de votre chaîne d'appro (rang 1) et application d'une série de stress tests de résilience.</p>
+          <strong>Supply Chain Resilience</strong>
+          <p>Tier-1 resources against physical climate risks: creation of a dedicated team for your supply chain (tier 1) and application of resilience stress tests.</p>
         </div>
         <div className="resource-block">
-          <strong>Modélisation</strong>
-          <p>Impacts business et financiers (S1 Impact sur la disruption Totale)</p>
+          <strong>Modeling</strong>
+          <p>Business and financial impacts (S1 Impact on Total disruption)</p>
         </div>
         <div className="resource-block">
-          <strong>Stratégie d'adaptation & de résilience</strong>
-          <p>Stratégie d'adaptation faite de solidité ou en mode "control tower" en liaison avec votre stratégie de gestion de crises.</p>
+          <strong>Adaptation & Resilience Strategy</strong>
+          <p>Adaptation strategy based on robustness or "control tower" mode in connection with your crisis management strategy.</p>
         </div>
         <button className="resource-btn">LET'S TALK <span className="arrow">→</span></button>
       </div>
@@ -80,18 +80,18 @@ const ResourceContent = ({ activeTab }) => {
         <img src="/images/warehouse.png" alt="Business" />
       </div>
       <div className="resource-text">
-        <h2>Diagnostic business</h2>
+        <h2>Business Assessment</h2>
         <div className="resource-block">
-          <strong>Analyse des modèles d'affaires</strong>
-          <p>Évaluation de la résilience de vos modèles d'affaires face aux changements climatiques.</p>
+          <strong>Business Model Analysis</strong>
+          <p>Assessment of your business models' resilience to climate change.</p>
         </div>
         <div className="resource-block">
-          <strong>Modélisation</strong>
-          <p>Scénarios d'évolution et opportunités d'innovation</p>
+          <strong>Modeling</strong>
+          <p>Evolution scenarios and innovation opportunities</p>
         </div>
         <div className="resource-block">
-          <strong>Stratégie d'adaptation</strong>
-          <p>Nouveaux modèles d'affaires et propositions de valeur adaptés</p>
+          <strong>Adaptation Strategy</strong>
+          <p>New business models and adapted value propositions</p>
         </div>
         <button className="resource-btn">LET'S TALK <span className="arrow">→</span></button>
       </div>

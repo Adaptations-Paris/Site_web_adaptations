@@ -81,9 +81,9 @@ nav a:hover {
 /* Hero */
 .hero {
   text-align: center;
-  padding: 120px 20px;
+  padding: 120px 20px 80px 20px;
   background: linear-gradient(120deg, #eef5d8 0%, #ffffff 100%);
-  background-image: url('../fond.jpg');
+  background-image: url('../fond_hero.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -146,12 +146,12 @@ nav a:hover {
 }
 
 .resource-text h2 {
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
 .resource-text p {
-  font-size: 16px;
+  font-size: 24px;
   color: #555;
   margin-bottom: 20px;
 }
@@ -167,25 +167,40 @@ nav a:hover {
 /* Mission */
 .mission {
   text-align: center;
-  padding: 80px 20px;
+  padding: 80px 20px 80px 20px;
   background: #fff;
 }
 
+.mission-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.mission-title span {
+  color: #111;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.mission-logo {
+  height: 32px;
+  width: auto;
+  vertical-align: middle;
+}
+
 .mission p {
-  font-size: 24px;
+  font-size: 30px;
   color: #222;
   max-width: 900px;
   margin: 0 auto 36px auto;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: -0.5px;
-}
-
-.mission-logo {
-  height: 24px;
-  width: auto;
-  vertical-align: middle;
-  margin-left: 8px;
 }
 
 .mission-picto {
@@ -254,10 +269,10 @@ nav a:hover {
 /* Newsletter */
 .newsletter {
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px 80px 20px;
   background: linear-gradient(120deg, #eef5d8 0%, #ffffff 100%);
-  background-image: url('../fond.jpg');
-  background-size: 250%;
+  background-image: url('../fond_newsletter.png');
+  background-size: 120%;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -316,8 +331,9 @@ footer {
   background: white;
   padding: 20px 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 40px;
   font-size: 14px;
   color: #888;
   border-top: 1px solid #eee;
@@ -360,6 +376,39 @@ footer {
   background: #333;
 }
 
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-copyright {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.footer-linkedin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-linkedin:hover {
+  color: #0077b5;
+}
+
+.linkedin-icon {
+  width: 24px;
+  height: 24px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   header {
@@ -379,6 +428,17 @@ footer {
   .team {
     grid-template-columns: 1fr;
   }
+
+  .footer-left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-copyright {
+    margin-bottom: 20px;
+  }
 }
 
 .tabs {
@@ -388,7 +448,7 @@ footer {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   border-radius: 8px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 10px auto;
   max-width: 1100px;
   padding: 0 16px;
   position: relative;
@@ -426,7 +486,8 @@ footer {
 }
 
 .resource-section {
-  padding: 60px 0;
+  padding: 120px 0 60px 0;
+  margin-top: -120px;
 }
 
 .resource-card {
@@ -435,8 +496,9 @@ footer {
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   border-radius: 12px;
   overflow: hidden;
-  max-width: 1100px;
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .resource-image {
@@ -529,7 +591,29 @@ footer {
 
 .team-section {
   background: #f7f7f7;
-  padding: 60px 0;
+  padding: 60px 0 60px 0;
+}
+
+.team-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.team-title span {
+  color: #111;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.team-logo {
+  height: 32px;
+  width: auto;
+  vertical-align: middle;
 }
 
 .team-card {
@@ -595,4 +679,87 @@ footer {
   .team-section {
     padding: 36px 0;
   }
+}
+
+.partners-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.partners-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.partners-title span {
+  color: #111;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.partners-logo {
+  height: 32px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.partners-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.partner-logo {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.section-anchor {
+  position: relative;
+  top: -120px;
+  visibility: hidden;
+  height: 0;
 } 

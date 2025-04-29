@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Home.css';
 import ResourceContent from './ResourceContent';
+import ContactForm from './ContactForm';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState('resources');
@@ -18,17 +19,19 @@ const Home = () => {
         </div>
         <nav>
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#team">Team</a></li>
+            <li><a href="#">About</a></li>
             <li><a href="#solutions">Solutions</a></li>
-            <li><a href="#cases">Cases</a></li>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#newsletter">Contact</a></li>
           </ul>
         </nav>
-        <a href="#contact" className="header-contact-btn">Contact</a>
+        <a href="#newsletter" className="header-contact-btn">Contact</a>
       </header>
 
       {/* Hero Section */}
-      <section className="hero" data-aos="fade-up">
+      <section id="hero" className="hero" data-aos="fade-up">
         <h1>Stay Resilient.<br />
           Adapt <span className="highlight">Fast</span>. <span className="highlight">Scale Smart.</span>
         </h1>
@@ -36,13 +39,16 @@ const Home = () => {
         <button className="hero-btn">CONTACT US →</button>
       </section>
 
+      {/* Solutions Section */}
+      <div id="solutions" className="section-anchor"></div>
+      
       {/* Tabs Section */}
       <div className="tabs">
         <div 
           className={`tab ${activeTab === 'infrastructures' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('infrastructures')}
         >
-          Infrastructures
+          Infrastructure
         </div>
         <div 
           className={`tab ${activeTab === 'finance' ? 'tab-active' : ''}`}
@@ -54,7 +60,7 @@ const Home = () => {
           className={`tab ${activeTab === 'resources' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('resources')}
         >
-          Ressources & Supply
+          Resources & Supply
         </div>
         <div 
           className={`tab ${activeTab === 'business' ? 'tab-active' : ''}`}
@@ -65,30 +71,41 @@ const Home = () => {
       </div>
 
       {/* Resources Section */}
-      <ResourceContent activeTab={activeTab} />
+      <section id="resources" className="resource-section" data-aos="fade-right">
+        <ResourceContent activeTab={activeTab} />
+      </section>
 
       {/* Mission Section */}
-      <section className="mission" data-aos="fade-up">
+      <section id="mission" className="mission" data-aos="fade-up">
+        <div className="mission-title">
+          <span>Mission</span>
+          <img src="/logos/logo_adaptations_court.png" alt="/" className="mission-logo" />
+        </div>
         <p>
           We live in an unstable, burning, and polluted world,<br />
           with limited resources — a world that is deteriorating<br />
           our living conditions and increasing the vulnerability of businesses.<br />
-          Our mission is to facilitate and accelerate the strategic transformation of companies, strengthening<br />
-          their resilience to ensure their long-term sustainability<br />
-          as positive contributors to the planet. <img src="/logos/logo_adaptations_court.png" alt="Adaptations" className="mission-logo" />
+          Our mission is to facilitate and accelerate the strategic transformation of companies, strengthening
+          their resilience to ensure their long-term <br />
+          sustainability as positive contributors to the planet.
         </p>
         <button className="mission-btn">DISCOVER US <span className="arrow">→</span></button>
       </section>
 
       {/* Team Section */}
-      <section className="team-section">
+      <section className="team-section" data-aos="fade-up">
+        <div id="team" className="section-anchor"></div>
+        <div className="team-title">
+          <span>Team</span>
+          <img src="/logos/logo_adaptations_court.png" alt="/" className="team-logo" />
+        </div>
         <div className="team-card">
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
               <img src="/images/loraine.png" alt="Loraine Coste" />
             </div>
             <h3>Loraine Coste</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Anim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Expert in climate resilience and strategic transformation, with a focus on helping businesses adapt to environmental challenges while maintaining growth and sustainability.</p>
             <a href="https://www.linkedin.com/in/lorainecoste2005/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
           <div className="team-member" data-aos="zoom-in">
@@ -96,7 +113,7 @@ const Home = () => {
               <img src="/images/theo.png" alt="Théo Cleret" />
             </div>
             <h3>Théo Cleret</h3>
-            <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.</p>
+            <p>Specialized in sustainable business models and technological innovation, driving companies towards resilient and environmentally conscious operations.</p>
             <a href="https://www.linkedin.com/in/th%C3%A9o-cleret-776940176/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
           <div className="team-member" data-aos="zoom-in">
@@ -104,7 +121,7 @@ const Home = () => {
               <img src="/images/maximilien.png" alt="Maximilien Rouer" />
             </div>
             <h3>Maximilien Rouer</h3>
-            <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.</p>
+            <p>Expert in sustainable development strategies and corporate transformation, helping organizations navigate the challenges of climate change and resource scarcity.</p>
             <a href="https://www.linkedin.com/in/maximilien-rouer/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
           <div className="team-member" data-aos="zoom-in">
@@ -112,28 +129,74 @@ const Home = () => {
               <img src="/images/maud.png" alt="Maud Mielvaque" />
             </div>
             <h3>Maud Mielvaque</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Anim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Focused on implementing sustainable solutions and developing resilient strategies for businesses facing environmental and resource challenges.</p>
             <a href="https://www.linkedin.com/in/maudmielvaque/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section className="partners-section" data-aos="fade-up">
+        <div id="partners" className="section-anchor"></div>
+        <div className="container">
+          <div className="partners-title">
+            <span>Partners</span>
+            <img src="/logos/logo_adaptations_court.png" alt="/" className="partners-logo" />
+          </div>
+          <div className="partners-grid">
+            <div className="partner-logo">
+              <img src="/partenaires/Ceebios.png" alt="Ceebios" />
+            </div>
+            <div className="partner-logo">
+              <img src="/partenaires/CNRS.png" alt="CNRS" />
+            </div>
+            <div className="partner-logo">
+              <img src="/partenaires/IFS.png" alt="IFS" />
+            </div>
+            <div className="partner-logo">
+              <img src="/partenaires/Lumia.png" alt="Lumia" />
+            </div>
+            <div className="partner-logo">
+              <img src="/partenaires/MinesParis.png" alt="Mines Paris" />
+            </div>
+            <div className="partner-logo">
+              <img src="/partenaires/Ouvert.png" alt="Ouvert" />
+            </div>
+            <div className="partner-logo">
+              <img src="/partenaires/Pixelis.png" alt="Pixelis" />
+            </div>
+            <div className="partner-logo">
+              <img src="/partenaires/Rejeneo.png" alt="Rejeneo" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Section */}
-      <section className="newsletter" data-aos="fade-up">
+      <section id="newsletter" className="newsletter" data-aos="fade-up">
         <div className="newsletter-title">
-          <span className="newsletter-new">New</span>
+          <span>Contact</span>
           <img src="/logos/logo_adaptations_court.png" alt="/" className="newsletter-logo" />
         </div>
-        <p className="newsletter-desc">The newsletter on adaptations and resilience in businesses.</p>
-        <button className="newsletter-btn">SUBSCRIBE <span className="arrow">→</span></button>
+        <p className="newsletter-desc">Contact us to learn more about our solutions.</p>
+        <ContactForm />
       </section>
 
       {/* Footer */}
       <footer data-aos="fade-up">
-        <div className="footer-logo">
-          <img src="/logos/logo_adaptations_court.png" alt="Adaptation Agency Logo" />
+        <div className="footer-left">
+          <div className="footer-logo">
+            <img src="/logos/logo_adaptations_court.png" alt="Adaptation Agency Logo" />
+          </div>
+          <div className="footer-copyright">
+            © 2025 Adaptations. All rights reserved. <br />
+            Pioneering climate resilience solutions.
+          </div>
         </div>
-        <a href="#contact" className="footer-contact-btn">Contact</a>
+        <a href="https://www.linkedin.com/company/adaptations-agency" target="_blank" rel="noopener noreferrer" className="footer-linkedin">
+          <img src="/icons/Linkedin.png" alt="LinkedIn" className="linkedin-icon" />
+          LinkedIn
+        </a>
       </footer>
     </div>
   );
