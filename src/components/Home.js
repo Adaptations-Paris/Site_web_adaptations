@@ -36,7 +36,7 @@ const Home = () => {
           Adapt <span className="highlight">Fast</span>. <span className="highlight">Scale Smart.</span>
         </h1>
         <p>The One Stop <span className="highlight">Shop</span> agency for tech and strategic solutions.<br />100% focused on positive, resilient adaptation at scale.</p>
-        <button className="hero-btn">CONTACT US →</button>
+        <a href="#newsletter" className="hero-btn">CONTACT US →</a>
       </section>
 
       {/* Solutions Section */}
@@ -89,7 +89,7 @@ const Home = () => {
           their resilience to ensure their long-term <br />
           sustainability as positive contributors to the planet.
         </p>
-        <button className="mission-btn">DISCOVER US <span className="arrow">→</span></button>
+        <a href="#newsletter" className="mission-btn">DISCOVER US <span className="arrow">→</span></a>
       </section>
 
       {/* Team Section */}

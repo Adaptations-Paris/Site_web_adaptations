@@ -8,9 +8,9 @@
 /* Base */
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  color: #222;
+  color: #000000;
   line-height: 1.6;
-  background-color: #f7f7f7;
+  background-color: #E6E6E6;
 }
 
 a {
@@ -56,12 +56,12 @@ nav a {
 }
 
 nav a:hover {
-  color: #C2FC53; /* vert comme sur le "Shop" */
+  color: #ABFF00;
 }
 
 .header-contact-btn {
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #FFFFFF;
   padding: 10px 28px;
   border-radius: 24px;
   font-weight: 500;
@@ -75,7 +75,7 @@ nav a:hover {
 }
 
 .header-contact-btn:hover {
-  background: #333;
+  background: #000000;
 }
 
 /* Hero */
@@ -112,8 +112,8 @@ nav a:hover {
 }
 
 .hero button {
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #FFFFFF;
   padding: 12px 25px;
   border: none;
   cursor: pointer;
@@ -122,7 +122,25 @@ nav a:hover {
 }
 
 .hero button:hover {
-  background: #333;
+  background: #000000;
+}
+
+.hero-btn {
+  background: #000000;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 32px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-btn:hover {
+  background: #000000;
+  transform: translateY(-2px);
 }
 
 /* Section Resource */
@@ -146,8 +164,10 @@ nav a:hover {
 }
 
 .resource-text h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #000000;
 }
 
 .resource-text p {
@@ -212,8 +232,8 @@ nav a:hover {
 }
 
 .mission-btn {
-  background: #111;
-  color: #fff;
+  background: #000000;
+  color: #FFFFFF;
   padding: 12px 32px;
   border: none;
   border-radius: 24px;
@@ -227,7 +247,7 @@ nav a:hover {
 }
 
 .mission-btn:hover {
-  background: #333;
+  background: #000000;
 }
 
 /* Team */
@@ -354,7 +374,7 @@ footer {
 }
 
 .footer-contact:hover {
-  color: #C2FC53;
+  color: #ABFF00;
 }
 
 .footer-contact-btn {
@@ -492,100 +512,101 @@ footer {
 
 .resource-card {
   display: flex;
-  background: #fff;
+  background: #FFFFFF;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   border-radius: 12px;
   overflow: hidden;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+  height: 560px;
 }
 
 .resource-image {
   flex: 1 1 45%;
   min-width: 320px;
   max-width: 480px;
-  display: flex;
-  align-items: stretch;
+  position: relative;
+  overflow: hidden;
 }
 
 .resource-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
 .resource-text {
   flex: 1 1 55%;
-  padding: 40px 36px 40px 36px;
+  padding: 38px 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  background: #FFFFFF;
+  position: relative;
+  height: 100%;
 }
 
-.resource-text h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 18px;
+.resource-content {
+  flex: 1;
+  padding-bottom: 80px;
 }
 
 .resource-block {
-  margin-bottom: 18px;
+  margin-bottom: 24px;
+}
+
+.resource-block:last-of-type {
+  margin-bottom: 0;
 }
 
 .resource-block strong {
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 4px;
-  color: #222;
+  margin-bottom: 8px;
+  color: #000000;
 }
 
 .resource-block p {
-  font-size: 15px;
-  color: #555;
-  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+  margin: 0;
+  max-width: 90%;
 }
 
 .resource-btn {
-  background: #111;
-  color: #fff;
-  padding: 12px 28px;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 16px 32px;
   border: none;
-  border-radius: 24px;
+  border-radius: 32px;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  margin-top: 18px;
-  align-self: flex-start;
+  position: absolute;
+  bottom: 38px;
+  left: 40px;
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: background 0.2s;
-}
-
-.resource-btn:hover {
-  background: #333;
-}
-
-.arrow {
-  font-size: 18px;
-  margin-left: 4px;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 900px) {
-  .resource-card {
-    flex-direction: column;
-    max-width: 100%;
-  }
-  .resource-image, .resource-text {
-    min-width: 0;
-    max-width: 100%;
-    padding: 0;
-  }
   .resource-text {
-    padding: 28px 16px 28px 16px;
+    padding: 32px 24px 100px 24px;
+  }
+  
+  .resource-content {
+    padding-bottom: 60px;
+  }
+
+  .resource-btn {
+    bottom: 28px;
+    left: 24px;
   }
 }
 
@@ -658,16 +679,22 @@ footer {
 }
 
 .linkedin-link {
-  color: #C2FC53;
+  background: #9DACA9;
+  color: #ABFF00;
+  padding: 8px 20px;
+  border-radius: 20px;
   font-weight: 600;
   text-decoration: none;
   font-size: 15px;
-  transition: color 0.2s;
+  transition: all 0.2s ease;
+  display: inline-block;
 }
 
 .linkedin-link:hover {
-  color: #222;
-  text-decoration: underline;
+  background: #9DACA9;
+  color: #ABFF00;
+  transform: translateY(-2px);
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
