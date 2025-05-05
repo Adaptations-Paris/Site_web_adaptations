@@ -22,7 +22,7 @@ const ContactForm = () => {
         company: e.target.company.value,
         message: e.target.message.value,
         time: new Date().toLocaleString(),
-        to_email: 'theo.cleret@gmail.com'
+        to_email: process.env.REACT_APP_CONTACT_EMAIL
       };
 
       await emailjs.send(
