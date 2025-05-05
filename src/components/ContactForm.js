@@ -4,7 +4,7 @@ import './ContactForm.css';
 
 const ContactForm = () => {
   useEffect(() => {
-    emailjs.init('NCGES2VJA4ysCbu7a');
+    emailjs.init(process.env.EMAILJS_ID);
   }, []);
 
   const [status, setStatus] = useState('');
@@ -14,7 +14,7 @@ const ContactForm = () => {
     setStatus('sending');
 
     try {
-      // 1. Send message to theo.cleret@gmail.com
+      // 1. Send message to contact email
       const messageParams = {
         title: e.target.title.value || 'New contact message',
         name: e.target.user_name.value + ' ' + e.target.user_lastname.value,
@@ -22,9 +22,14 @@ const ContactForm = () => {
         company: e.target.company.value,
         message: e.target.message.value,
         time: new Date().toLocaleString(),
+        to_email: 'theo.cleret@gmail.com'
       };
 
-      await emailjs.send('service_lg9t0v8', 'template_omgup4f', messageParams);
+      await emailjs.send(
+        process.env.EMAILJS_SERVICE,
+        process.env.EMAILJS_TEMPLATE,
+        messageParams
+      );
 
       // 2. Send confirmation to sender
       const autoReplyParams = {
@@ -32,7 +37,11 @@ const ContactForm = () => {
         from_name: e.target.user_name.value + ' ' + e.target.user_lastname.value,
       };
 
-      await emailjs.send('service_lg9t0v8', 'template_7msmd7k', autoReplyParams);
+      await emailjs.send(
+        process.env.EMAILJS_SERVICE,
+        process.env.EMAILJS_AUTOREPLY,
+        autoReplyParams
+      );
 
       setStatus('success');
       e.target.reset();
