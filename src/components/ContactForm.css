@@ -94,4 +94,16 @@
 .contact-form button:hover {
   background: #ABFF00;
   transform: translateY(-2px);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
 } 

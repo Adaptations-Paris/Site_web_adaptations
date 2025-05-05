@@ -37,12 +37,16 @@ header {
 }
 
 .logo {
-  height: 40px; /* Ajustez cette valeur selon la hauteur souhaitée */
+  height: 40px;
 }
 
 .logo img {
   height: 100%;
   width: auto;
+}
+
+nav {
+  position: relative;
 }
 
 nav ul {
@@ -57,6 +61,58 @@ nav a {
 
 nav a:hover {
   color: #ABFF00;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: white;
+    padding: 80px 20px 20px;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  .header-contact-btn {
+    display: none;
+  }
 }
 
 .header-contact-btn {
@@ -519,7 +575,8 @@ footer {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  height: 560px;
+  height: auto;
+  min-height: 560px;
 }
 
 .resource-image {
@@ -596,12 +653,32 @@ footer {
 }
 
 @media (max-width: 900px) {
+  .resource-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .resource-image {
+    min-width: 100%;
+    max-width: 100%;
+    height: 300px;
+  }
+
   .resource-text {
     padding: 32px 24px 100px 24px;
   }
   
   .resource-content {
     padding-bottom: 60px;
+  }
+
+  .resource-block p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .resource-block strong {
+    font-size: 18px;
   }
 
   .resource-btn {
@@ -755,9 +832,15 @@ footer {
 }
 
 .partner-logo img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
   transition: transform 0.3s ease;
+}
+
+/* Style spécifique pour le logo CNRS */
+.partner-logo img[alt="CNRS"] {
+  max-width: 60%;
+  height: auto;
 }
 
 .partner-logo:hover {
@@ -767,20 +850,53 @@ footer {
 @media (max-width: 1024px) {
   .partners-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .partner-logo img {
+    max-width: 60%;
+  }
+  
+  .partner-logo img[alt="CNRS"] {
+    max-width: 50%;
   }
 }
 
 @media (max-width: 768px) {
   .partners-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 20px;
+  }
+  
+  .partner-logo {
+    padding: 15px;
+  }
+  
+  .partner-logo img {
+    max-width: 50%;
+  }
+  
+  .partner-logo img[alt="CNRS"] {
+    max-width: 40%;
   }
 }
 
 @media (max-width: 480px) {
   .partners-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 15px;
+  }
+  
+  .partner-logo {
+    padding: 10px;
+  }
+  
+  .partner-logo img {
+    max-width: 40%;
+  }
+  
+  .partner-logo img[alt="CNRS"] {
+    max-width: 30%;
   }
 }
 

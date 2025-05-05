@@ -5,9 +5,14 @@ import ContactForm from './ContactForm';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState('resources');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -17,14 +22,17 @@ const Home = () => {
         <div className="logo">
           <img src="logos/logo_adaptations_long.png" alt="Adaptation Agency Logo" />
         </div>
-        <nav>
+        <div className="menu-toggle" onClick={toggleMenu}>
+          {isMenuOpen ? '✕' : '☰'}
+        </div>
+        <nav className={isMenuOpen ? 'active' : ''}>
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#solutions">Solutions</a></li>
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#partners">Partners</a></li>
-            <li><a href="#newsletter">Contact</a></li>
+            <li><a href="#" onClick={() => setIsMenuOpen(false)}>About</a></li>
+            <li><a href="#solutions" onClick={() => setIsMenuOpen(false)}>Solutions</a></li>
+            <li><a href="#mission" onClick={() => setIsMenuOpen(false)}>Mission</a></li>
+            <li><a href="#team" onClick={() => setIsMenuOpen(false)}>Team</a></li>
+            <li><a href="#partners" onClick={() => setIsMenuOpen(false)}>Partners</a></li>
+            <li><a href="#newsletter" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
           </ul>
         </nav>
         <a href="#newsletter" className="header-contact-btn">Contact</a>

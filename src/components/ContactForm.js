@@ -3,24 +3,86 @@ import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
 const ContactForm = () => {
+  // Initialize EmailJS with public key
   useEffect(() => {
     emailjs.init(process.env.REACT_APP_EMAILJS_ID);
   }, []);
 
   const [status, setStatus] = useState('');
+  const [formData, setFormData] = useState({
+    user_name: '',
+    user_lastname: '',
+    user_email: '',
+    company: '',
+    title: '',
+    message: ''
+  });
+  const [errors, setErrors] = useState({});
+
+  // Validate email format
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  // Validate form before submission
+  const validateForm = () => {
+    const newErrors = {};
+    
+    if (!formData.user_name.trim()) {
+      newErrors.user_name = 'First name is required';
+    }
+    if (!formData.user_lastname.trim()) {
+      newErrors.user_lastname = 'Last name is required';
+    }
+    if (!formData.user_email.trim()) {
+      newErrors.user_email = 'Email is required';
+    } else if (!validateEmail(formData.user_email)) {
+      newErrors.user_email = 'Invalid email format';
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.length < 10) {
+      newErrors.message = 'Message must be at least 10 characters long';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
     setStatus('sending');
 
     try {
       // 1. Send message to contact email
       const messageParams = {
-        title: e.target.title.value || 'New contact message',
-        name: e.target.user_name.value + ' ' + e.target.user_lastname.value,
-        email: e.target.user_email.value,
-        company: e.target.company.value,
-        message: e.target.message.value,
+        title: formData.title || 'New contact message',
+        name: `${formData.user_name} ${formData.user_lastname}`,
+        email: formData.user_email,
+        company: formData.company,
+        message: formData.message,
         time: new Date().toLocaleString(),
         to_email: process.env.REACT_APP_CONTACT_EMAIL
       };
@@ -33,8 +95,8 @@ const ContactForm = () => {
 
       // 2. Send confirmation to sender
       const autoReplyParams = {
-        user_email: e.target.user_email.value,
-        from_name: e.target.user_name.value + ' ' + e.target.user_lastname.value,
+        user_email: formData.user_email,
+        from_name: `${formData.user_name} ${formData.user_lastname}`,
       };
 
       await emailjs.send(
@@ -44,7 +106,14 @@ const ContactForm = () => {
       );
 
       setStatus('success');
-      e.target.reset();
+      setFormData({
+        user_name: '',
+        user_lastname: '',
+        user_email: '',
+        company: '',
+        title: '',
+        message: ''
+      });
       setTimeout(() => setStatus(''), 3000);
     } catch (error) {
       console.error('Error:', error);
@@ -61,16 +130,24 @@ const ContactForm = () => {
             type="text"
             name="user_name"
             placeholder="First name"
+            value={formData.user_name}
+            onChange={handleChange}
+            className={errors.user_name ? 'error' : ''}
             required
           />
+          {errors.user_name && <span className="error-message">{errors.user_name}</span>}
         </div>
         <div className="form-group">
           <input
             type="text"
             name="user_lastname"
             placeholder="Last name"
+            value={formData.user_lastname}
+            onChange={handleChange}
+            className={errors.user_lastname ? 'error' : ''}
             required
           />
+          {errors.user_lastname && <span className="error-message">{errors.user_lastname}</span>}
         </div>
       </div>
 
@@ -80,6 +157,8 @@ const ContactForm = () => {
             type="text"
             name="company"
             placeholder="Company"
+            value={formData.company}
+            onChange={handleChange}
           />
         </div>
         <div className="form-group">
@@ -87,8 +166,12 @@ const ContactForm = () => {
             type="email"
             name="user_email"
             placeholder="Email address"
+            value={formData.user_email}
+            onChange={handleChange}
+            className={errors.user_email ? 'error' : ''}
             required
           />
+          {errors.user_email && <span className="error-message">{errors.user_email}</span>}
         </div>
       </div>
 
@@ -98,6 +181,8 @@ const ContactForm = () => {
             type="text"
             name="title"
             placeholder="Message title"
+            value={formData.title}
+            onChange={handleChange}
           />
         </div>
       </div>
@@ -107,8 +192,12 @@ const ContactForm = () => {
           <textarea
             name="message"
             placeholder="Your message"
+            value={formData.message}
+            onChange={handleChange}
+            className={errors.message ? 'error' : ''}
             required
           />
+          {errors.message && <span className="error-message">{errors.message}</span>}
         </div>
       </div>
 
