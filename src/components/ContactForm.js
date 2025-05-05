@@ -4,7 +4,7 @@ import './ContactForm.css';
 
 const ContactForm = () => {
   useEffect(() => {
-    emailjs.init(process.env.EMAILJS_ID);
+    emailjs.init(process.env.REACT_APP_EMAILJS_ID);
   }, []);
 
   const [status, setStatus] = useState('');
@@ -26,8 +26,8 @@ const ContactForm = () => {
       };
 
       await emailjs.send(
-        process.env.EMAILJS_SERVICE,
-        process.env.EMAILJS_TEMPLATE,
+        process.env.REACT_APP_EMAILJS_SERVICE,
+        process.env.REACT_APP_EMAILJS_TEMPLATE,
         messageParams
       );
 
@@ -38,8 +38,8 @@ const ContactForm = () => {
       };
 
       await emailjs.send(
-        process.env.EMAILJS_SERVICE,
-        process.env.EMAILJS_AUTOREPLY,
+        process.env.REACT_APP_EMAILJS_SERVICE,
+        process.env.REACT_APP_EMAILJS_AUTOREPLY,
         autoReplyParams
       );
 
