@@ -20,7 +20,7 @@ const Home = () => {
       {/* Header */}
       <header data-aos="fade-down">
         <div className="logo">
-          <img src="logos/logo_adaptations_long.png" alt="Adaptation Agency Logo" />
+          <img src="logos/logo_adaptations_long.png" alt="Adaptations Logo" />
         </div>
         <div className="menu-toggle" onClick={toggleMenu}>
           {isMenuOpen ? '✕' : '☰'}
@@ -40,10 +40,10 @@ const Home = () => {
 
       {/* Hero Section */}
       <section id="hero" className="hero" data-aos="fade-up">
-        <h1>Stay Resilient.<br />
-          Adapt <span className="highlight">Fast</span>. <span className="highlight">Scale Smart.</span>
+        <h1>Resilient.<br />
+        <span className="highlight">Positive.  </span> <span className="highlight">At scale.</span>
         </h1>
-        <p>The One Stop <span className="highlight">Shop</span> agency for tech and strategic solutions.<br />100% focused on positive, resilient adaptation at scale.</p>
+        <p>A "one stop <span className="highlight">shop"</span> combining AI-based digital tools and strategic support,  <br /> 100% focused on positive & resilient adaptation, at scale.</p>
         <a href="#newsletter" className="hero-btn">CONTACT US →</a>
       </section>
 
@@ -56,19 +56,19 @@ const Home = () => {
           className={`tab ${activeTab === 'infrastructures' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('infrastructures')}
         >
-          Infrastructure
-        </div>
-        <div 
-          className={`tab ${activeTab === 'finance' ? 'tab-active' : ''}`}
-          onClick={() => handleTabClick('finance')}
-        >
-          Finance 360°
+          Infrastructures
         </div>
         <div 
           className={`tab ${activeTab === 'resources' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('resources')}
         >
           Resources & Supply
+        </div>
+        <div 
+          className={`tab ${activeTab === 'finance' ? 'tab-active' : ''}`}
+          onClick={() => handleTabClick('finance')}
+        >
+          Finance & Strategy
         </div>
         <div 
           className={`tab ${activeTab === 'business' ? 'tab-active' : ''}`}
@@ -110,7 +110,7 @@ const Home = () => {
         <div className="team-card">
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/loraine.png" alt="Loraine Coste" />
+              <img src="/images/loraine.jpg" alt="Loraine Coste" />
             </div>
             <h3>Loraine Coste</h3>
             <p>Expert in climate resilience and strategic transformation, with a focus on helping businesses adapt to environmental challenges while maintaining growth and sustainability.</p>
@@ -118,7 +118,7 @@ const Home = () => {
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/theo.png" alt="Théo Cleret" />
+              <img src="/images/theo.jpg" alt="Théo Cleret" />
             </div>
             <h3>Théo Cleret</h3>
             <p>Specialized in sustainable business models and technological innovation, driving companies towards resilient and environmentally conscious operations.</p>
@@ -126,7 +126,7 @@ const Home = () => {
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/maximilien.png" alt="Maximilien Rouer" />
+              <img src="/images/maximilien.jpg" alt="Maximilien Rouer" />
             </div>
             <h3>Maximilien Rouer</h3>
             <p>Expert in sustainable development strategies and corporate transformation, helping organizations navigate the challenges of climate change and resource scarcity.</p>
@@ -134,7 +134,7 @@ const Home = () => {
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/maud.png" alt="Maud Mielvaque" />
+              <img src="/images/maud.jpg" alt="Maud Mielvaque" />
             </div>
             <h3>Maud Mielvaque</h3>
             <p>Focused on implementing sustainable solutions and developing resilient strategies for businesses facing environmental and resource challenges.</p>

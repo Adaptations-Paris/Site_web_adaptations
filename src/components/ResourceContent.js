@@ -9,18 +9,15 @@ const ResourceContent = ({ activeTab }) => {
       </div>
       <div className="resource-text">
         <div className="resource-content">
-          <h2>Infrastructure Assessment</h2>
+          <h2>Infrastructures resilience</h2>
           <div className="resource-block">
-            <strong>Infrastructure Resilience</strong>
-            <p>Comprehensive analysis of your infrastructure against climate risks: vulnerability assessment and adaptation solutions.</p>
+            <strong>Strategic support</strong>
+            <p>Vulnerability and resiliency diagnosis of your sites - with databoard to help you monitor, model and act</p>
+            <p>Adaptation & resilience strategy - including nature-based solutions</p>
           </div>
           <div className="resource-block">
-            <strong>Modeling</strong>
-            <p>Assessment of impacts on your facilities and associated costs</p>
-          </div>
-          <div className="resource-block">
-            <strong>Adaptation Strategy</strong>
-            <p>Action plan to strengthen your infrastructure resilience</p>
+            <strong>A tool to scale up</strong>
+            <p>Accelerated deployment of your adaptation & resilience strategies, site by site: creation of a numerical guide</p>
           </div>
         </div>
         <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
@@ -34,19 +31,16 @@ const ResourceContent = ({ activeTab }) => {
         <img src="/images/warehouse.png" alt="Finance" />
       </div>
       <div className="resource-text">
-        <div className="resource-content">
-          <h2>Financial Assessment</h2>
+        <div className="resource-content">  
+          <h2>Financial & Strategic resilience</h2>
           <div className="resource-block">
-            <strong>360° Financial Analysis</strong>
-            <p>Comprehensive assessment of climate risks' financial impact on your business.</p>
+            <strong>Strategic support</strong>
+            <p>Joint modeling of physical & transition risks on different climate scenarios - to address mitigation & adaptation simultaneously </p>
+            <p>Modeling of business and financial impacts, comparing the cost of inaction with the cost of prevention in different scenarios </p>
           </div>
           <div className="resource-block">
-            <strong>Modeling</strong>
-            <p>Financial projections and adaptation cost analysis</p>
-          </div>
-          <div className="resource-block">
-            <strong>Financial Strategy</strong>
-            <p>Financing plan for your adaptation projects</p>
+            <strong>A tool to scale up</strong>
+            <p>Implementation of a strategic tool for 360° monitoring of your financial resilience and your positioning vs. peers regarding threats and opportunities caused by physical and transition risks </p>
           </div>
         </div>
         <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
@@ -61,18 +55,16 @@ const ResourceContent = ({ activeTab }) => {
       </div>
       <div className="resource-text">
         <div className="resource-content">
-          <h2>Vulnerability Assessment</h2>
+          <h2>Resources & Supply resilience</h2>
           <div className="resource-block">
-            <strong>Supply Chain Resilience</strong>
-            <p>Tier-1 resources against physical climate risks: creation of a dedicated team for your supply chain (tier 1) and application of resilience stress tests.</p>
+            <strong>Strategic support</strong>
+            <p>Supply chain vulnerability diagnosis</p>
+            <p>Climate vulnerability analysis for Tier 1 suppliers</p>
           </div>
           <div className="resource-block">
-            <strong>Modeling</strong>
-            <p>Business and financial impacts (S1 Impact on Total disruption)</p>
-          </div>
-          <div className="resource-block">
-            <strong>Adaptation & Resilience Strategy</strong>
-            <p>Adaptation strategy based on robustness or "control tower" mode in connection with your crisis management strategy.</p>
+            <strong>A tool to scale up</strong>
+            <p>Creation of a digital twin of your supply chain (rank 1 suppliers) to apply resiliency stress tests</p>
+            <p>Real-time control tower module - requiring supply chain digital twin</p>
           </div>
         </div>
         <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
@@ -87,19 +79,21 @@ const ResourceContent = ({ activeTab }) => {
       </div>
       <div className="resource-text">
         <div className="resource-content">
-          <h2>Business Assessment</h2>
+          <h2>Offers & Business Model resilience</h2>
           <div className="resource-block">
-            <strong>Business Model Analysis</strong>
-            <p>Assessment of your business models' resilience to climate change.</p>
+            <p>Reinventing supply and business models to meet environmental challenges and new market expectations</p>
           </div>
-          <div className="resource-block">
-            <strong>Modeling</strong>
-            <p>Evolution scenarios and innovation opportunities</p>
-          </div>
-          <div className="resource-block">
-            <strong>Adaptation Strategy</strong>
-            <p>New business models and adapted value propositions</p>
-          </div>
+          <img
+            src="/images/O&BM.png"
+            alt="Offers & Business Models"
+            style={{
+              margin: '8px auto 24px auto',
+              display: 'block',
+              maxWidth: '620px',
+              width: '100%',
+              borderRadius: '10px'
+            }}
+          />
         </div>
         <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
       </div>
