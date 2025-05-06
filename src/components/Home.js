@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div className="home">
       {/* Header */}
-      <header>
+      <header data-aos="fade-down">
         <div className="logo">
           <img src="/logos/logo_adaptations_long.png" alt="Adaptations Logo" />
         </div>
@@ -53,7 +53,7 @@ const Home = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="hero" className="hero">
+      <section id="hero" className="hero" data-aos="fade-up">
         <h1>Resilient.<br />
         <span className="highlight">Positive.  </span> <span className="highlight">At scale.</span>
         </h1>
@@ -65,7 +65,7 @@ const Home = () => {
       <div id="solutions" className="section-anchor"></div>
       
       {/* Tabs Section */}
-      <div className="tabs">
+      <div className="tabs" data-aos="fade-up">
         <div 
           className={`tab ${activeTab === 'infrastructures' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('infrastructures')}
@@ -93,12 +93,12 @@ const Home = () => {
       </div>
 
       {/* Resources Section */}
-      <section id="resources" className="resource-section">
+      <section id="resources" className="resource-section" data-aos="fade-right">
         <ResourceContent activeTab={activeTab} />
       </section>
 
       {/* Mission Section */}
-      <section id="mission" className="mission">
+      <section id="mission" className="mission" data-aos="fade-up">
         <div className="mission-title">
           <span>Mission</span>
           <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="mission-logo" />
@@ -115,14 +115,14 @@ const Home = () => {
       </section>
 
       {/* Team Section */}
-      <section className="team-section">
+      <section className="team-section" data-aos="fade-up">
         <div id="team" className="section-anchor"></div>
         <div className="team-title">
           <span>Team</span>
           <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="team-logo" />
         </div>
         <div className="team-card cofounders">
-          <div className="team-member">
+          <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
               <img src="/images/theo.png" alt="Théo Cleret" />
             </div>
@@ -131,7 +131,7 @@ const Home = () => {
             <p>Ecole Polytechnique and University of Cambridge (UK) graduate,<br /> with 4+ years experience in decarbonization and adaptation strategies<br /> for industrials and investors. Ex- BCG Climate</p>
             <a href="https://www.linkedin.com/in/th%C3%A9o-cleret-776940176/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
-          <div className="team-member">
+          <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
               <img src="/images/loraine.png" alt="Loraine Coste" />
             </div>
@@ -140,7 +140,7 @@ const Home = () => {
             <p>Ecole Polytechnique and UCL (UK) data scientist, with 4+ years<br />experience in environmental transition modelisation for industrials<br />and investors. Ex- E-Cube data science department</p>
             <a href="https://www.linkedin.com/in/lorainecoste2005/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
-          <div className="team-member">
+          <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
               <img src="/images/maud.png" alt="Maud Mielvaque" />
             </div>
@@ -149,7 +149,7 @@ const Home = () => {
             <p>20+ years experience in helping companies' strategic transformation<br /> on digital & environmental challenges. Ex- Google ExCo,<br />  Possible Future CEO & WDNR co-founder</p>
             <a href="https://www.linkedin.com/in/maudmielvaque/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
-          <div className="team-member">
+          <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
               <img src="/images/maximilien.png" alt="Maximilien Rouer" />
             </div>
@@ -161,7 +161,7 @@ const Home = () => {
         </div>
         <div className="team-card employees">
           <div></div>
-          <div className="team-member">
+          <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
               <img src="/images/louise.png" alt="Louise Eon" />
             </div>
@@ -174,7 +174,7 @@ const Home = () => {
       </section>
 
       {/* Partners Section */}
-      <section className="partners-section">
+      <section className="partners-section" data-aos="fade-up">
         <div id="partners" className="section-anchor"></div>
         <div className="container">
           <div className="partners-title">
@@ -182,28 +182,28 @@ const Home = () => {
             <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="partners-logo" />
           </div>
           <div className="partners-grid">
-            <div className="partner-logo">
+            <div className="partner-logo" data-aos="zoom-in">
               <img src="/partenaires/Ceebios.png" alt="Ceebios" />
             </div>
-            <div className="partner-logo">
+            <div className="partner-logo" data-aos="zoom-in">
               <img src="/partenaires/CNRS.png" alt="CNRS" />
             </div>
-            <div className="partner-logo">
+            <div className="partner-logo" data-aos="zoom-in">
               <img src="/partenaires/IFS.png" alt="IFS" />
             </div>
-            <div className="partner-logo">
+            <div className="partner-logo" data-aos="zoom-in">
               <img src="/partenaires/Lumia.png" alt="Lumia" />
             </div>
-            <div className="partner-logo">
+            <div className="partner-logo" data-aos="zoom-in">
               <img src="/partenaires/MinesParis.png" alt="Mines Paris" />
             </div>
-            <div className="partner-logo">
+            <div className="partner-logo" data-aos="zoom-in">
               <img src="/partenaires/Ouvert.png" alt="Ouvert" />
             </div>
-            <div className="partner-logo">
+            <div className="partner-logo" data-aos="zoom-in">
               <img src="/partenaires/Pixelis.png" alt="Pixelis" />
             </div>
-            <div className="partner-logo">
+            <div className="partner-logo" data-aos="zoom-in">
               <img src="/partenaires/Rejeneo.png" alt="Rejeneo" />
             </div>
           </div>
@@ -211,7 +211,7 @@ const Home = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section id="newsletter" className="newsletter">
+      <section id="newsletter" className="newsletter" data-aos="fade-up">
         <div className="newsletter-title">
           <span>Contact</span>
           <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="newsletter-logo" />
@@ -221,7 +221,7 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer>
+      <footer data-aos="fade-up">
         <div className="footer-left">
           <div className="footer-logo">
             <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" />
