@@ -53,5 +53,20 @@
         });
       });
     </script>
+    <script>
+      // Fallback 100dvh for browsers that do not support it
+      function setNavHeight() {
+        var navs = document.querySelectorAll('nav');
+        if (!CSS.supports('height: 100dvh')) {
+          var vh = window.innerHeight * 0.01;
+          navs.forEach(function(nav) {
+            nav.style.height = (vh * 100) + 'px';
+          });
+        }
+      }
+      window.addEventListener('resize', setNavHeight);
+      window.addEventListener('orientationchange', setNavHeight);
+      document.addEventListener('DOMContentLoaded', setNavHeight);
+    </script>
   </body>
 </html>
