@@ -853,6 +853,55 @@ footer {
     width: 140px;
     height: 140px;
   }
+  .hero h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 32px;
+  }
+  .hero h1 br, .hero h1 .highlight {
+    display: none;
+  }
+  .hero h1 span {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .team-member {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .team-member h3,
+  .team-member p,
+  .team-role,
+  .team-role-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .team-photo-bg {
+    max-width: 100%;
+    width: 140px;
+    height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .team-photo-bg img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .team-member p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 12px auto;
+  }
 }
 
 .team-card .team-member:last-child {
