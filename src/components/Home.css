@@ -1015,4 +1015,15 @@ footer {
 
 .partners-grid .partner-logo:nth-child(n+5):nth-child(-n+8) img {
   max-width: 90%;
+}
+
+[data-aos] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+body[data-aos-disabled="true"] [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
 } 

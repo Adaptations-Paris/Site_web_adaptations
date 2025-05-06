@@ -1,18 +1,25 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 import './Home.css';
 import ResourceContent from './ResourceContent';
 import ContactForm from './ContactForm';
-
-const fadeIn = {
-  initial: { opacity: 0, y: 40 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8 }
-};
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState('infrastructures');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    AOS.init({
+      disable: isMobile,
+      duration: 600,
+      once: true,
+    });
+    if (isMobile) {
+      document.body.setAttribute('data-aos-disabled', 'true');
+    }
+  }, []);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -25,7 +32,7 @@ const Home = () => {
   return (
     <div className="home">
       {/* Header */}
-      <motion.header {...fadeIn}>
+      <header>
         <div className="logo">
           <img src="/logos/logo_adaptations_long.png" alt="Adaptations Logo" />
         </div>
@@ -43,16 +50,16 @@ const Home = () => {
           </ul>
         </nav>
         <a href="#newsletter" className="header-contact-btn">Contact</a>
-      </motion.header>
+      </header>
 
       {/* Hero Section */}
-      <motion.section id="hero" className="hero" {...fadeIn}>
+      <section id="hero" className="hero">
         <h1>Resilient.<br />
         <span className="highlight">Positive.  </span> <span className="highlight">At scale.</span>
         </h1>
         <p><strong>A "one stop <span className="highlight">shop"</span> combining AI-based digital tools and strategic support,  <br /> 100% focused on positive & resilient adaptation, at scale.</strong></p>
         <a href="#newsletter" className="hero-btn">CONTACT US →</a>
-      </motion.section>
+      </section>
 
       {/* Solutions Section */}
       <div id="solutions" className="section-anchor"></div>
@@ -86,12 +93,12 @@ const Home = () => {
       </div>
 
       {/* Resources Section */}
-      <motion.section id="resources" className="resource-section" {...fadeIn}>
+      <section id="resources" className="resource-section">
         <ResourceContent activeTab={activeTab} />
-      </motion.section>
+      </section>
 
       {/* Mission Section */}
-      <motion.section id="mission" className="mission" {...fadeIn}>
+      <section id="mission" className="mission">
         <div className="mission-title">
           <span>Mission</span>
           <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="mission-logo" />
@@ -105,10 +112,10 @@ const Home = () => {
           sustainability as positive contributors to the planet.
         </p>
         <a href="#newsletter" className="mission-btn">DISCOVER US <span className="arrow">→</span></a>
-      </motion.section>
+      </section>
 
       {/* Team Section */}
-      <motion.section className="team-section" {...fadeIn}>
+      <section className="team-section">
         <div id="team" className="section-anchor"></div>
         <div className="team-title">
           <span>Team</span>
@@ -164,10 +171,10 @@ const Home = () => {
           </div>
           <div></div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Partners Section */}
-      <motion.section className="partners-section" {...fadeIn}>
+      <section className="partners-section">
         <div id="partners" className="section-anchor"></div>
         <div className="container">
           <div className="partners-title">
@@ -201,20 +208,20 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Newsletter Section */}
-      <motion.section id="newsletter" className="newsletter" {...fadeIn}>
+      <section id="newsletter" className="newsletter">
         <div className="newsletter-title">
           <span>Contact</span>
           <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="newsletter-logo" />
         </div>
         <p className="newsletter-desc"><strong>Contact us to learn more about our solutions.</strong></p>
         <ContactForm />
-      </motion.section>
+      </section>
 
       {/* Footer */}
-      <motion.footer {...fadeIn}>
+      <footer>
         <div className="footer-left">
           <div className="footer-logo">
             <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" />
@@ -228,7 +235,7 @@ const Home = () => {
           <img src="/icons/Linkedin.png" alt="LinkedIn" className="linkedin-icon" />
           LinkedIn
         </a>
-      </motion.footer>
+      </footer>
     </div>
   );
 };
