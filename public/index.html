@@ -77,5 +77,10 @@
       window.addEventListener('orientationchange', setVh);
       setVh();
     </script>
+    <script>
+      window.onerror = function (message, source, lineno, colno, error) {
+        document.body.innerHTML = '<pre style="color:red;white-space:pre-wrap;">JS ERROR: ' + message + '\n' + (error && error.stack ? error.stack : '') + '</pre>';
+      };
+    </script>
   </body>
 </html>
