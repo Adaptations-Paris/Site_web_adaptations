@@ -20,7 +20,8 @@ const Home = () => {
       {/* Header */}
       <header data-aos="fade-down">
         <div className="logo">
-          <img src="/logos/logo_adaptations_long.png" alt="Adaptations Logo" />
+          {/* <img src="/logos/logo_adaptations_long.png" alt="Adaptations Logo" /> */}
+          <span style={{fontWeight: 'bold', fontSize: 20}}>LOGO</span>
         </div>
         <div className="menu-toggle" onClick={toggleMenu}>
           {isMenuOpen ? '✕' : '☰'}
@@ -87,7 +88,8 @@ const Home = () => {
       <section id="mission" className="mission" data-aos="fade-up">
         <div className="mission-title">
           <span>Mission</span>
-          <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="mission-logo" />
+          {/* <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="mission-logo" /> */}
+          <span style={{fontWeight: 'bold', fontSize: 18}}>LOGO</span>
         </div>
         <p>
           We live in an unstable, burning, and polluted world,<br />
@@ -105,12 +107,14 @@ const Home = () => {
         <div id="team" className="section-anchor"></div>
         <div className="team-title">
           <span>Team</span>
-          <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="team-logo" />
+          {/* <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="team-logo" /> */}
+          <span style={{fontWeight: 'bold', fontSize: 18}}>LOGO</span>
         </div>
         <div className="team-card cofounders">
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/theo.png" alt="Théo Cleret" />
+              {/* <img src="/images/theo.png" alt="Théo Cleret" /> */}
+              <span>PHOTO</span>
             </div>
             <h3>Théo Cleret</h3>
             <span className="team-role">Co-founder</span>
@@ -119,7 +123,8 @@ const Home = () => {
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/loraine.png" alt="Loraine Coste" />
+              {/* <img src="/images/loraine.png" alt="Loraine Coste" /> */}
+              <span>PHOTO</span>
             </div>
             <h3>Loraine Coste</h3>
             <span className="team-role">Co-founder</span>
@@ -128,7 +133,8 @@ const Home = () => {
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/maud.png" alt="Maud Mielvaque" />
+              {/* <img src="/images/maud.png" alt="Maud Mielvaque" /> */}
+              <span>PHOTO</span>
             </div>
             <h3>Maud Mielvaque</h3>
             <span className="team-role">Co-founder</span>
@@ -137,7 +143,8 @@ const Home = () => {
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/maximilien.png" alt="Maximilien Rouer" />
+              {/* <img src="/images/maximilien.png" alt="Maximilien Rouer" /> */}
+              <span>PHOTO</span>
             </div>
             <h3>Maximilien Rouer</h3>
             <span className="team-role">Co-founder</span>
@@ -149,7 +156,8 @@ const Home = () => {
           <div></div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/louise.png" alt="Louise Eon" />
+              {/* <img src="/images/louise.png" alt="Louise Eon" /> */}
+              <span>PHOTO</span>
             </div>
             <h3 className="team-name-center">Louise Eon</h3>
             <span className="team-role team-role-center">First employee and physical risks expert</span>
@@ -165,32 +173,41 @@ const Home = () => {
         <div className="container">
           <div className="partners-title">
             <span>Partners</span>
-            <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="partners-logo" />
+            {/* <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="partners-logo" /> */}
+            <span style={{fontWeight: 'bold', fontSize: 18}}>LOGO</span>
           </div>
           <div className="partners-grid">
             <div className="partner-logo">
-              <img src="/partenaires/Ceebios.png" alt="Ceebios" />
+              {/* <img src="/partenaires/Ceebios.png" alt="Ceebios" /> */}
+              <span>Ceebios</span>
             </div>
             <div className="partner-logo">
-              <img src="/partenaires/CNRS.png" alt="CNRS" />
+              {/* <img src="/partenaires/CNRS.png" alt="CNRS" /> */}
+              <span>CNRS</span>
             </div>
             <div className="partner-logo">
-              <img src="/partenaires/IFS.png" alt="IFS" />
+              {/* <img src="/partenaires/IFS.png" alt="IFS" /> */}
+              <span>IFS</span>
             </div>
             <div className="partner-logo">
-              <img src="/partenaires/Lumia.png" alt="Lumia" />
+              {/* <img src="/partenaires/Lumia.png" alt="Lumia" /> */}
+              <span>Lumia</span>
             </div>
             <div className="partner-logo">
-              <img src="/partenaires/MinesParis.png" alt="Mines Paris" />
+              {/* <img src="/partenaires/MinesParis.png" alt="Mines Paris" /> */}
+              <span>Mines Paris</span>
             </div>
             <div className="partner-logo">
-              <img src="/partenaires/Ouvert.png" alt="Ouvert" />
+              {/* <img src="/partenaires/Ouvert.png" alt="Ouvert" /> */}
+              <span>Ouvert</span>
             </div>
             <div className="partner-logo">
-              <img src="/partenaires/Pixelis.png" alt="Pixelis" />
+              {/* <img src="/partenaires/Pixelis.png" alt="Pixelis" /> */}
+              <span>Pixelis</span>
             </div>
             <div className="partner-logo">
-              <img src="/partenaires/Rejeneo.png" alt="Rejeneo" />
+              {/* <img src="/partenaires/Rejeneo.png" alt="Rejeneo" /> */}
+              <span>Rejeneo</span>
             </div>
           </div>
         </div>
@@ -200,7 +217,8 @@ const Home = () => {
       <section id="newsletter" className="newsletter" data-aos="fade-up">
         <div className="newsletter-title">
           <span>Contact</span>
-          <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="newsletter-logo" />
+          {/* <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="newsletter-logo" /> */}
+          <span style={{fontWeight: 'bold', fontSize: 18}}>LOGO</span>
         </div>
         <p className="newsletter-desc"><strong>Contact us to learn more about our solutions.</strong></p>
         <ContactForm />
@@ -210,7 +228,8 @@ const Home = () => {
       <footer data-aos="fade-up">
         <div className="footer-left">
           <div className="footer-logo">
-            <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" />
+            {/* <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" /> */}
+            <span style={{fontWeight: 'bold', fontSize: 18}}>LOGO</span>
           </div>
           <div className="footer-copyright">
             © 2025 Adaptations. All rights reserved. <br />
@@ -218,8 +237,8 @@ const Home = () => {
           </div>
         </div>
         <a href="https://www.linkedin.com/company/adaptations-agency" target="_blank" rel="noopener noreferrer" className="footer-linkedin">
-          <img src="/icons/Linkedin.png" alt="LinkedIn" className="linkedin-icon" />
-          LinkedIn
+          {/* <img src="/icons/Linkedin.png" alt="LinkedIn" className="linkedin-icon" /> */}
+          <span>LinkedIn</span>
         </a>
       </footer>
     </div>

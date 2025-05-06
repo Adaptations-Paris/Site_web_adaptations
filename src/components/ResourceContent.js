@@ -5,7 +5,7 @@ const ResourceContent = ({ activeTab }) => {
   const infrastructuresContent = (
     <div className="resource-card">
       <div className="resource-image">
-        <img src="/images/infra.png" alt="Infrastructure" className="infra-main" />
+        <span>INFRA IMAGE</span>
       </div>
       <div className="resource-text">
         <div className="resource-content">
@@ -28,7 +28,7 @@ const ResourceContent = ({ activeTab }) => {
   const resourcesContent = (
     <div className="resource-card">
       <div className="resource-image">
-        <img src="/images/warehouse.png" alt="Warehouse" />
+        <span>WAREHOUSE IMAGE</span>
       </div>
       <div className="resource-text">
         <div className="resource-content">
@@ -52,7 +52,7 @@ const ResourceContent = ({ activeTab }) => {
   const financeContent = (
     <div className="resource-card">
       <div className="resource-image">
-        <img src="/images/finance.png" alt="Finance" />
+        <span>FINANCE IMAGE</span>
       </div>
       <div className="resource-text">
         <div className="resource-content">  
@@ -75,7 +75,7 @@ const ResourceContent = ({ activeTab }) => {
   const businessContent = (
     <div className="resource-card">
       <div className="resource-image">
-        <img src="/images/vision.png" alt="Vision" />
+        <span>VISION IMAGE</span>
       </div>
       <div className="resource-text">
         <div className="resource-content">
@@ -83,17 +83,7 @@ const ResourceContent = ({ activeTab }) => {
           <div className="resource-block">
             <p>Reinventing supply and business models to meet environmental challenges and new market expectations</p>
           </div>
-          <img
-            src="/images/O&BM.png"
-            alt="Operations & Business Model"
-            style={{
-              margin: '8px auto 24px auto',
-              display: 'block',
-              maxWidth: '620px',
-              width: '100%',
-              borderRadius: '10px'
-            }}
-          />
+          <span>O&BM IMAGE</span>
         </div>
         <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
       </div>
