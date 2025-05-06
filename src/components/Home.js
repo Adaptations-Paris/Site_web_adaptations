@@ -4,7 +4,7 @@ import ResourceContent from './ResourceContent';
 import ContactForm from './ContactForm';
 
 const Home = () => {
-  const [activeTab, setActiveTab] = useState('resources');
+  const [activeTab, setActiveTab] = useState('infrastructures');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleTabClick = (tab) => {
@@ -43,7 +43,7 @@ const Home = () => {
         <h1>Resilient.<br />
         <span className="highlight">Positive.  </span> <span className="highlight">At scale.</span>
         </h1>
-        <p>A "one stop <span className="highlight">shop"</span> combining AI-based digital tools and strategic support,  <br /> 100% focused on positive & resilient adaptation, at scale.</p>
+        <p><strong>A "one stop <span className="highlight">shop"</span> combining AI-based digital tools and strategic support,  <br /> 100% focused on positive & resilient adaptation, at scale.</strong></p>
         <a href="#newsletter" className="hero-btn">CONTACT US →</a>
       </section>
 
@@ -107,39 +107,55 @@ const Home = () => {
           <span>Team</span>
           <img src="/logos/logo_adaptations_court.png" alt="/" className="team-logo" />
         </div>
-        <div className="team-card">
-          <div className="team-member" data-aos="zoom-in">
-            <div className="team-photo-bg">
-              <img src="/images/loraine.jpg" alt="Loraine Coste" />
-            </div>
-            <h3>Loraine Coste</h3>
-            <p>Expert in climate resilience and strategic transformation, with a focus on helping businesses adapt to environmental challenges while maintaining growth and sustainability.</p>
-            <a href="https://www.linkedin.com/in/lorainecoste2005/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
-          </div>
+        <div className="team-card cofounders">
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
               <img src="/images/theo.jpg" alt="Théo Cleret" />
             </div>
             <h3>Théo Cleret</h3>
-            <p>Specialized in sustainable business models and technological innovation, driving companies towards resilient and environmentally conscious operations.</p>
+            <span className="team-role">Co-founder</span>
+            <p>Ecole Polytechnique and University of Cambridge (UK) graduate,<br /> with 4+ years experience in decarbonization and adaptation strategies<br /> for industrials and investors. Ex- BCG Climate</p>
             <a href="https://www.linkedin.com/in/th%C3%A9o-cleret-776940176/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/maximilien.jpg" alt="Maximilien Rouer" />
+              <img src="/images/loraine.jpg" alt="Loraine Coste" />
             </div>
-            <h3>Maximilien Rouer</h3>
-            <p>Expert in sustainable development strategies and corporate transformation, helping organizations navigate the challenges of climate change and resource scarcity.</p>
-            <a href="https://www.linkedin.com/in/maximilien-rouer/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
+            <h3>Loraine Coste</h3>
+            <span className="team-role">Co-founder</span>
+            <p>Ecole Polytechnique and UCL (UK) data scientist, with 4+ years<br />experience in environmental transition modelisation for industrials<br />and investors. Ex- E-Cube data science department</p>
+            <a href="https://www.linkedin.com/in/lorainecoste2005/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
               <img src="/images/maud.jpg" alt="Maud Mielvaque" />
             </div>
             <h3>Maud Mielvaque</h3>
-            <p>Focused on implementing sustainable solutions and developing resilient strategies for businesses facing environmental and resource challenges.</p>
+            <span className="team-role">Co-founder</span>
+            <p>20+ years experience in helping companies' strategic transformation<br /> on digital & environmental challenges. Ex- Google ExCo,<br />  Possible Future CEO & WDNR co-founder</p>
             <a href="https://www.linkedin.com/in/maudmielvaque/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
+          <div className="team-member" data-aos="zoom-in">
+            <div className="team-photo-bg">
+              <img src="/images/maximilien.jpg" alt="Maximilien Rouer" />
+            </div>
+            <h3>Maximilien Rouer</h3>
+            <span className="team-role">Co-founder</span>
+            <p>25+ years expertise in helping companies adapt to environmental<br /> resiliency challenges. Ex- BeCitizen co-founder, Terrena<br /> ExCo and Axa Climate Regeneration Strategy Director</p>
+            <a href="https://www.linkedin.com/in/maximilien-rouer/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
+          </div>
+        </div>
+        <div className="team-card employees">
+          <div></div>
+          <div className="team-member" data-aos="zoom-in">
+            <div className="team-photo-bg">
+              <img src="/images/louise.jpg" alt="Louise Eon" />
+            </div>
+            <h3>Louise Eon</h3>
+            <span className="team-role">First employee and physical risks expert</span>
+            <p>Specialized in physical risks impact modelisation. Ex-founder Resilient</p>
+          </div>
+          <div></div>
         </div>
       </section>
 
@@ -186,7 +202,7 @@ const Home = () => {
           <span>Contact</span>
           <img src="/logos/logo_adaptations_court.png" alt="/" className="newsletter-logo" />
         </div>
-        <p className="newsletter-desc">Contact us to learn more about our solutions.</p>
+        <p className="newsletter-desc"><strong>Contact us to learn more about our solutions.</strong></p>
         <ContactForm />
       </section>
 

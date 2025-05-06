@@ -220,14 +220,14 @@ nav a:hover {
 }
 
 .resource-text h2 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 24px;
   color: #000000;
 }
 
 .resource-text p {
-  font-size: 24px;
+  font-size: 45px;
   color: #555;
   margin-bottom: 20px;
 }
@@ -340,6 +340,17 @@ nav a:hover {
 .team-member p {
   font-size: 14px;
   color: #666;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.team-role {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 14px;
+  color: #888;
+  display: block;
+  margin-bottom: 6px;
 }
 
 /* Newsletter */
@@ -573,10 +584,10 @@ footer {
   border-radius: 12px;
   overflow: hidden;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
-  height: auto;
   min-height: 560px;
+  height: 560px;
 }
 
 .resource-image {
@@ -585,6 +596,9 @@ footer {
   max-width: 480px;
   position: relative;
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
 }
 
 .resource-image img {
@@ -595,19 +609,32 @@ footer {
   display: block;
 }
 
+.infra-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 120px;
+  height: auto;
+  z-index: 2;
+}
+
 .resource-text {
   flex: 1 1 55%;
   padding: 38px 40px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background: #FFFFFF;
   position: relative;
   height: 100%;
 }
 
 .resource-content {
-  flex: 1;
-  padding-bottom: 80px;
+  flex: 1 1 auto;
+  padding-bottom: 20px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
 }
 
 .resource-block {
@@ -620,18 +647,22 @@ footer {
 
 .resource-block strong {
   display: block;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   color: #000000;
 }
 
 .resource-block p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   color: #000000;
   margin: 0;
   max-width: 90%;
+}
+
+.resource-block p + p {
+  margin-top: 12px;
 }
 
 .resource-btn {
@@ -643,47 +674,32 @@ footer {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  position: absolute;
-  bottom: 38px;
-  left: 40px;
+  align-self: flex-start;
   display: flex;
   align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
+  position: static;
+  margin-top: auto;
 }
 
 @media (max-width: 900px) {
   .resource-card {
     flex-direction: column;
     height: auto;
+    min-height: 0;
   }
-
   .resource-image {
     min-width: 100%;
     max-width: 100%;
     height: 300px;
   }
-
   .resource-text {
-    padding: 32px 24px 100px 24px;
+    padding: 32px 24px 32px 24px;
+    height: auto;
   }
-  
   .resource-content {
-    padding-bottom: 60px;
-  }
-
-  .resource-block p {
-    font-size: 14px;
-    max-width: 100%;
-  }
-
-  .resource-block strong {
-    font-size: 18px;
-  }
-
-  .resource-btn {
-    bottom: 28px;
-    left: 24px;
+    padding-bottom: 16px;
   }
 }
 
@@ -716,10 +732,17 @@ footer {
 
 .team-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 36px;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.team-card .team-member {
+  min-height: 420px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .team-photo-bg {
@@ -749,8 +772,8 @@ footer {
 }
 
 .team-member p {
-  font-size: 15px;
-  color: #555;
+  font-size: 14px;
+  color: #666;
   margin-bottom: 12px;
   text-align: center;
 }
@@ -783,6 +806,11 @@ footer {
   .team-section {
     padding: 36px 0;
   }
+}
+
+.team-card .team-member:last-child {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .partners-section {
@@ -883,7 +911,7 @@ footer {
 
 @media (max-width: 480px) {
   .partners-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
   
@@ -905,4 +933,39 @@ footer {
   top: -120px;
   visibility: hidden;
   height: 0;
+}
+
+.infra-main {
+  object-fit: contain;
+  padding: 0;
+  background: none;
+}
+
+.team-card.cofounders {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  max-width: 1100px;
+  margin: 0 auto 36px auto;
+}
+
+.team-card.employees {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 36px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.team-subtitle {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 36px 0 18px 0;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.partners-grid .partner-logo:nth-child(n+5):nth-child(-n+8) img {
+  max-width: 90%;
 } 

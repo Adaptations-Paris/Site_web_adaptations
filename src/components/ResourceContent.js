@@ -5,42 +5,19 @@ const ResourceContent = ({ activeTab }) => {
   const infrastructuresContent = (
     <div className="resource-card">
       <div className="resource-image">
-        <img src="/images/warehouse.png" alt="Infrastructure" />
+        <img src="/images/infra.png" alt="Infrastructure" className="infra-main" />
       </div>
       <div className="resource-text">
         <div className="resource-content">
-          <h2>Infrastructures resilience</h2>
+          <h2>Infrastructures Resilience</h2>
           <div className="resource-block">
             <strong>Strategic support</strong>
             <p>Vulnerability and resiliency diagnosis of your sites - with databoard to help you monitor, model and act</p>
             <p>Adaptation & resilience strategy - including nature-based solutions</p>
           </div>
           <div className="resource-block">
-            <strong>A tool to scale up</strong>
+            <strong>A digital tool to scale up</strong>
             <p>Accelerated deployment of your adaptation & resilience strategies, site by site: creation of a numerical guide</p>
-          </div>
-        </div>
-        <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
-      </div>
-    </div>
-  );
-
-  const financeContent = (
-    <div className="resource-card">
-      <div className="resource-image">
-        <img src="/images/warehouse.png" alt="Finance" />
-      </div>
-      <div className="resource-text">
-        <div className="resource-content">  
-          <h2>Financial & Strategic resilience</h2>
-          <div className="resource-block">
-            <strong>Strategic support</strong>
-            <p>Joint modeling of physical & transition risks on different climate scenarios - to address mitigation & adaptation simultaneously </p>
-            <p>Modeling of business and financial impacts, comparing the cost of inaction with the cost of prevention in different scenarios </p>
-          </div>
-          <div className="resource-block">
-            <strong>A tool to scale up</strong>
-            <p>Implementation of a strategic tool for 360° monitoring of your financial resilience and your positioning vs. peers regarding threats and opportunities caused by physical and transition risks </p>
           </div>
         </div>
         <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
@@ -62,9 +39,32 @@ const ResourceContent = ({ activeTab }) => {
             <p>Climate vulnerability analysis for Tier 1 suppliers</p>
           </div>
           <div className="resource-block">
-            <strong>A tool to scale up</strong>
+            <strong>A digital tool to scale up</strong>
             <p>Creation of a digital twin of your supply chain (rank 1 suppliers) to apply resiliency stress tests</p>
             <p>Real-time control tower module - requiring supply chain digital twin</p>
+          </div>
+        </div>
+        <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
+      </div>
+    </div>
+  );
+
+  const financeContent = (
+    <div className="resource-card">
+      <div className="resource-image">
+        <img src="/images/finance.png" alt="Finance" />
+      </div>
+      <div className="resource-text">
+        <div className="resource-content">  
+          <h2>Financial & Strategic resilience</h2>
+          <div className="resource-block">
+            <strong>Strategic support</strong>
+            <p>Joint modeling of physical & transition risks on different climate scenarios - to address mitigation & adaptation simultaneously </p>
+            <p>Modeling of business and financial impacts, comparing the cost of inaction with the cost of prevention in different scenarios </p>
+          </div>
+          <div className="resource-block">
+            <strong>A digital tool to scale up</strong>
+            <p>Implementation of a strategic tool for 360° monitoring of your financial & strategic resilience and your positioning vs. peers regarding threats and opportunities caused by physical and transition risks </p>
           </div>
         </div>
         <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
@@ -75,7 +75,7 @@ const ResourceContent = ({ activeTab }) => {
   const businessContent = (
     <div className="resource-card">
       <div className="resource-image">
-        <img src="/images/warehouse.png" alt="Business" />
+        <img src="/images/vision.png" alt="Business" />
       </div>
       <div className="resource-text">
         <div className="resource-content">

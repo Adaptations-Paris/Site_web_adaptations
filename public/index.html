@@ -44,9 +44,13 @@
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1000,
-        once: true
+      document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+          duration: 1000,
+          once: true,
+          disable: 'mobile',
+          startEvent: 'load'
+        });
       });
     </script>
   </body>
