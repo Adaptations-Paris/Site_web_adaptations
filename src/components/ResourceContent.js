@@ -75,7 +75,7 @@ const ResourceContent = ({ activeTab }) => {
   const businessContent = (
     <div className="resource-card">
       <div className="resource-image">
-        <img src="/images/vision.png" alt="Business" />
+        <img src="/images/vision.png" alt="Vision" />
       </div>
       <div className="resource-text">
         <div className="resource-content">
@@ -85,7 +85,7 @@ const ResourceContent = ({ activeTab }) => {
           </div>
           <img
             src="/images/O&BM.png"
-            alt="Offers & Business Models"
+            alt="Operations & Business Model"
             style={{
               margin: '8px auto 24px auto',
               display: 'block',

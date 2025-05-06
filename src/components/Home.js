@@ -20,7 +20,7 @@ const Home = () => {
       {/* Header */}
       <header data-aos="fade-down">
         <div className="logo">
-          <img src="logos/logo_adaptations_long.png" alt="Adaptations Logo" />
+          <img src="/logos/logo_adaptations_long.png" alt="Adaptations Logo" />
         </div>
         <div className="menu-toggle" onClick={toggleMenu}>
           {isMenuOpen ? '✕' : '☰'}
@@ -87,7 +87,7 @@ const Home = () => {
       <section id="mission" className="mission" data-aos="fade-up">
         <div className="mission-title">
           <span>Mission</span>
-          <img src="/logos/logo_adaptations_court.png" alt="/" className="mission-logo" />
+          <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="mission-logo" />
         </div>
         <p>
           We live in an unstable, burning, and polluted world,<br />
@@ -105,7 +105,7 @@ const Home = () => {
         <div id="team" className="section-anchor"></div>
         <div className="team-title">
           <span>Team</span>
-          <img src="/logos/logo_adaptations_court.png" alt="/" className="team-logo" />
+          <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="team-logo" />
         </div>
         <div className="team-card cofounders">
           <div className="team-member" data-aos="zoom-in">
@@ -165,7 +165,7 @@ const Home = () => {
         <div className="container">
           <div className="partners-title">
             <span>Partners</span>
-            <img src="/logos/logo_adaptations_court.png" alt="/" className="partners-logo" />
+            <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="partners-logo" />
           </div>
           <div className="partners-grid">
             <div className="partner-logo">
@@ -200,7 +200,7 @@ const Home = () => {
       <section id="newsletter" className="newsletter" data-aos="fade-up">
         <div className="newsletter-title">
           <span>Contact</span>
-          <img src="/logos/logo_adaptations_court.png" alt="/" className="newsletter-logo" />
+          <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="newsletter-logo" />
         </div>
         <p className="newsletter-desc"><strong>Contact us to learn more about our solutions.</strong></p>
         <ContactForm />
@@ -210,7 +210,7 @@ const Home = () => {
       <footer data-aos="fade-up">
         <div className="footer-left">
           <div className="footer-logo">
-            <img src="/logos/logo_adaptations_court.png" alt="Adaptation Agency Logo" />
+            <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" />
           </div>
           <div className="footer-copyright">
             © 2025 Adaptations. All rights reserved. <br />
