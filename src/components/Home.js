@@ -110,7 +110,7 @@ const Home = () => {
         <div className="team-card cofounders">
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/theo.jpg" alt="Théo Cleret" />
+              <img src="/images/theo.png" alt="Théo Cleret" />
             </div>
             <h3>Théo Cleret</h3>
             <span className="team-role">Co-founder</span>
@@ -119,7 +119,7 @@ const Home = () => {
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/loraine.jpg" alt="Loraine Coste" />
+              <img src="/images/loraine.png" alt="Loraine Coste" />
             </div>
             <h3>Loraine Coste</h3>
             <span className="team-role">Co-founder</span>
@@ -128,7 +128,7 @@ const Home = () => {
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/maud.jpg" alt="Maud Mielvaque" />
+              <img src="/images/maud.png" alt="Maud Mielvaque" />
             </div>
             <h3>Maud Mielvaque</h3>
             <span className="team-role">Co-founder</span>
@@ -137,7 +137,7 @@ const Home = () => {
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/maximilien.jpg" alt="Maximilien Rouer" />
+              <img src="/images/maximilien.png" alt="Maximilien Rouer" />
             </div>
             <h3>Maximilien Rouer</h3>
             <span className="team-role">Co-founder</span>
@@ -149,10 +149,10 @@ const Home = () => {
           <div></div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
-              <img src="/images/louise.jpg" alt="Louise Eon" />
+              <img src="/images/louise.png" alt="Louise Eon" />
             </div>
-            <h3>Louise Eon</h3>
-            <span className="team-role">First employee and physical risks expert</span>
+            <h3 className="team-name-center">Louise Eon</h3>
+            <span className="team-role team-role-center">First employee and physical risks expert</span>
             <p>Specialized in physical risks impact modelisation. Ex-founder Resilient</p>
           </div>
           <div></div>
