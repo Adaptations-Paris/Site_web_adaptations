@@ -854,21 +854,7 @@ footer {
     grid-template-columns: 1fr !important;
     justify-items: center;
   }
-  .team-card.employees .team-member {
-    width: 100%;
-    max-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .team-card.employees .team-photo-bg {
-    width: 100%;
-    max-width: 140px;
-    min-width: 80px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 8px;
-    box-sizing: border-box;
-  }
+  
   .team-member {
     text-align: center;
     align-items: center;
@@ -906,14 +892,6 @@ footer {
   }
   .mission p {
     font-size: 18px;
-  }
-
-  .team-card.employees .team-photo-bg img {
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 10px;
   }
 }
 
