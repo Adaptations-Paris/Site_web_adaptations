@@ -10,7 +10,7 @@ const ResourceContent = ({ activeTab }) => {
         </div>
         <div className="resource-text">
           <div className="resource-content">
-            <h2>Infrastructures Resilience</h2>
+            <h2>Infrastructures resilience</h2>
             <div className="resource-block">
               <strong>Strategic support</strong>
               <p>Vulnerability and resiliency diagnosis of your sites - with databoard to help you monitor, model and act</p>
@@ -57,7 +57,7 @@ const ResourceContent = ({ activeTab }) => {
         </div>
         <div className="resource-text">
           <div className="resource-content">  
-            <h2>Financial & Strategic resilience</h2>
+            <h2>Finance & Strategy resilience</h2>
             <div className="resource-block">
               <strong>Strategic support</strong>
               <p>Joint modeling of physical & transition risks on different climate scenarios - to address mitigation & adaptation simultaneously </p>

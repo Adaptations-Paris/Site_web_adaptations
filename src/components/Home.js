@@ -54,8 +54,10 @@ const Home = () => {
 
       {/* Hero Section */}
       <section id="hero" className="hero" data-aos="fade-up">
-        <h1>Resilient.<br />
-        <span className="highlight">Positive.  </span> <span className="highlight">At scale.</span>
+        <h1>
+          Resilient<span className="mobile-hero-break">.<br /></span>.
+          Positive<span className="mobile-hero-break">.<br /></span>.
+          At scale.
         </h1>
         <p><strong>A "one stop <span className="highlight">shop"</span> combining AI-based digital tools and strategic support,  <br /> 100% focused on positive & resilient adaptation, at scale.</strong></p>
         <a href="#newsletter" className="hero-btn">CONTACT US →</a>
@@ -168,6 +170,7 @@ const Home = () => {
             <span className="team-role team-role-center">First employee and physical risks expert</span>
             <p>Specialized in physical risks impact modelisation. Ex-founder Resilient</p>
           </div>
+          <div className="team-member team-member-empty"></div>
         </div>
       </section>
 
