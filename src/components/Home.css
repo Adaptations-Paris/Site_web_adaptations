@@ -907,18 +907,9 @@ footer {
   .mission p {
     font-size: 18px;
   }
-  .team-card.employees .team-photo-bg {
-    width: 90%;
-    max-width: 180px;
-    min-width: 120px;
-    height: auto;
-    aspect-ratio: 1/1;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-  }
+
   .team-card.employees .team-photo-bg img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     aspect-ratio: 1/1;
     object-fit: cover;
