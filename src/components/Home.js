@@ -96,7 +96,7 @@ const Home = () => {
           className={`tab ${activeTab === 'business' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('business')}
         >
-          Offers & Business Models
+          Offers & Business Model
         </div>
       </div>
 
@@ -213,6 +213,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <div className="section-separator"></div>
 
       {/* Newsletter Section */}
       <section id="newsletter" className="newsletter" data-aos="fade-up">
