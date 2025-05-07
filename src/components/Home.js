@@ -55,11 +55,17 @@ const Home = () => {
       {/* Hero Section */}
       <section id="hero" className="hero" data-aos="fade-up">
         <h1>
-          Resilient<span className="mobile-hero-break">.<br /></span>.
-          Positive<span className="mobile-hero-break">.<br /></span>.
+          Resilient<span className="mobile-hero-break">.<br /></span>
+          Positive<span className="mobile-hero-break">.<br /></span>
           At scale.
         </h1>
-        <p><strong>A "one stop <span className="highlight">shop"</span> combining AI-based digital tools and strategic support,  <br /> 100% focused on positive & resilient adaptation, at scale.</strong></p>
+        <p>
+          <strong>
+            A "one stop <span className="highlight">shop"</span> combining AI-based digital tools<br />
+            and strategic support,<span className="mobile-break"><br /></span>
+            100% focused on positive & resilient adaptation, at scale.
+          </strong>
+        </p>
         <a href="#newsletter" className="hero-btn">CONTACT US →</a>
       </section>
 
@@ -106,12 +112,12 @@ const Home = () => {
           <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="mission-logo" />
         </div>
         <p>
-          We live in an unstable, burning, and polluted world,<br />
-          with limited resources — a world that is deteriorating<br />
-          our living conditions and increasing the vulnerability of businesses.<br />
-          Our mission is to facilitate and accelerate the strategic transformation of companies, strengthening
-          their resilience to ensure their long-term <br />
-          sustainability as positive contributors to the planet.
+          We live in an unstable, burning, and polluted world,<span className="mobile-break"><br /></span>
+          with limited resources — a world that is deteriorating our living conditions<br />
+          and increasing the vulnerability of businesses.<br />
+          Our mission is to facilitate and accelerate the strategic transformation of companies,<span className="mobile-break"><br /></span>
+          strengthening their resilience to ensure their long-term sustainability<br />
+          as positive contributors to the planet.
         </p>
         <a href="#newsletter" className="mission-btn">DISCOVER US <span className="arrow">→</span></a>
       </section>

@@ -894,6 +894,23 @@ footer {
   .mission p {
     font-size: 18px;
   }
+  .team-card.employees .team-photo-bg {
+    width: 90%;
+    max-width: 180px;
+    min-width: 120px;
+    height: auto;
+    aspect-ratio: 1/1;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  .team-card.employees .team-photo-bg img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 }
 
 .team-card .team-member:last-child {
@@ -1075,6 +1092,11 @@ body[data-aos-disabled="true"] [data-aos] {
 @media (max-width: 600px) {
   .mobile-break {
     display: inline;
+  }
+}
+@media (min-width: 601px) {
+  .mobile-break {
+    display: none;
   }
 }
 
