@@ -367,6 +367,10 @@ nav a:hover {
   margin-right: auto;
 }
 
+.team-member-empty {
+  visibility: hidden;
+}
+
 /* Newsletter */
 .newsletter {
   text-align: center;
@@ -858,8 +862,6 @@ footer {
     justify-content: center;
   }
   .team-member h3 {
-    max-width: 90px;
-    word-break: break-word;
     margin-left: auto;
     margin-right: auto;
   }
@@ -888,6 +890,9 @@ footer {
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
+  }
+  .mission p {
+    font-size: 18px;
   }
 }
 
@@ -1069,6 +1074,15 @@ body[data-aos-disabled="true"] [data-aos] {
 }
 @media (max-width: 600px) {
   .mobile-break {
+    display: inline;
+  }
+}
+
+.mobile-hero-break {
+  display: none;
+}
+@media (max-width: 600px) {
+  .mobile-hero-break {
     display: inline;
   }
 } 
