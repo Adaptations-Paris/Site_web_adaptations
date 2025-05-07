@@ -55,14 +55,14 @@ const Home = () => {
       {/* Hero Section */}
       <section id="hero" className="hero" data-aos="fade-up">
         <h1>
-          Resilient<span className="mobile-hero-break">.<br /></span>
-          Positive<span className="mobile-hero-break">.<br /></span>
+          Resilient. <span className="mobile-hero-break"><br /></span>
+          Positive. <br />
           At scale.
         </h1>
         <p>
           <strong>
-            A "one stop <span className="highlight">shop"</span> combining AI-based digital tools<br />
-            and strategic support,<span className="mobile-break"><br /></span>
+            A "one stop <span className="highlight">shop"</span> combining AI-based digital tools
+            and strategic support, <br />
             100% focused on positive & resilient adaptation, at scale.
           </strong>
         </p>
@@ -112,12 +112,9 @@ const Home = () => {
           <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="mission-logo" />
         </div>
         <p>
-          We live in an unstable, burning, and polluted world,<span className="mobile-break"><br /></span>
-          with limited resources — a world that is deteriorating our living conditions<br />
-          and increasing the vulnerability of businesses.<br />
-          Our mission is to facilitate and accelerate the strategic transformation of companies,<span className="mobile-break"><br /></span>
-          strengthening their resilience to ensure their long-term sustainability<br />
-          as positive contributors to the planet.
+          We live in an unstable, burning, and polluted world, with limited resources — a world that is deteriorating our living conditions
+          and increasing the vulnerability of businesses.<span className="mini-break"></span>
+          Our mission is to facilitate and accelerate the strategic transformation of companies, strengthening their resilience to ensure their long-term sustainability as positive contributors to the planet.
         </p>
         <a href="#newsletter" className="mission-btn">DISCOVER US <span className="arrow">→</span></a>
       </section>
@@ -134,7 +131,7 @@ const Home = () => {
             <div className="team-photo-bg">
               <img src="/images/theo.png" alt="Théo Cleret" />
             </div>
-            <h3>Théo<span className="mobile-break"><br /></span>Cleret</h3>
+            <h3>Théo <span className="mobile-break"><br /></span>Cleret</h3>
             <span className="team-role">Co-founder</span>
             <p>Ecole Polytechnique and University of Cambridge (UK) graduate,<br /> with 4+ years experience in decarbonization and adaptation strategies<br /> for industrials and investors. Ex- BCG Climate</p>
             <a href="https://www.linkedin.com/in/th%C3%A9o-cleret-776940176/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
@@ -143,7 +140,7 @@ const Home = () => {
             <div className="team-photo-bg">
               <img src="/images/loraine.png" alt="Loraine Coste" />
             </div>
-            <h3>Loraine<span className="mobile-break"><br /></span>Coste</h3>
+            <h3>Loraine <span className="mobile-break"><br /></span>Coste</h3>
             <span className="team-role">Co-founder</span>
             <p>Ecole Polytechnique and UCL (UK) data scientist, with 4+ years<br />experience in environmental transition modelisation for industrials<br />and investors. Ex- E-Cube data science department</p>
             <a href="https://www.linkedin.com/in/lorainecoste2005/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
@@ -152,7 +149,7 @@ const Home = () => {
             <div className="team-photo-bg">
               <img src="/images/maud.png" alt="Maud Mielvaque" />
             </div>
-            <h3>Maud<span className="mobile-break"><br /></span>Mielvaque</h3>
+            <h3>Maud <span className="mobile-break"><br /></span>Mielvaque</h3>
             <span className="team-role">Co-founder</span>
             <p>20+ years experience in helping companies' strategic transformation<br /> on digital & environmental challenges. Ex- Google ExCo,<br />  Possible Future CEO & WDNR co-founder</p>
             <a href="https://www.linkedin.com/in/maudmielvaque/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
@@ -161,7 +158,7 @@ const Home = () => {
             <div className="team-photo-bg">
               <img src="/images/maximilien.png" alt="Maximilien Rouer" />
             </div>
-            <h3>Maximilien<span className="mobile-break"><br /></span>Rouer</h3>
+            <h3>Maximilien <span className="mobile-break"><br /></span>Rouer</h3>
             <span className="team-role">Co-founder</span>
             <p>25+ years expertise in helping companies adapt to environmental<br /> resiliency challenges. Ex- BeCitizen co-founder, Terrena<br /> ExCo and Axa Climate Regeneration Strategy Director</p>
             <a href="https://www.linkedin.com/in/maximilien-rouer/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
@@ -172,7 +169,7 @@ const Home = () => {
             <div className="team-photo-bg">
               <img src="/images/louise.png" alt="Louise Eon" />
             </div>
-            <h3 className="team-name-center">Louise<span className="mobile-break"><br /></span>Eon</h3>
+            <h3 className="team-name-center">Louise <span className="mobile-break"><br /></span>Eon</h3>
             <span className="team-role team-role-center">First employee and physical risks expert</span>
             <p>Specialized in physical risks impact modelisation. Ex-founder Resilient</p>
           </div>

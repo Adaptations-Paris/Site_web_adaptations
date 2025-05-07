@@ -37,7 +37,7 @@ header {
 }
 
 .logo {
-  height: 40px;
+  height: 70px;
 }
 
 .logo img {
@@ -220,14 +220,14 @@ nav a:hover {
 }
 
 .resource-text h2 {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 700;
   margin-bottom: 24px;
   color: #000000;
 }
 
 .resource-text p {
-  font-size: 45px;
+  font-size: 40px;
   color: #555;
   margin-bottom: 20px;
 }
@@ -254,7 +254,7 @@ nav a:hover {
   gap: 10px;
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .mission-title span {
@@ -270,7 +270,7 @@ nav a:hover {
 }
 
 .mission p {
-  font-size: 30px;
+  font-size: 22px;
   color: #222;
   max-width: 900px;
   margin: 0 auto 36px auto;
@@ -851,10 +851,23 @@ footer {
 
 @media (max-width: 600px) {
   .team-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    justify-items: center;
   }
-  .team-card.employees {
-    grid-template-columns: 1fr 1fr;
+  .team-card.employees .team-member {
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .team-card.employees .team-photo-bg {
+    width: 100%;
+    max-width: 140px;
+    min-width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    box-sizing: border-box;
   }
   .team-member {
     text-align: center;
@@ -1107,4 +1120,17 @@ body[data-aos-disabled="true"] [data-aos] {
   .mobile-hero-break {
     display: inline;
   }
+}
+
+@media (min-width: 901px) {
+  .team-card.employees .team-member:first-child {
+    grid-column: 2 / 3;
+  }
+}
+
+.mini-break {
+  display: block;
+  height: 0.3em;
+  width: 100%;
+  content: "";
 } 
