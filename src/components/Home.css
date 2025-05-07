@@ -1038,10 +1038,10 @@ footer {
 
 .team-card.employees {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   gap: 36px;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto 36px auto;
 }
 
 .team-subtitle {
@@ -1091,11 +1091,7 @@ body[data-aos-disabled="true"] [data-aos] {
   }
 }
 
-@media (min-width: 901px) {
-  .team-card.employees .team-member:first-child {
-    grid-column: 2 / 3;
-  }
-}
+
 
 .mini-break {
   display: block;
