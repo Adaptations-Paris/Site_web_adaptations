@@ -1119,4 +1119,24 @@ body[data-aos-disabled="true"] [data-aos] {
   height: 0.3em;
   width: 100%;
   content: "";
+}
+
+@media (max-width: 900px) {
+  .header-contact-btn {
+    display: none !important;
+  }
+  header {
+    padding: 8px 8px;
+  }
+  .logo {
+    height: 40px;
+  }
+  .logo img {
+    height: 40px;
+    max-width: 140px;
+  }
+  .menu-toggle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 } 
