@@ -126,7 +126,7 @@ const Home = () => {
             <div className="team-photo-bg">
               <img src="/images/theo.png" alt="Théo Cleret" />
             </div>
-            <h3>Théo Cleret</h3>
+            <h3>Théo<span className="mobile-break"><br /></span>Cleret</h3>
             <span className="team-role">Co-founder</span>
             <p>Ecole Polytechnique and University of Cambridge (UK) graduate,<br /> with 4+ years experience in decarbonization and adaptation strategies<br /> for industrials and investors. Ex- BCG Climate</p>
             <a href="https://www.linkedin.com/in/th%C3%A9o-cleret-776940176/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
@@ -135,7 +135,7 @@ const Home = () => {
             <div className="team-photo-bg">
               <img src="/images/loraine.png" alt="Loraine Coste" />
             </div>
-            <h3>Loraine Coste</h3>
+            <h3>Loraine<span className="mobile-break"><br /></span>Coste</h3>
             <span className="team-role">Co-founder</span>
             <p>Ecole Polytechnique and UCL (UK) data scientist, with 4+ years<br />experience in environmental transition modelisation for industrials<br />and investors. Ex- E-Cube data science department</p>
             <a href="https://www.linkedin.com/in/lorainecoste2005/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
@@ -144,7 +144,7 @@ const Home = () => {
             <div className="team-photo-bg">
               <img src="/images/maud.png" alt="Maud Mielvaque" />
             </div>
-            <h3>Maud Mielvaque</h3>
+            <h3>Maud<span className="mobile-break"><br /></span>Mielvaque</h3>
             <span className="team-role">Co-founder</span>
             <p>20+ years experience in helping companies' strategic transformation<br /> on digital & environmental challenges. Ex- Google ExCo,<br />  Possible Future CEO & WDNR co-founder</p>
             <a href="https://www.linkedin.com/in/maudmielvaque/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
@@ -153,23 +153,21 @@ const Home = () => {
             <div className="team-photo-bg">
               <img src="/images/maximilien.png" alt="Maximilien Rouer" />
             </div>
-            <h3>Maximilien Rouer</h3>
+            <h3>Maximilien<span className="mobile-break"><br /></span>Rouer</h3>
             <span className="team-role">Co-founder</span>
             <p>25+ years expertise in helping companies adapt to environmental<br /> resiliency challenges. Ex- BeCitizen co-founder, Terrena<br /> ExCo and Axa Climate Regeneration Strategy Director</p>
             <a href="https://www.linkedin.com/in/maximilien-rouer/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
         </div>
         <div className="team-card employees">
-          <div></div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
               <img src="/images/louise.png" alt="Louise Eon" />
             </div>
-            <h3 className="team-name-center">Louise Eon</h3>
+            <h3 className="team-name-center">Louise<span className="mobile-break"><br /></span>Eon</h3>
             <span className="team-role team-role-center">First employee and physical risks expert</span>
             <p>Specialized in physical risks impact modelisation. Ex-founder Resilient</p>
           </div>
-          <div></div>
         </div>
       </section>
 
