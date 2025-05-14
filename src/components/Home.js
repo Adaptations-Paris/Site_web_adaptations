@@ -151,8 +151,8 @@ const Home = () => {
             </div>
             <h3>Maud <span className="mobile-break"><br /></span>Mielvaque</h3>
             <span className="team-role">Co-founder</span>
-            <p>20+ years experience in helping companies' strategic transformation on digital & environmental challenges. Ex- Google ExCo, Possible Future CEO & WDNR co-founder</p>
-            <a href="https://www.linkedin.com/in/maudmielvaque/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
+            <p>20+ years experience in helping companies' strategic transformation on digital & environmental challenges. Ex- P&G, Google & YouTube, WDNR co-founder & CEO, Climate House co-founder</p>
+            <a href="https://www.linkedin.com/in/maudm/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
@@ -160,7 +160,7 @@ const Home = () => {
             </div>
             <h3>Maximilien <span className="mobile-break"><br /></span>Rouer</h3>
             <span className="team-role">Co-founder</span>
-            <p>25+ years expertise in helping companies adapt to environmental resiliency challenges. Ex- BeCitizen co-founder, Terrena ExCo and Axa Climate Regeneration Strategy Director</p>
+            <p>25+ years expertise in helping companies adapt to environmental resiliency challenges. Ex- BeCitizen co-founder, Terrena ExCo and Axa Climate Regeneration Strategy Expert</p>
             <a href="https://www.linkedin.com/in/maximilien-rouer/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
         </div>
