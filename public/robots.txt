@@ -1,3 +1,7 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://www.adaptations.eu/sitemap.xml
+Sitemap: https://adaptations.vercel.app/sitemap.xml
+Sitemap: https://www.positiveadaptation.eu/sitemap.xml
