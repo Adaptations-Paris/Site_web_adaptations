@@ -13,8 +13,8 @@ const ResourceContent = ({ activeTab }) => {
             <h2>Infrastructures resilience</h2>
             <div className="resource-block">
               <strong>Strategic support</strong>
-              <p>Vulnerability and resiliency diagnosis of your sites - with databoard to help you monitor, model and act</p>
-              <p>Adaptation & resilience strategy - including nature-based solutions</p>
+              <p>Environmental risks modeling with potential financial losses assessment - risk = exposure x criticity x vulnerability</p>
+              <p>Resilient and environmentally positive adaptation strategies definition - with ROIs calculation</p>
             </div>
             <div className="resource-block">
               <strong>A digital tool to scale up</strong>
@@ -29,11 +29,11 @@ const ResourceContent = ({ activeTab }) => {
     const resourcesContent = (
       <div className="resource-card">
         <div className="resource-image">
-          <img src="/images/warehouse.png" alt="Warehouse" />
+          <img src="/images/resources.png" alt="Resources" />
         </div>
         <div className="resource-text">
           <div className="resource-content">
-            <h2>Resources & Supply resilience</h2>
+            <h2>Supply & Resources resilience</h2>
             <div className="resource-block">
               <strong>Strategic support</strong>
               <p>Supply chain vulnerability diagnosis</p>
@@ -50,22 +50,18 @@ const ResourceContent = ({ activeTab }) => {
       </div>
     );
 
-    const financeContent = (
+    const agricultureContent = (
       <div className="resource-card">
         <div className="resource-image">
-          <img src="/images/finance.png" alt="Finance" />
+          <img src="/images/agri.png" alt="Agriculture" />
         </div>
         <div className="resource-text">
           <div className="resource-content">  
-            <h2>Finance & Strategy resilience</h2>
-            <div className="resource-block">
-              <strong>Strategic support</strong>
-              <p>Joint modeling of physical & transition risks on different climate scenarios - to address mitigation & adaptation simultaneously </p>
-              <p>Modeling of business and financial impacts, comparing the cost of inaction with the cost of prevention in different scenarios </p>
-            </div>
+            <h2>Agricultural production resilience</h2>
             <div className="resource-block">
               <strong>A digital tool to scale up</strong>
-              <p>Implementation of a strategic tool for 360° monitoring of your financial & strategic resilience and your positioning vs. peers regarding threats and opportunities caused by physical and transition risks </p>
+              <p>Creation of a resiliency simulator for the whole farming operation, analyzing local production and climate data at the plot level with unprecedented granularity</p>
+              <p>Resiliency assessment of entire farm and each plot in future climate scenarios to model future farm yields.</p>
             </div>
           </div>
           <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
@@ -103,7 +99,7 @@ const ResourceContent = ({ activeTab }) => {
 
     const contentMap = {
       'infrastructures': infrastructuresContent,
-      'finance': financeContent,
+      'agriculture': agricultureContent,
       'resources': resourcesContent,
       'business': businessContent
     };

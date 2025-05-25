@@ -61,9 +61,7 @@ const Home = () => {
         </h1>
         <p>
           <strong>
-            A "one stop <span className="highlight">shop"</span> combining AI-based digital tools
-            and strategic support, <br />
-            100% focused on positive & resilient adaptation, at scale.
+            A comprehensive "one stop <span className="highlight">shop"</span> integrating AI-driven tools and strategic <br /> support, for positive and resilient adaptation, at scale.
           </strong>
         </p>
         <a href="#newsletter" className="hero-btn">CONTACT US →</a>
@@ -84,13 +82,13 @@ const Home = () => {
           className={`tab ${activeTab === 'resources' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('resources')}
         >
-          Resources & Supply
+          Supply & Resources
         </div>
         <div 
-          className={`tab ${activeTab === 'finance' ? 'tab-active' : ''}`}
-          onClick={() => handleTabClick('finance')}
+          className={`tab ${activeTab === 'agriculture' ? 'tab-active' : ''}`}
+          onClick={() => handleTabClick('agriculture')}
         >
-          Finance & Strategy
+          Agricultural production
         </div>
         <div 
           className={`tab ${activeTab === 'business' ? 'tab-active' : ''}`}
@@ -114,7 +112,7 @@ const Home = () => {
         <p>
           We live in an unstable, burning, and polluted world, with limited resources — a world that is deteriorating our living conditions
           and increasing the vulnerability of businesses.<span className="mini-break"></span>
-          Our mission is to facilitate and accelerate the strategic transformation of companies, strengthening their resilience to ensure their long-term sustainability as positive contributors to the planet.
+          We help model and implement adaptation strategies that foster long-term resilience for businesses and have a positive impact on the environment, notably by employing a regenerative approach.
         </p>
         <a href="#newsletter" className="mission-btn">DISCOVER US <span className="arrow">→</span></a>
       </section>
@@ -171,7 +169,7 @@ const Home = () => {
             </div>
             <h3 className="team-name-center">Louise <span className="mobile-break"><br /></span>Eon</h3>
             <span className="team-role team-role-center">First employee and physical risks expert</span>
-            <p>Specialized in physical risks impact modelisation. Ex-founder Resilient</p>
+            <p>Specialized in physical risks impact modelisation and financial quantification. Ex-founder Resilient</p>
           </div>
           <div className="team-member team-member-empty"></div>
         </div>
