@@ -45,7 +45,6 @@ const Home = () => {
             <li><a href="#solutions" onClick={() => setIsMenuOpen(false)}>Solutions</a></li>
             <li><a href="#mission" onClick={() => setIsMenuOpen(false)}>Mission</a></li>
             <li><a href="#team" onClick={() => setIsMenuOpen(false)}>Team</a></li>
-            <li><a href="#partners" onClick={() => setIsMenuOpen(false)}>Partners</a></li>
             <li><a href="#newsletter" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
           </ul>
         </nav>
@@ -79,16 +78,22 @@ const Home = () => {
           Infrastructures
         </div>
         <div 
-          className={`tab ${activeTab === 'resources' ? 'tab-active' : ''}`}
-          onClick={() => handleTabClick('resources')}
+          className={`tab ${activeTab === 'realestate' ? 'tab-active' : ''}`}
+          onClick={() => handleTabClick('realestate')}
         >
-          Supply & Resources
+          Real Estate
         </div>
         <div 
           className={`tab ${activeTab === 'agriculture' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('agriculture')}
         >
           Agricultural production
+        </div>
+        <div 
+          className={`tab ${activeTab === 'resources' ? 'tab-active' : ''}`}
+          onClick={() => handleTabClick('resources')}
+        >
+          Supply & Resources
         </div>
         <div 
           className={`tab ${activeTab === 'business' ? 'tab-active' : ''}`}
@@ -158,7 +163,7 @@ const Home = () => {
             </div>
             <h3>Maximilien <span className="mobile-break"><br /></span>Rouer</h3>
             <span className="team-role">Co-founder</span>
-            <p>25+ years expertise in helping companies adapt to environmental resiliency challenges. Ex- BeCitizen co-founder, Terrena ExCo and Axa Climate Regeneration Strategy Expert</p>
+            <p>25+ years experience in helping companies adapt to environmental resiliency challenges. Ex- BeCitizen co-founder, Terrena ExCo and Axa Climate Regeneration Strategy Expert</p>
             <a href="https://www.linkedin.com/in/maximilien-rouer/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
           </div>
         </div>
@@ -168,14 +173,19 @@ const Home = () => {
               <img src="/images/louise.png" alt="Louise Eon" />
             </div>
             <h3 className="team-name-center">Louise <span className="mobile-break"><br /></span>Eon</h3>
-            <span className="team-role team-role-center">First employee and physical risks expert</span>
+            <span className="team-role team-role-center">Resilience analyst</span>
             <p>Specialized in physical risks impact modelisation and financial quantification. Ex-founder Resilient</p>
           </div>
-          <div className="team-member team-member-empty"></div>
+          <div className="team-member" data-aos="zoom-in">
+            <div className="team-badge-network">
+              And a broad network of trusted consultants, data scientists, and sector-specific experts partnering with us
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Partners Section */}
+      {/*
       <section className="partners-section" data-aos="fade-up">
         <div id="partners" className="section-anchor"></div>
         <div className="container">
@@ -211,6 +221,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      */}
 
       <div className="section-separator"></div>
 

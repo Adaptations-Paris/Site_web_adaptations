@@ -215,8 +215,14 @@ nav a:hover {
 }
 
 .resource-text {
-  flex: 1;
-  padding: 40px;
+  flex: 1 1 55%;
+  padding: 38px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #FFFFFF;
+  position: relative;
+  height: 100%;
 }
 
 .resource-text h2 {
@@ -563,7 +569,7 @@ footer {
 
 .tab {
   padding: 24px 32px 18px 32px;
-  font-size: 18px;
+  font-size: 16px;
   color: #888;
   font-weight: 500;
   cursor: pointer;
@@ -636,17 +642,6 @@ footer {
   z-index: 2;
 }
 
-.resource-text {
-  flex: 1 1 55%;
-  padding: 38px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: #FFFFFF;
-  position: relative;
-  height: 100%;
-}
-
 .resource-content {
   flex: 1 1 auto;
   padding-bottom: 20px;
@@ -698,7 +693,7 @@ footer {
   gap: 8px;
   transition: all 0.3s ease;
   position: static;
-  margin-top: auto;
+  margin-top: 80px;
 }
 
 @media (max-width: 900px) {
@@ -904,9 +899,22 @@ footer {
   }
 }
 
-.team-card .team-member:last-child {
+.team-card.employees .team-member:last-child {
   margin-left: auto;
   margin-right: auto;
+  /* background: #9DACA9; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 40px; */
+}
+
+.team-card.employees .team-member:last-child h3 {
+  color: #ABFF00;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0;
+  text-align: center;
 }
 
 .partners-section {
@@ -1139,4 +1147,36 @@ body[data-aos-disabled="true"] [data-aos] {
     top: 50%;
     transform: translateY(-50%);
   }
+}
+
+.team-card.employees .team-member:last-child {
+  margin-left: auto;
+  margin-right: auto;
+  /* background: #9DACA9; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 40px; */
+}
+
+.team-card.employees .team-member:last-child h3 {
+  color: #ABFF00;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0;
+  text-align: center;
+}
+
+.team-badge-network {
+  background: #ABFF00;
+  color: #111;
+  border-radius: 32px;
+  padding: 22px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  max-width: 90%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 } 

@@ -17,7 +17,7 @@ const ResourceContent = ({ activeTab }) => {
               <p>Resilient and environmentally positive adaptation strategies definition - with ROIs calculation</p>
             </div>
             <div className="resource-block">
-              <strong>A digital tool to scale up</strong>
+              <strong> Digital tools to scale up</strong>
               <p>Accelerated deployment of your adaptation & resilience strategies, site by site: creation of a numerical guide</p>
             </div>
           </div>
@@ -40,7 +40,7 @@ const ResourceContent = ({ activeTab }) => {
               <p>Climate vulnerability analysis for Tier 1 suppliers</p>
             </div>
             <div className="resource-block">
-              <strong>A digital tool to scale up</strong>
+              <strong> Digital tools to scale up</strong>
               <p>Creation of a digital twin of your supply chain (rank 1 suppliers) to apply resiliency stress tests</p>
               <p>Real-time control tower module - requiring supply chain digital twin</p>
             </div>
@@ -59,7 +59,7 @@ const ResourceContent = ({ activeTab }) => {
           <div className="resource-content">  
             <h2>Agricultural production resilience</h2>
             <div className="resource-block">
-              <strong>A digital tool to scale up</strong>
+              <strong> Digital tools to scale up</strong>
               <p>Creation of a resiliency simulator for the whole farming operation, analyzing local production and climate data at the plot level with unprecedented granularity</p>
               <p>Resiliency assessment of entire farm and each plot in future climate scenarios to model future farm yields.</p>
             </div>
@@ -97,8 +97,33 @@ const ResourceContent = ({ activeTab }) => {
       </div>
     );
 
+    const realEstateContent = (
+      <div className="resource-card">
+        <div className="resource-image">
+          <img src="/images/real-estate.png" alt="Real Estate" />
+        </div>
+        <div className="resource-text">
+          <div className="resource-content">
+            <h2>Real Estate resilience</h2>
+            <div className="resource-block">
+              <strong>Strategic support</strong>
+              <p>Climate risk assessment and adaptation strategies for real estate assets</p>
+              <p>Detailed vulnerability assessment downscaled at property level for value/insurability protection and prevention</p>
+            </div>
+            <div className="resource-block">
+              <strong>Digital tools to scale up</strong>
+              <p>House-level detailed autodiagnostic for "RGA" risk assessment and prevention</p>
+              <p>Property-level risk mapping for asset/portfolio due-dilligences, and tailored vulnerability assessment for long-term insurability</p>
+            </div>
+          </div>
+          <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
+        </div>
+      </div>
+    );
+
     const contentMap = {
       'infrastructures': infrastructuresContent,
+      'realestate': realEstateContent,
       'agriculture': agricultureContent,
       'resources': resourcesContent,
       'business': businessContent
