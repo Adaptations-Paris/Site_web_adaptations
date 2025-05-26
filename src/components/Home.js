@@ -4,10 +4,12 @@ import ResourceContent from './ResourceContent';
 import ContactForm from './ContactForm';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState('infrastructures');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -41,29 +43,39 @@ const Home = () => {
         </div>
         <nav className={isMenuOpen ? 'active' : ''}>
           <ul>
-            <li><a href="#" onClick={() => setIsMenuOpen(false)}>About</a></li>
-            <li><a href="#solutions" onClick={() => setIsMenuOpen(false)}>Solutions</a></li>
-            <li><a href="#mission" onClick={() => setIsMenuOpen(false)}>Mission</a></li>
-            <li><a href="#team" onClick={() => setIsMenuOpen(false)}>Team</a></li>
-            <li><a href="#newsletter" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+            <li><a href="#" onClick={() => setIsMenuOpen(false)}>{t('about')}</a></li>
+            <li><a href="#solutions" onClick={() => setIsMenuOpen(false)}>{t('solutions')}</a></li>
+            <li><a href="#mission" onClick={() => setIsMenuOpen(false)}>{t('mission')}</a></li>
+            <li><a href="#team" onClick={() => setIsMenuOpen(false)}>{t('team')}</a></li>
+            <li><a href="#newsletter" onClick={() => setIsMenuOpen(false)}>{t('contact')}</a></li>
           </ul>
         </nav>
-        <a href="#newsletter" className="header-contact-btn">Contact</a>
+        {/* <a href="#newsletter" className="header-contact-btn">{t('contact')}</a> */}
+        <div style={{marginLeft: 16, display: 'flex', gap: 8}}>
+          <button
+            onClick={() => i18n.changeLanguage('fr')}
+            className={`lang-btn${i18n.language === 'fr' ? ' active' : ''}`}
+          >FR</button>
+          <button
+            onClick={() => i18n.changeLanguage('en')}
+            className={`lang-btn${i18n.language === 'en' ? ' active' : ''}`}
+          >EN</button>
+        </div>
       </header>
 
       {/* Hero Section */}
       <section id="hero" className="hero" data-aos="fade-up">
         <h1>
-          Resilient. <span className="mobile-hero-break"><br /></span>
-          Positive. <br />
-          At scale.
+          {t('resilient')} <span className="mobile-hero-break"><br /></span>
+          {t('positive')} <br />
+          {t('at_scale')}
         </h1>
         <p>
-          <strong>
-            A comprehensive "one stop <span className="highlight">shop"</span> integrating AI-driven tools and strategic <br /> support, for positive and resilient adaptation, at scale.
+          <strong style={{ whiteSpace: 'pre-line' }}>
+            {t('hero_subtitle')}
           </strong>
         </p>
-        <a href="#newsletter" className="hero-btn">CONTACT US →</a>
+        <a href="#newsletter" className="hero-btn">{t('contact_us')}</a>
       </section>
 
       {/* Solutions Section */}
@@ -75,31 +87,31 @@ const Home = () => {
           className={`tab ${activeTab === 'infrastructures' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('infrastructures')}
         >
-          Infrastructures
+          {t('infrastructures')}
         </div>
         <div 
           className={`tab ${activeTab === 'realestate' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('realestate')}
         >
-          Real Estate
+          {t('real_estate')}
         </div>
         <div 
           className={`tab ${activeTab === 'agriculture' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('agriculture')}
         >
-          Agricultural production
+          {t('agricultural_production')}
         </div>
         <div 
           className={`tab ${activeTab === 'resources' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('resources')}
         >
-          Supply & Resources
+          {t('supply_resources')}
         </div>
         <div 
           className={`tab ${activeTab === 'business' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('business')}
         >
-          Offers & Business Model
+          {t('offers_business_model')}
         </div>
       </div>
 
@@ -111,22 +123,20 @@ const Home = () => {
       {/* Mission Section */}
       <section id="mission" className="mission" data-aos="fade-up">
         <div className="mission-title">
-          <span>Mission</span>
+          <span>{t('mission_title')}</span>
           <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="mission-logo" />
         </div>
-        <p>
-          We live in an unstable, burning, and polluted world, with limited resources — a world that is deteriorating our living conditions
-          and increasing the vulnerability of businesses.<span className="mini-break"></span>
-          We help model and implement adaptation strategies that foster long-term resilience for businesses and have a positive impact on the environment, notably by employing a regenerative approach.
+        <p style={{ whiteSpace: 'pre-line' }}>
+          {t('mission_text')}
         </p>
-        <a href="#newsletter" className="mission-btn">DISCOVER US <span className="arrow">→</span></a>
+        <a href="#newsletter" className="mission-btn">{t('discover_us')} <span className="arrow">→</span></a>
       </section>
 
       {/* Team Section */}
       <section className="team-section" data-aos="fade-up">
         <div id="team" className="section-anchor"></div>
         <div className="team-title">
-          <span>Team</span>
+          <span>{t('team_title')}</span>
           <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="team-logo" />
         </div>
         <div className="team-card cofounders">
@@ -135,36 +145,36 @@ const Home = () => {
               <img src="/images/theo.png" alt="Théo Cleret" />
             </div>
             <h3>Théo <span className="mobile-break"><br /></span>Cleret</h3>
-            <span className="team-role">Co-founder</span>
-            <p>Ecole Polytechnique and University of Cambridge (UK) graduate, with 4+ years experience in decarbonization and adaptation strategies for industrials and investors. Ex- BCG Climate</p>
-            <a href="https://www.linkedin.com/in/th%C3%A9o-cleret-776940176/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
+            <span className="team-role">{t('cofounder_m')}</span>
+            <p>{t('theo_bio')}</p>
+            <a href="https://www.linkedin.com/in/th%C3%A9o-cleret-776940176/" target="_blank" rel="noopener noreferrer" className="linkedin-link">{t('linkedin')}</a>
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
               <img src="/images/loraine.png" alt="Loraine Coste" />
             </div>
             <h3>Loraine <span className="mobile-break"><br /></span>Coste</h3>
-            <span className="team-role">Co-founder</span>
-            <p>Ecole Polytechnique and UCL (UK) data scientist, with 4+ years experience in environmental transition modelisation for industrials and investors. Ex- E-Cube data science department</p>
-            <a href="https://www.linkedin.com/in/lorainecoste2005/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
+            <span className="team-role">{t('cofounder_f')}</span>
+            <p>{t('loraine_bio')}</p>
+            <a href="https://www.linkedin.com/in/lorainecoste2005/" target="_blank" rel="noopener noreferrer" className="linkedin-link">{t('linkedin')}</a>
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
               <img src="/images/maud.png" alt="Maud Mielvaque" />
             </div>
             <h3>Maud <span className="mobile-break"><br /></span>Mielvaque</h3>
-            <span className="team-role">Co-founder</span>
-            <p>20+ years experience in helping companies' strategic transformation on digital & environmental challenges. Ex- P&G, Google & YouTube, WDNR co-founder & CEO, Climate House co-founder</p>
-            <a href="https://www.linkedin.com/in/maudm/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
+            <span className="team-role">{t('cofounder_f')}</span>
+            <p>{t('maud_bio')}</p>
+            <a href="https://www.linkedin.com/in/maudm/" target="_blank" rel="noopener noreferrer" className="linkedin-link">{t('linkedin')}</a>
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-photo-bg">
               <img src="/images/maximilien.png" alt="Maximilien Rouer" />
             </div>
             <h3>Maximilien <span className="mobile-break"><br /></span>Rouer</h3>
-            <span className="team-role">Co-founder</span>
-            <p>25+ years experience in helping companies adapt to environmental resiliency challenges. Ex- BeCitizen co-founder, Terrena ExCo and Axa Climate Regeneration Strategy Expert</p>
-            <a href="https://www.linkedin.com/in/maximilien-rouer/" target="_blank" rel="noopener noreferrer" className="linkedin-link">LinkedIn</a>
+            <span className="team-role">{t('cofounder_m')}</span>
+            <p>{t('maximilien_bio')}</p>
+            <a href="https://www.linkedin.com/in/maximilien-rouer/" target="_blank" rel="noopener noreferrer" className="linkedin-link">{t('linkedin')}</a>
           </div>
         </div>
         <div className="team-card employees">
@@ -173,12 +183,12 @@ const Home = () => {
               <img src="/images/louise.png" alt="Louise Eon" />
             </div>
             <h3 className="team-name-center">Louise <span className="mobile-break"><br /></span>Eon</h3>
-            <span className="team-role team-role-center">Resilience analyst</span>
-            <p>Specialized in physical risks impact modelisation and financial quantification. Ex-founder Resilient</p>
+            <span className="team-role team-role-center">{t('resilience_analyst')}</span>
+            <p>{t('louise_bio')}</p>
           </div>
           <div className="team-member" data-aos="zoom-in">
             <div className="team-badge-network">
-              And a broad network of trusted consultants, data scientists, and sector-specific experts partnering with us
+              {t('broad_network')}
             </div>
           </div>
         </div>
@@ -228,10 +238,10 @@ const Home = () => {
       {/* Newsletter Section */}
       <section id="newsletter" className="newsletter" data-aos="fade-up">
         <div className="newsletter-title">
-          <span>Contact</span>
+          <span>{t('newsletter_title')}</span>
           <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="newsletter-logo" />
         </div>
-        <p className="newsletter-desc"><strong>Contact us to learn more about our solutions.</strong></p>
+        <p className="newsletter-desc"><strong>{t('newsletter_desc')}</strong></p>
         <ContactForm />
       </section>
 
@@ -242,13 +252,13 @@ const Home = () => {
             <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" />
           </div>
           <div className="footer-copyright">
-            © 2025 Adaptations. All rights reserved. <br />
-            Pioneering climate resilience solutions.
+            {t('footer_copyright')} <br />
+            {t('footer_slogan')}
           </div>
         </div>
-        <a href="https://www.linkedin.com/company/adaptations-agency" target="_blank" rel="noopener noreferrer" className="footer-linkedin">
+        <a href="https://www.linkedin.com/company/adaptations-eu/" target="_blank" rel="noopener noreferrer" className="footer-linkedin">
           <img src="/icons/Linkedin.png" alt="LinkedIn" className="linkedin-icon" />
-          LinkedIn
+          {t('linkedin')}
         </a>
       </footer>
     </div>

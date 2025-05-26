@@ -1,7 +1,9 @@
 import React from 'react';
 import './Home.css';
+import { useTranslation } from 'react-i18next';
 
 const ResourceContent = ({ activeTab }) => {
+  const { t } = useTranslation();
   try {
     const infrastructuresContent = (
       <div className="resource-card">
@@ -10,18 +12,18 @@ const ResourceContent = ({ activeTab }) => {
         </div>
         <div className="resource-text">
           <div className="resource-content">
-            <h2>Infrastructures resilience</h2>
+            <h2>{t('infrastructures_resilience')}</h2>
             <div className="resource-block">
-              <strong>Strategic support</strong>
-              <p>Environmental risks modeling with potential financial losses assessment - risk = exposure x criticity x vulnerability</p>
-              <p>Resilient and environmentally positive adaptation strategies definition - with ROIs calculation</p>
+              <strong>{t('strategic_support')}</strong>
+              <p>{t('infra_support_1')}</p>
+              <p>{t('infra_support_2')}</p>
             </div>
             <div className="resource-block">
-              <strong> Digital tools to scale up</strong>
-              <p>Accelerated deployment of your adaptation & resilience strategies, site by site: creation of a numerical guide</p>
+              <strong>{t('digital_tools')}</strong>
+              <p>{t('infra_tools_1')}</p>
             </div>
           </div>
-          <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
+          <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
         </div>
       </div>
     );
@@ -33,19 +35,19 @@ const ResourceContent = ({ activeTab }) => {
         </div>
         <div className="resource-text">
           <div className="resource-content">
-            <h2>Supply & Resources resilience</h2>
+            <h2>{t('resources_resilience')}</h2>
             <div className="resource-block">
-              <strong>Strategic support</strong>
-              <p>Supply chain vulnerability diagnosis</p>
-              <p>Climate vulnerability analysis for Tier 1 suppliers</p>
+              <strong>{t('strategic_support')}</strong>
+              <p>{t('resources_support_1')}</p>
+              <p>{t('resources_support_2')}</p>
             </div>
             <div className="resource-block">
-              <strong> Digital tools to scale up</strong>
-              <p>Creation of a digital twin of your supply chain (rank 1 suppliers) to apply resiliency stress tests</p>
-              <p>Real-time control tower module - requiring supply chain digital twin</p>
+              <strong>{t('digital_tools')}</strong>
+              <p>{t('resources_tools_1')}</p>
+              <p>{t('resources_tools_2')}</p>
             </div>
           </div>
-          <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
+          <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
         </div>
       </div>
     );
@@ -57,14 +59,14 @@ const ResourceContent = ({ activeTab }) => {
         </div>
         <div className="resource-text">
           <div className="resource-content">  
-            <h2>Agricultural production resilience</h2>
+            <h2>{t('agriculture_resilience')}</h2>
             <div className="resource-block">
-              <strong> Digital tools to scale up</strong>
-              <p>Creation of a resiliency simulator for the whole farming operation, analyzing local production and climate data at the plot level with unprecedented granularity</p>
-              <p>Resiliency assessment of entire farm and each plot in future climate scenarios to model future farm yields.</p>
+              <strong>{t('digital_tools')}</strong>
+              <p>{t('agri_tools_1')}</p>
+              <p>{t('agri_tools_2')}</p>
             </div>
           </div>
-          <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
+          <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
         </div>
       </div>
     );
@@ -76,9 +78,9 @@ const ResourceContent = ({ activeTab }) => {
         </div>
         <div className="resource-text">
           <div className="resource-content">
-            <h2>Offers & Business Model resilience</h2>
+            <h2>{t('business_resilience')}</h2>
             <div className="resource-block">
-              <p>Reinventing supply and business models to meet environmental challenges and new market expectations</p>
+              <p>{t('business_text')}</p>
             </div>
             <img
               src="/images/O&BM.png"
@@ -92,7 +94,7 @@ const ResourceContent = ({ activeTab }) => {
               }}
             />
           </div>
-          <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
+          <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
         </div>
       </div>
     );
@@ -104,19 +106,19 @@ const ResourceContent = ({ activeTab }) => {
         </div>
         <div className="resource-text">
           <div className="resource-content">
-            <h2>Real Estate resilience</h2>
+            <h2>{t('realestate_resilience')}</h2>
             <div className="resource-block">
-              <strong>Strategic support</strong>
-              <p>Climate risk assessment and adaptation strategies for real estate assets</p>
-              <p>Detailed vulnerability assessment downscaled at property level for value/insurability protection and prevention</p>
+              <strong>{t('strategic_support')}</strong>
+              <p>{t('realestate_support_1')}</p>
+              <p>{t('realestate_support_2')}</p>
             </div>
             <div className="resource-block">
-              <strong>Digital tools to scale up</strong>
-              <p>House-level detailed autodiagnostic for "RGA" risk assessment and prevention</p>
-              <p>Property-level risk mapping for asset/portfolio due-dilligences, and tailored vulnerability assessment for long-term insurability</p>
+              <strong>{t('digital_tools')}</strong>
+              <p>{t('realestate_tools_1')}</p>
+              <p>{t('realestate_tools_2')}</p>
             </div>
           </div>
-          <a href="#newsletter" className="resource-btn">LET'S TALK <span className="arrow">→</span></a>
+          <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
         </div>
       </div>
     );
