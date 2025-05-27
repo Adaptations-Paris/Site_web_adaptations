@@ -126,9 +126,9 @@ const Home = () => {
           <span>{t('mission_title')}</span>
           <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="mission-logo" />
         </div>
-        <p style={{ whiteSpace: 'pre-line' }}>
-          {t('mission_text')}
-        </p>
+        <p style={{ whiteSpace: 'pre-line' }}
+           dangerouslySetInnerHTML={{ __html: t('mission_text') }}
+        />
         <a href="#newsletter" className="mission-btn">{t('discover_us')} <span className="arrow">→</span></a>
       </section>
 
