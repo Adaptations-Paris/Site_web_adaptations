@@ -608,7 +608,7 @@ footer {
   border-radius: 12px;
   overflow: hidden;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1500px;
   margin: 0 auto;
   min-height: 560px;
   height: 560px;
@@ -687,13 +687,13 @@ footer {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  align-self: flex-start;
+  width: fit-content;
   display: flex;
   align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
   position: static;
-  margin-top: 80px;
+  margin-top: 48px;
 }
 
 @media (max-width: 900px) {
