@@ -216,7 +216,7 @@ nav a:hover {
 
 .resource-text {
   flex: 1 1 55%;
-  padding: 38px 40px;
+  padding: 30px 24px 30px 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -617,7 +617,7 @@ footer {
 .resource-image {
   flex: 1 1 45%;
   min-width: 320px;
-  max-width: 480px;
+  max-width: 380px;
   position: relative;
   overflow: hidden;
   height: 100%;

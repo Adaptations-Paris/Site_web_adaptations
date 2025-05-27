@@ -43,7 +43,7 @@
   "resources_resilience": "Résilience de la chaîne d'approvisionnement",
   "resources_support_1": "Diagnostic de vulnérabilité de la chaîne d'approvisionnement",
   "resources_support_2": "Analyse de vulnérabilité climatique pour les fournisseurs de rang 1",
-  "resources_tools_1": "Création d'un jumeau numérique de votre chaîne d'approvisionnement (fournisseurs rang 1) pour appliquer des stress tests de résilience",
+  "resources_tools_1": "Création d'un jumeau numérique de votre chaîne d'approvisionnement (fournisseurs de rang 1) pour appliquer des stress tests de résilience",
   "resources_tools_2": "Module tour de contrôle en temps réel – nécessite le jumeau numérique de la chaîne d'approvisionnement",
   "agriculture_resilience": "Résilience des productions agricoles",
   "agri_tools_1": "Création d'un simulateur de résilience pour toute l'exploitation, analyse des données locales de production et de climat de chaque parcelle à une granularité inédite",
