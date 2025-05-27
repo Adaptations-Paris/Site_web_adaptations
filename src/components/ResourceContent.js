@@ -22,8 +22,8 @@ const ResourceContent = ({ activeTab }) => {
               <strong>{t('digital_tools')}</strong>
               <p>{t('infra_tools_1')}</p>
             </div>
+            <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
           </div>
-          <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
         </div>
       </div>
     );
@@ -46,8 +46,8 @@ const ResourceContent = ({ activeTab }) => {
               <p>{t('resources_tools_1')}</p>
               <p>{t('resources_tools_2')}</p>
             </div>
+            <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
           </div>
-          <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
         </div>
       </div>
     );
@@ -65,8 +65,8 @@ const ResourceContent = ({ activeTab }) => {
               <p>{t('agri_tools_1')}</p>
               <p>{t('agri_tools_2')}</p>
             </div>
+            <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
           </div>
-          <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
         </div>
       </div>
     );
@@ -93,8 +93,8 @@ const ResourceContent = ({ activeTab }) => {
                 borderRadius: '10px'
               }}
             />
+            <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
           </div>
-          <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
         </div>
       </div>
     );
@@ -110,15 +110,14 @@ const ResourceContent = ({ activeTab }) => {
             <div className="resource-block">
               <strong>{t('strategic_support')}</strong>
               <p>{t('realestate_support_1')}</p>
-              <p>{t('realestate_support_2')}</p>
             </div>
             <div className="resource-block">
               <strong>{t('digital_tools')}</strong>
               <p>{t('realestate_tools_1')}</p>
               <p>{t('realestate_tools_2')}</p>
             </div>
+            <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
           </div>
-          <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
         </div>
       </div>
     );
