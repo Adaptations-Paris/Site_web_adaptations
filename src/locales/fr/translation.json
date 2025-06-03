@@ -62,7 +62,7 @@
   "your_message": "Votre message",
   "send": "Envoyer",
   "sending": "Envoi en cours...",
-  "message_sent": "Message envoyé avec succès !",
+  "message_sent": "Message envoyé avec succès!",
   "error_occurred": "Une erreur est survenue. Veuillez réessayer.",
   "user_name_required": "Le prénom est requis",
   "user_lastname_required": "Le nom est requis",
