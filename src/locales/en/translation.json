@@ -30,7 +30,7 @@
   "resilience_analyst": "Resilience analyst",
   "louise_bio": "Specialized in physical risks impact modelisation and financial quantification. Ex-founder Resilient",
   "broad_network": "And a broad network of trusted consultants, data scientists, designers and sector-specific experts partnering with us",
-  "newsletter_title": "Contact",
+  "newsletter_title": "Newsletter",
   "newsletter_desc": "Contact us to learn more about our solutions.",
   "footer_copyright": "© 2025 Adaptations. All rights reserved.",
   "footer_slogan": "Climate resilience solutions.",
@@ -69,5 +69,6 @@
   "user_email_required": "Email is required",
   "invalid_email_format": "Invalid email format",
   "message_required": "Message is required",
-  "message_too_short": "Message must be at least 10 characters long"
+  "message_too_short": "Message must be at least 10 characters long",
+  "newsletter_title_menu": "Newsletter"
 } 

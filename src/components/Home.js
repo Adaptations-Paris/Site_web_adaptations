@@ -47,7 +47,8 @@ const Home = () => {
             <li><a href="#solutions" onClick={() => setIsMenuOpen(false)}>{t('solutions')}</a></li>
             <li><a href="#mission" onClick={() => setIsMenuOpen(false)}>{t('mission')}</a></li>
             <li><a href="#team" onClick={() => setIsMenuOpen(false)}>{t('team')}</a></li>
-            <li><a href="#newsletter" onClick={() => setIsMenuOpen(false)}>{t('contact')}</a></li>
+            <li><a href="#newsletter" onClick={() => setIsMenuOpen(false)}>{t('newsletter_title')}</a></li>
+            <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>{t('contact')}</a></li>
           </ul>
         </nav>
         {/* <a href="#newsletter" className="header-contact-btn">{t('contact')}</a> */}
@@ -194,54 +195,45 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Partners Section */}
-      {/*
-      <section className="partners-section" data-aos="fade-up">
-        <div id="partners" className="section-anchor"></div>
-        <div className="container">
-          <div className="partners-title">
-            <span>Partners</span>
-            <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="partners-logo" />
-          </div>
-          <div className="partners-grid">
-            <div className="partner-logo" data-aos="zoom-in">
-              <img src="/partenaires/Ceebios.png" alt="Ceebios" />
-            </div>
-            <div className="partner-logo" data-aos="zoom-in">
-              <img src="/partenaires/CNRS.png" alt="CNRS" />
-            </div>
-            <div className="partner-logo" data-aos="zoom-in">
-              <img src="/partenaires/IFS.png" alt="IFS" />
-            </div>
-            <div className="partner-logo" data-aos="zoom-in">
-              <img src="/partenaires/Lumia.png" alt="Lumia" />
-            </div>
-            <div className="partner-logo" data-aos="zoom-in">
-              <img src="/partenaires/MinesParis.png" alt="Mines Paris" />
-            </div>
-            <div className="partner-logo" data-aos="zoom-in">
-              <img src="/partenaires/Ouvert.png" alt="Ouvert" />
-            </div>
-            <div className="partner-logo" data-aos="zoom-in">
-              <img src="/partenaires/Pixelis.png" alt="Pixelis" />
-            </div>
-            <div className="partner-logo" data-aos="zoom-in">
-              <img src="/partenaires/Rejeneo.png" alt="Rejeneo" />
-            </div>
-          </div>
-        </div>
-      </section>
-      */}
-
-      <div className="section-separator"></div>
-
       {/* Newsletter Section */}
-      <section id="newsletter" className="newsletter" data-aos="fade-up">
+      <section id="newsletter" className="newsletter-section" data-aos="fade-up">
         <div className="newsletter-title">
           <span>{t('newsletter_title')}</span>
           <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="newsletter-logo" />
         </div>
         <p className="newsletter-desc"><strong>{t('newsletter_desc')}</strong></p>
+        <div className="tagembed-container">
+          <iframe 
+            src="https://widget.tagembed.com/286075?website=1" 
+            style={{
+              width: '100%',
+              height: '400px',
+              overflow: 'auto',
+              border: 'none',
+              margin: '0 auto',
+              display: 'block'
+            }}
+          />
+        </div>
+        <a 
+          href="https://www.linkedin.com/company/adaptations-eu/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="mission-btn"
+        >
+          {i18n.language === 'en' ? 'Find us on LinkedIn' : 'Retrouvez-nous sur Linkedin'}
+        </a>
+      </section>
+
+      <div className="section-separator"></div>
+
+      {/* Contact Section */}
+      <section id="contact" className="contact-section" data-aos="fade-up">
+        <div className="contact-title">
+          <span>{t('contact')}</span>
+          <img src="/logos/logo_adaptations_court.png" alt="Adaptations Logo" className="contact-logo" />
+        </div>
+        <p className="contact-desc"><strong>{t('contact_desc') ? t('contact_desc') : ''}</strong></p>
         <ContactForm />
       </section>
 

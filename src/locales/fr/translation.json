@@ -30,8 +30,8 @@
   "resilience_analyst": "Analyste résilience",
   "louise_bio": "Spécialisée en modélisation des risques physiques et quantification financière. Ex-fondatrice Resilient",
   "broad_network": "Et un grand réseau de consultants, de data-scientists, de designers et d'experts sectoriels de confiance, engagés avec nous.",
-  "newsletter_title": "Contact",
-  "newsletter_desc": "Contactez-nous pour en savoir plus sur nos solutions.",
+  "newsletter_title": "Newsletter",
+  "newsletter_desc": "Suivez toutes nos actualités",
   "footer_copyright": "© 2025 Adaptations. Tous droits réservés.",
   "footer_slogan": "Solutions de résilience climatique.",
   "infrastructures_resilience": "Résilience des infrastructures",
@@ -69,5 +69,7 @@
   "user_email_required": "L'e-mail est requis",
   "invalid_email_format": "Format d'e-mail invalide",
   "message_required": "Le message est requis",
-  "message_too_short": "Le message doit contenir au moins 10 caractères"
+  "message_too_short": "Le message doit contenir au moins 10 caractères",
+  "contact_title": "Contact",
+  "contact_desc": "Contactez-nous pour découvrir nos solutions."
 } 

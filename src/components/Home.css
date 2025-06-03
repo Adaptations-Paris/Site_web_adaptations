@@ -1198,4 +1198,139 @@ body[data-aos-disabled="true"] [data-aos] {
 .lang-btn:focus {
   outline: none;
   box-shadow: 0 0 0 2px #ABFF00;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  text-align: center;
+  padding: 40px 0 30px 0;
+  background: #fff;
+}
+
+.newsletter-section .newsletter-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.newsletter-section .newsletter-title span {
+  color: #111;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.newsletter-section .newsletter-logo {
+  height: 32px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.tagembed-container {
+  margin: 0 auto 18px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.newsletter-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-top: 40px;
+}
+
+.newsletter-linkedin:hover {
+  color: #0077b5;
+}
+
+.newsletter-linkedin .linkedin-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Nouveau bouton LinkedIn style capture */
+.newsletter-linkedin-btn {
+  background: #9DACA9;
+  color: #ABFF00;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  border-radius: 28px;
+  padding: 12px 36px;
+  margin: 0 auto;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
+  cursor: pointer;
+}
+.newsletter-linkedin-btn:hover {
+  background: #8ca09a;
+  color: #ABFF00;
+}
+
+@media (max-width: 768px) {
+  .newsletter-section {
+    padding: 60px 20px;
+  }
+  
+  .newsletter-section .newsletter-title {
+    font-size: 28px;
+  }
+  
+  .newsletter-section .newsletter-title span {
+    font-size: 28px;
+  }
+  
+  .newsletter-section .newsletter-logo {
+    height: 28px;
+  }
+  
+  .tagembed-container {
+    padding: 0 10px;
+  }
+}
+
+/* La règle .tagembed-container iframe a été supprimée */
+
+/* Contact Section (même style que newsletter-section) */
+.contact-section {
+  text-align: center;
+  padding: 100px 20px 80px 20px;
+  background: linear-gradient(120deg, #eef5d8 0%, #ffffff 100%);
+  background-image: url('../fond_newsletter.png');
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-logo {
+  height: 32px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.contact-desc {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 24px;
 } 
