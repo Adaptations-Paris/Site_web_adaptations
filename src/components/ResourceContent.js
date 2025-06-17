@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 import { useTranslation } from 'react-i18next';
 
 const ResourceContent = ({ activeTab }) => {
   const { t } = useTranslation();
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
+  const openVideoModal = () => {
+    setIsVideoModalOpen(true);
+  };
+
+  const closeVideoModal = () => {
+    setIsVideoModalOpen(false);
+  };
+
   try {
     const infrastructuresContent = (
       <div className="resource-card">
@@ -22,6 +32,23 @@ const ResourceContent = ({ activeTab }) => {
               <strong>{t('digital_tools')}</strong>
               <p>{t('infra_tools_1')}</p>
             </div>
+            <div className="video-container" style={{ margin: '8px 0' }}>
+              <div className="video-thumbnail" onClick={openVideoModal}>
+                <img src="/images/video-thumbnail.jpg" alt="Vidéo infrastructure" style={{ width: '100%', maxWidth: '260px', cursor: 'pointer' }} />
+                <div className="play-button">▶</div>
+              </div>
+            </div>
+            {isVideoModalOpen && (
+              <div className="video-modal" onClick={closeVideoModal}>
+                <div className="video-modal-content" onClick={e => e.stopPropagation()}>
+                  <button className="close-button" onClick={closeVideoModal}>×</button>
+                  <video width="100%" controls autoPlay>
+                    <source src="/video/infrastructure.mp4" type="video/mp4" />
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                  </video>
+                </div>
+              </div>
+            )}
             <a href="#newsletter" className="resource-btn">{t('lets_talk')} <span className="arrow">→</span></a>
           </div>
         </div>

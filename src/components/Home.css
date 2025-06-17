@@ -648,6 +648,8 @@ footer {
   min-height: 260px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .resource-block {
@@ -692,7 +694,10 @@ footer {
   align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
-  margin-top: 32px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
 }
 
 @media (max-width: 900px) {
@@ -1333,4 +1338,90 @@ body[data-aos-disabled="true"] [data-aos] {
   font-size: 18px;
   color: #555;
   margin-bottom: 24px;
+}
+
+/* Styles pour la vidéo */
+.video-thumbnail {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.video-thumbnail:hover {
+  transform: scale(1.02);
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  transition: background 0.2s;
+}
+
+.video-thumbnail:hover .play-button {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.video-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  background: black;
+  padding: 20px;
+  border-radius: 8px;
+  pointer-events: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.close-button:hover {
+  color: #ABFF00;
+}
+
+@media (max-width: 768px) {
+  .video-modal-content {
+    width: 95%;
+    padding: 10px;
+  }
+  
+  .play-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
 } 
