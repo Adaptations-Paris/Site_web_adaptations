@@ -23,6 +23,24 @@ const Home = () => {
     }
   }, []);
 
+  useEffect(() => {
+    // Inject Curator script for the social feed
+    const script = document.createElement('script');
+    script.async = true;
+    script.charset = 'UTF-8';
+    script.src = 'https://cdn.curator.io/published/831616ae-0953-4ce9-9f1e-acef8a266adf.js';
+    const anchor = document.getElementsByTagName('script')[0];
+    if (anchor && anchor.parentNode) {
+      anchor.parentNode.insertBefore(script, anchor);
+    } else {
+      document.body.appendChild(script);
+    }
+    return () => {
+      // Optionally, remove the script if the component unmounts
+      script.remove();
+    };
+  }, []);
+
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
@@ -203,17 +221,7 @@ const Home = () => {
         </div>
         <p className="newsletter-desc"><strong>{t('newsletter_desc')}</strong></p>
         <div className="tagembed-container">
-          <iframe 
-            src="https://widget.tagembed.com/286075?website=1" 
-            style={{
-              width: '100%',
-              height: '400px',
-              overflow: 'auto',
-              border: 'none',
-              margin: '0 auto',
-              display: 'block'
-            }}
-          />
+          <CuratorFeed />
         </div>
         <a 
           href="https://www.linkedin.com/company/adaptations-eu/" 
@@ -255,6 +263,23 @@ const Home = () => {
       </footer>
     </div>
   );
+};
+
+const CuratorFeed = () => {
+  const feedRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (feedRef.current) {
+      feedRef.current.innerHTML = '<a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>';
+      const script = document.createElement('script');
+      script.async = true;
+      script.charset = 'UTF-8';
+      script.src = 'https://cdn.curator.io/published/831616ae-0953-4ce9-9f1e-acef8a266adf.js';
+      feedRef.current.appendChild(script);
+    }
+  }, []);
+
+  return <div ref={feedRef} id="curator-feed-default-feed-layout" />;
 };
 
 export default Home; 
