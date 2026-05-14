@@ -21,5 +21,9 @@ yarn-error.log*
 # IDE
 .idea/
 .vscode/
+.claude/
+
+# build output (Vercel rebuilds on push)
+/build
 
 .vercel

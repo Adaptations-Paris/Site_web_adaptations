@@ -1,0 +1,148 @@
+/* ===== PAGE CARRIÈRES ===== */
+.carrieres-page { background: #E6E6E6; }
+
+/* Hero */
+.carrieres-hero {
+  background-image: url('../fond_hero.png');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 50px 80px 50px;
+  text-align: center;
+}
+
+.carrieres-hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #111;
+  max-width: 820px;
+  margin: 0 auto 24px auto;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.carrieres-hero p {
+  font-size: 18px;
+  color: #111;
+  max-width: 640px;
+  margin: 0 auto 36px auto;
+  line-height: 1.6;
+}
+
+/* Valeurs */
+.carrieres-values {
+  background: #fff;
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.carrieres-values h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 48px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: #f7f7f7;
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: left;
+  border-top: 4px solid #ABFF00;
+}
+
+.value-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Team */
+.carrieres-team {
+  background: #E6E6E6;
+  padding: 80px 50px;
+}
+
+.carrieres-team-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carrieres-team h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.carrieres-team p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* CTA */
+.carrieres-cta {
+  background: #111;
+  padding: 80px 50px;
+  text-align: center;
+  color: #fff;
+}
+
+.carrieres-cta h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto 16px auto;
+}
+
+.carrieres-cta p {
+  font-size: 16px;
+  color: #aaa;
+  max-width: 520px;
+  margin: 0 auto 32px auto;
+  line-height: 1.6;
+}
+
+/* Shared buttons */
+.btn-lime {
+  background: #ABFF00;
+  color: #111;
+  padding: 14px 32px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  transition: background 0.2s, transform 0.15s;
+  text-decoration: none;
+}
+
+.btn-lime:hover { background: #c2fc53; transform: translateY(-2px); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .carrieres-hero { padding: 70px 24px 60px 24px; }
+  .carrieres-hero h1 { font-size: 30px; }
+  .carrieres-values, .carrieres-team, .carrieres-cta { padding: 60px 24px; }
+  .values-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .carrieres-hero h1 { font-size: 26px; }
+}

@@ -1,0 +1,121 @@
+/* ===== PAGE MATIÈRES PREMIÈRES ===== */
+.matieres-page { background: #E6E6E6; }
+
+.matieres-hero {
+  background-image: url('../fond_hero.png');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 50px 80px 50px;
+  text-align: center;
+}
+
+.matieres-hero h1 {
+  font-size: 44px;
+  font-weight: 800;
+  color: #111;
+  max-width: 820px;
+  margin: 0 auto 24px auto;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.matieres-hero p {
+  font-size: 18px;
+  color: #111;
+  max-width: 640px;
+  margin: 0 auto 36px auto;
+  line-height: 1.6;
+}
+
+/* Audiences */
+.matieres-audiences {
+  background: #fff;
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.matieres-audiences h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 48px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ce qu'on modélise */
+.matieres-model {
+  background: #E6E6E6;
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.matieres-model h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 48px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Cas client */
+.matieres-case {
+  background: #fff;
+  padding: 80px 50px;
+}
+
+.matieres-case-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.matieres-case h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* Démo */
+.matieres-demo {
+  background: #111;
+  padding: 80px 50px;
+  color: #fff;
+  text-align: center;
+}
+
+.matieres-demo-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.matieres-demo h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.matieres-demo p {
+  font-size: 16px;
+  color: #aaa;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .matieres-hero { padding: 70px 24px 60px 24px; }
+  .matieres-hero h1 { font-size: 30px; }
+  .matieres-audiences, .matieres-model, .matieres-case, .matieres-demo { padding: 60px 24px; }
+  .audiences-grid { grid-template-columns: 1fr 1fr; }
+  .model-item { grid-template-columns: 1fr; gap: 6px; }
+}
+
+@media (max-width: 600px) {
+  .audiences-grid { grid-template-columns: 1fr; }
+}
