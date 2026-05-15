@@ -61,7 +61,7 @@ const Home = () => {
         </div>
         <nav className={isMenuOpen ? 'active' : ''}>
           <ul>
-            <li><a href="#" onClick={() => setIsMenuOpen(false)}>{t('about')}</a></li>
+            <li><a href="#hero" onClick={() => setIsMenuOpen(false)}>{t('about')}</a></li>
             <li><a href="#solutions" onClick={() => setIsMenuOpen(false)}>{t('solutions')}</a></li>
             <li><a href="#mission" onClick={() => setIsMenuOpen(false)}>{t('mission')}</a></li>
             <li><a href="#team" onClick={() => setIsMenuOpen(false)}>{t('team')}</a></li>
