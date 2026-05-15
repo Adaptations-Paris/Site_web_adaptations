@@ -7,7 +7,7 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [entrepriseOpen, setEntrepriseOpen] = useState(false);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const close = () => {
     setMenuOpen(false);
@@ -21,12 +21,12 @@ export const Header = () => {
         <img src="/logos/logo_adaptations_long.png" alt="adaptation/s" />
       </Link>
 
-      <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
+      <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={t('nav.menu_aria')}>
         {menuOpen ? '✕' : '☰'}
       </button>
 
       <nav className={`header-nav${menuOpen ? ' open' : ''}`}>
-        <NavLink to="/" onClick={close} end>Accueil</NavLink>
+        <NavLink to="/" onClick={close} end>{t('nav.home')}</NavLink>
 
         <div
           className={`nav-dropdown${solutionsOpen ? ' open' : ''}`}
@@ -37,15 +37,15 @@ export const Header = () => {
             className="nav-dropdown-trigger"
             onClick={() => setSolutionsOpen(!solutionsOpen)}
           >
-            Solutions <span className="chevron">▾</span>
+            {t('nav.solutions')} <span className="chevron">▾</span>
           </span>
           <div className="nav-dropdown-menu">
             <Link to="/plateforme" onClick={close} className="dropdown-flagship">
               <img src="/logos/logo_adaptations_court.png" alt="" className="dropdown-icon" />
-              Plateforme infrastructures
+              {t('nav.platform_infra')}
             </Link>
-            <Link to="/cas-usage/ressources" onClick={close}>Matières premières</Link>
-            <Link to="/conseil" onClick={close}>Accompagnement stratégique</Link>
+            <Link to="/cas-usage/ressources" onClick={close}>{t('nav.raw_materials')}</Link>
+            <Link to="/conseil" onClick={close}>{t('nav.strategic_support')}</Link>
           </div>
         </div>
 
@@ -58,13 +58,13 @@ export const Header = () => {
             className="nav-dropdown-trigger"
             onClick={() => setEntrepriseOpen(!entrepriseOpen)}
           >
-            Entreprise <span className="chevron">▾</span>
+            {t('nav.company')} <span className="chevron">▾</span>
           </span>
           <div className="nav-dropdown-menu">
-            <Link to="/a-propos" onClick={close}>À propos</Link>
-            <Link to="/ressources" onClick={close}>Ressources & Actualités</Link>
-            <Link to="/carrieres" onClick={close}>Carrières</Link>
-            <Link to="/contact" onClick={close}>Contact</Link>
+            <Link to="/a-propos" onClick={close}>{t('nav.about')}</Link>
+            <Link to="/ressources" onClick={close}>{t('nav.resources_news')}</Link>
+            <Link to="/carrieres" onClick={close}>{t('nav.careers')}</Link>
+            <Link to="/contact" onClick={close}>{t('nav.contact')}</Link>
           </div>
         </div>
 
@@ -80,7 +80,7 @@ export const Header = () => {
           onClick={() => i18n.changeLanguage('en')}
         >EN</button>
         <Link to="/contact" className="header-cta" onClick={close}>
-          Demander une démo
+          {t('nav.request_demo')}
         </Link>
       </div>
     </header>
@@ -88,6 +88,7 @@ export const Header = () => {
 };
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="footer-grid">
@@ -95,36 +96,36 @@ export const Footer = () => {
           <div className="footer-logo footer-logo-icon">
             <img src="/logos/logo_adaptations_court.png" alt="adaptation/s" />
           </div>
-          <p>La plateforme qui modélise les impacts financiers et business des aléas climatiques sur les infrastructures pour vous aider à prendre vos décisions stratégiques.</p>
+          <p>{t('footer.brand_desc')}</p>
         </div>
 
         <div className="footer-col">
-          <h4>Solutions</h4>
+          <h4>{t('footer.col_solutions')}</h4>
           <Link to="/plateforme" className="footer-flagship">
             <img src="/logos/logo_adaptations_court.png" alt="" className="footer-icon" />
-            Plateforme infrastructures
+            {t('nav.platform_infra')}
           </Link>
-          <Link to="/cas-usage/ressources">Matières premières</Link>
-          <Link to="/conseil">Accompagnement stratégique</Link>
+          <Link to="/cas-usage/ressources">{t('nav.raw_materials')}</Link>
+          <Link to="/conseil">{t('nav.strategic_support')}</Link>
         </div>
 
         <div className="footer-col">
-          <h4>Entreprise</h4>
-          <Link to="/a-propos">À propos</Link>
-          <Link to="/ressources">Ressources & Actualités</Link>
-          <Link to="/carrieres">Carrières</Link>
-          <Link to="/contact">Contact</Link>
+          <h4>{t('footer.col_company')}</h4>
+          <Link to="/a-propos">{t('nav.about')}</Link>
+          <Link to="/ressources">{t('nav.resources_news')}</Link>
+          <Link to="/carrieres">{t('nav.careers')}</Link>
+          <Link to="/contact">{t('nav.contact')}</Link>
         </div>
 
         <div className="footer-col">
-          <h4>Suivre</h4>
-          <a href="https://www.linkedin.com/company/adaptations-eu/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <h4>{t('footer.col_follow')}</h4>
+          <a href="https://www.linkedin.com/company/adaptations-eu/" target="_blank" rel="noopener noreferrer">{t('footer.linkedin')}</a>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <span>© 2026 adaptation/s. Tous droits réservés.</span>
-        <span>Solutions de résilience climatique.</span>
+        <span>{t('footer.copyright')}</span>
+        <span>{t('footer.tagline')}</span>
       </div>
     </footer>
   );

@@ -1,74 +1,492 @@
 {
-  "infrastructures": "Infrastructures",
-  "real_estate": "Real Estate",
-  "agricultural_production": "Agricultural production",
-  "supply_resources": "Supply & Resources",
-  "offers_business_model": "Offers & Business Model",
-  "lets_talk": "LET'S TALK",
-  "about": "About",
-  "solutions": "Our solutions",
-  "mission": "Our mission",
-  "team": "Our team",
-  "contact": "Contact us",
-  "resilient": "Resilient.",
-  "positive": "Positive.",
-  "at_scale": "At scale.",
-  "hero_subtitle": "A comprehensive one stop shop integrating AI-driven tools and strategic support,\nfor positive and resilient adaptation, at scale.",
-  "contact_us": "CONTACT US →",
-  "mission_title": "Mission",
-  "mission_text": "We live in an unstable, <strong>burning, and polluted world, with limited resources</strong> — a world that is deteriorating our living conditions and increasing the <strong>vulnerability</strong> of businesses.\nWe help model and implement adaptation strategies that foster long-term <strong>resilience</strong> for businesses and have a <strong>positive</strong> impact on the environment, notably by employing a <strong>regenerative</strong> approach.",
-  "discover_us": "DISCOVER US",
-  "team_title": "Team",
-  "cofounder": "Co-founder",
-  "cofounder_m": "Co-founder",
-  "cofounder_f": "Co-founder",
-  "theo_bio": "Ecole Polytechnique and University of Cambridge (UK) graduate, with 4+ years experience in decarbonization and adaptation strategies for industrials and investors. Ex- BCG Climate",
-  "loraine_bio": "Ecole Polytechnique and UCL (UK) data scientist, with 4+ years experience in environmental transition modelisation for industrials and investors. Ex- E-Cube data science department",
-  "maud_bio": "20+ years experience in helping companies' strategic transformation on digital & environmental challenges. Ex- P&G, Google & YouTube, WDNR co-founder & CEO, Climate House co-founder",
-  "maximilien_bio": "25+ years experience in helping companies adapt to environmental resiliency challenges. Ex- BeCitizen co-founder, Terrena ExCo and Axa Climate Regeneration Strategy Expert",
-  "linkedin": "LinkedIn",
-  "resilience_analyst": "Resilience analyst",
-  "louise_bio": "Specialized in physical risks impact modelisation and financial quantification. Ex-founder Resilient",
-  "broad_network": "And a broad network of trusted consultants, data scientists, designers and sector-specific experts partnering with us",
-  "newsletter_title": "Newsletter",
-  "newsletter_desc": "Contact us to learn more about our solutions.",
-  "footer_copyright": "© 2025 Adaptations. All rights reserved.",
-  "footer_slogan": "Climate resilience solutions.",
-  "infrastructures_resilience": "Infrastructures resilience",
-  "strategic_support": "Strategic support",
-  "infra_support_1": "Environmental risks modeling with potential financial losses assessment - risk = exposure x criticity x vulnerability",
-  "infra_support_2": "Resilient and environmentally positive adaptation strategies definition - with ROIs calculation",
-  "digital_tools": "Digital tools to scale up",
-  "infra_tools_1": "Accelerated deployment of your adaptation & resilience strategies, site by site: creation of a numerical guide",
-  "resources_resilience": "Supply & Resources resilience",
-  "resources_support_1": "Supply chain vulnerability diagnosis",
-  "resources_support_2": "Climate vulnerability analysis for Tier 1 suppliers",
-  "resources_tools_1": "Creation of a digital twin of your supply chain (rank 1) to apply resiliency stress tests",
-  "resources_tools_2": "Real-time control tower module - requiring supply chain digital twin",
-  "agriculture_resilience": "Agricultural production resilience",
-  "agri_tools_1": "Creation of a resiliency simulator for the whole farming operation, analyzing local production and climate data at the plot level with unprecedented granularity",
-  "agri_tools_2": "Resiliency assessment of entire farm and each plot in future climate scenarios to model future farm yields.",
-  "business_resilience": "Offers & Business Model resilience",
-  "business_text": "Reinventing supply and business models to meet environmental challenges and new market expectations",
-  "realestate_resilience": "Real Estate resilience",
-  "realestate_support_1": "Climate risk assessment and adaptation strategies for real estate assets - detailed vulnerability assessment downscaled at property level",
-  "realestate_tools_1": "House-level detailed autodiagnostic for 'RGA' risk assessment and prevention",
-  "realestate_tools_2": "Property-level risk mapping for asset/portfolio due-dilligences, and tailored vulnerability assessment for long-term insurability",
-  "first_name": "First name",
-  "last_name": "Last name",
-  "company": "Company",
-  "email_address": "Email address",
-  "message_title": "Message title",
-  "your_message": "Your message",
-  "send": "Send",
-  "sending": "Sending...",
-  "message_sent": "Message sent successfully!",
-  "error_occurred": "An error occurred. Please try again.",
-  "user_name_required": "First name is required",
-  "user_lastname_required": "Last name is required",
-  "user_email_required": "Email is required",
-  "invalid_email_format": "Invalid email format",
-  "message_required": "Message is required",
-  "message_too_short": "Message must be at least 10 characters long",
-  "newsletter_title_menu": "Newsletter"
-} 
+  "nav": {
+    "home": "Home",
+    "solutions": "Solutions",
+    "company": "Company",
+    "platform_infra": "Infrastructure Platform",
+    "raw_materials": "Raw Materials",
+    "strategic_support": "Strategic Advisory",
+    "about": "About",
+    "resources_news": "Resources & News",
+    "careers": "Careers",
+    "contact": "Contact",
+    "request_demo": "Request a demo",
+    "menu_aria": "Menu"
+  },
+  "footer": {
+    "brand_desc": "The platform that models the financial and business impacts of climate hazards on infrastructure to help you make strategic decisions.",
+    "col_solutions": "Solutions",
+    "col_company": "Company",
+    "col_follow": "Follow",
+    "linkedin": "LinkedIn",
+    "copyright": "© 2026 adaptation/s. All rights reserved.",
+    "tagline": "Climate resilience solutions."
+  },
+  "home": {
+    "hero": {
+      "title_line1": "Measure how vulnerable your business and assets are to climate hazards.",
+      "title_line2": "Quantify the cost of inaction and the ROI of your adaptation strategy.",
+      "subtitle": "adaptation/s is the SaaS platform that models the financial and business impacts of climate hazards on your infrastructure, helping you make strategic adaptation decisions backed by ROI.",
+      "cta_demo": "Request a demo",
+      "cta_platform": "See how the platform works →"
+    },
+    "hazards": {
+      "title": "Across every physical hazard that matters for your sites.",
+      "list": [
+        "Heatwaves",
+        "Cold spells",
+        "Frost",
+        "Wildfires",
+        "Storms",
+        "Floods (riverine, pluvial, coastal)",
+        "Heavy rainfall",
+        "Hail",
+        "Landslides",
+        "Subsidence (incl. RGA)",
+        "Drought",
+        "Coastal erosion"
+      ]
+    },
+    "proof": {
+      "title": "Built for yesterday's climate. Exposed to tomorrow's.",
+      "body": "Over the past twenty years, economic losses from natural disasters have tripled. Many industrial sites still in operation today were designed for a climate that no longer exists. Shutdowns are multiplying, insurance premiums are climbing, and the question is no longer \"should we adapt?\" but \"how do we prioritize our investments?\".",
+      "stat1_value": "×3",
+      "stat1_label": "Economic losses from natural disasters over 20 years (BCG, 2023)",
+      "stat2_value": "+$200B",
+      "stat2_label": "Cost of natural disasters in 2023",
+      "stat3_value": "85%",
+      "stat3_label": "Of industrial sites analyzed have at least one uncovered critical vulnerability",
+      "quote_text": "So many constants are turning into variables that we urgently need to rethink climate risk management — not as a fix, but as a strategic adaptation capability. The reality is clear: climate is no longer something we observe from a distance, it has become an immediate strategic parameter.",
+      "quote_author": "François Beaume",
+      "quote_role": "AMRAE President"
+    },
+    "howitworks": {
+      "title": "From hazard to resilience: three steps, one platform.",
+      "step1_title": "A risk map for every site and across your entire group",
+      "step1_desc": "Identification and modeling of operational failures at each site. Quantification of financial, business and human impacts. Resilience score calculation.",
+      "step2_title": "A strategy and adaptation roadmap built on a positive ROI",
+      "step2_desc": "Identification of the most relevant solutions for each site's vulnerabilities. Prioritization by financial impact and your constraints. Construction of a target trajectory.",
+      "step3_title": "Monitoring to strengthen resilience and re-engage your stakeholders",
+      "step3_desc": "Implementation tracking and trajectory updates. Continuously updated resilience score. Stakeholder engagement (insurers, investors…) through the score.",
+      "arrow_aria": "Chronological steps"
+    },
+    "product": {
+      "title": "One platform delivering a financial risk map at site and group level, operational action management, and strategic monitoring.",
+      "video_fallback": "Your browser does not support video playback.",
+      "cta": "See the platform in a demo →"
+    },
+    "forwho": {
+      "title": "We help you secure your infrastructure, your production chain and your critical resources",
+      "infra_title": "Infrastructure",
+      "infra_desc": "Factories, logistics hubs, data centers, warehouses. Quantify the physical vulnerability of every site and prioritize investments.",
+      "infra_cta": "See dedicated page →",
+      "raw_title": "Raw Materials",
+      "raw_desc": "Agricultural commodities, water, energy. Anticipate yield drops and secure your supply.",
+      "raw_cta": "See dedicated page →",
+      "supply_title": "Supply chain",
+      "supply_desc": "Currently in development for integration into the platform.",
+      "supply_badge": "Soon",
+      "video_expand_aria": "Expand video",
+      "modal_close_aria": "Close"
+    },
+    "conseil": {
+      "title": "Our expert team steps in at key moments of your adaptation journey to complement the platform",
+      "desc": "Our expert team supports you at critical moments: onboarding, diagnostics for complex sites, ExCom preparation. The goal is not to sell you consulting, but to make sure the platform delivers actionable decisions.",
+      "cta": "Discover our advisory →"
+    },
+    "social_proof": {
+      "title": "They trust us",
+      "testimonial": "We benchmarked every adaptation solution on the market. You are far more comprehensive than the others on vulnerability diagnosis and on estimating the impact of adaptation measures — especially with the ROI of these measures. On top of that, no one else offers a strategic monitoring and steering module like yours!"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "Why isn't an exposure analysis enough?",
+      "a1": "An exposure analysis tells you that a hazard is coming — heatwaves, floods, drought… — but not whether your roof will fail, at what temperature your control systems shut down, or how many production days you will lose. Translating exposure into a quantified investment decision requires drilling down to the physical and financial vulnerability of each of your sites. Without this, you can neither quantify your real cost of inaction nor prioritize adaptation measures by ROI.",
+      "q2": "What is the difference between your physical & financial vulnerability analysis and the statistical vulnerability analysis used by the rest of the market?",
+      "a2": "Statistical vulnerability relies on generic damage functions built on past climate events. The result: a theoretical cost of inaction, a standard list of non-prioritized measures, and no actionable trajectory. Our physical and financial vulnerability uses your specific damage functions — through a digital twin of each site and our R&D — relevant for prospective climate events. You get the real cost of inaction, a resilience score per site and at group level, specific measures prioritized by ROI, and an actionable trajectory you can steer over time.",
+      "q3": "How do you build the digital twin? Does it take a lot of time from our teams?",
+      "a3": "Our digital twin is based on 9 systems of an infrastructure: building envelope, people, equipment, stocks, processes, external dependencies, outdoor spaces, governance, prevention. It is built mostly from automated reading of client documents through the platform. The load on your teams therefore stays very light: sharing existing documents and, occasionally during pilots, a few targeted interviews are enough; we take care of the modeling and quantification on our side.",
+      "q4": "How long before we see results?",
+      "a4": "We typically start with a year 1 pilot on a number of your critical sites, then roll out to the rest of your portfolio in year 2."
+    },
+    "cta_final": {
+      "title": "Ready to quantify climate impact on your sites?",
+      "subtitle": "Book 30 minutes with one of our experts to discover the platform.",
+      "cta_demo": "Request a demo",
+      "cta_whitepaper": "Download the white paper"
+    }
+  },
+  "platform": {
+    "hero": {
+      "title": "The only platform that delivers physical & financial vulnerability assessment",
+      "subtitle": "Where conventional tools stop at the climate hazard — or at a hardly actionable statistical vulnerability — adaptation/s models the physical and financial vulnerability of each of your sites, and translates it into euros, measures and ROI, so you can steer your resilience.",
+      "video_title": "The best way to understand the platform is still to see it.",
+      "video_fallback": "Your browser does not support video playback.",
+      "cta": "Request a personalized demo"
+    },
+    "problem": {
+      "title": "Our edge: beyond exposure and statistical vulnerability, physical & financial vulnerability.",
+      "old_head": "Current tools",
+      "old_tag": "Statistical vulnerability",
+      "old_sub_pre": "Exposure × ",
+      "old_sub_mid": " damage functions, built on ",
+      "old_sub_end": " climate events.",
+      "old_sub_b1": "generic",
+      "old_sub_b2": "past",
+      "old_b1": "Exposure analysis",
+      "old_b2_pre": "",
+      "old_b2_b": "Generic",
+      "old_b2_end_extra": " cost of inaction",
+      "old_b3_pre": "Standard list of ",
+      "old_b3_b": "non-prioritized",
+      "old_b3_end_extra": " measures",
+      "old_b4_b": "No operational",
+      "old_b4_end": " and actionable trajectory",
+      "old_b5_b": "No steering",
+      "old_b5_end": " possible",
+      "new_head": "adaptation/s",
+      "new_tag": "Physical & financial vulnerability",
+      "new_sub_pre": "Exposure × ",
+      "new_sub_yours": "your",
+      "new_sub_mid1": " ",
+      "new_sub_specific": "specific",
+      "new_sub_mid2": " damage functions (through a digital twin and our R&D), relevant for ",
+      "new_sub_prospective": "prospective",
+      "new_sub_end": " climate events.",
+      "new_b1_b": "Exposure analysis",
+      "new_b1_note": ": we work with leading international partners",
+      "new_b2_pre": "",
+      "new_b2_b": "Real",
+      "new_b2_end": " cost of inaction + resilience score",
+      "new_b3_pre": "",
+      "new_b3_b1": "Specific",
+      "new_b3_mid": " adaptation measures, ",
+      "new_b3_b2": "prioritized",
+      "new_b3_end": " by ROI",
+      "new_b4_pre": "",
+      "new_b4_b": "Actionable strategy and trajectory, arbitrated by ROI",
+      "new_b5_b": "Steering",
+      "new_b5_end": " and tracking over time"
+    },
+    "systems": {
+      "title": "To quantify the physical and financial vulnerability of your infrastructure, we build a digital twin covering 9 systems — not just the building envelope.",
+      "list": [
+        { "category": "S1. Building envelope", "items": "Buildings, roofs, walls and openings — structural and thermal characteristics." },
+        { "category": "S2. People", "items": "On-site headcount, working conditions and types of impact on health and productivity." },
+        { "category": "S3. Equipment", "items": "Generic, critical and production equipment — operating thresholds and sensitivities." },
+        { "category": "S4. Stocks", "items": "Raw materials, finished goods and inputs — storage conditions and exposed values." },
+        { "category": "S5. Production processes", "items": "Production lines, upstream/downstream connections and substitution lead times in case of failure." },
+        { "category": "S6. External dependencies", "items": "Water, electricity, gas, telecom and road networks — critical dependency levels." },
+        { "category": "S7. Outdoor spaces", "items": "Parking areas, green spaces and other surfaces — sealing and exposure to hazards." },
+        { "category": "S8. Governance", "items": "Organizational steering, budget, risk culture." },
+        { "category": "S9. Prevention", "items": "Insurance coverage and existing protections." }
+      ]
+    },
+    "steps": {
+      "title": "Define, quantify and monitor your adaptation strategy over time.",
+      "step1_title": "A group-wide risk map down to each of your sites",
+      "step1_b1_b": "Cost of inaction calculation",
+      "step1_b1_end": " at site and group level",
+      "step1_b2_b": "Consolidated risk map",
+      "step1_b2_end": " of your sites, at site and group level",
+      "step1_b3_b": "Resilience score calculation",
+      "step1_b3_end": " per site and at group level",
+      "step1_alt": "Site-level risk map",
+      "step2_title": "An adaptation strategy and roadmap built on a positive ROI",
+      "step2_b1_b": "Identification of the most relevant solutions",
+      "step2_b1_end": " for each site's vulnerabilities",
+      "step2_b2_b": "Prioritization and selection of solutions",
+      "step2_b2_end": " based on their ROI and your constraints (e.g. budget)",
+      "step2_b3_pre": "Construction of a ",
+      "step2_b3_b": "target adaptation trajectory",
+      "step2_alt": "Prioritized investment plan with ROI",
+      "step3_title": "Steering and monitoring your adaptation trajectory to strengthen resilience and engage your stakeholders",
+      "step3_b1_b": "Steering",
+      "step3_b1_end": " the operational rollout of the target trajectory",
+      "step3_b2_b": "Loss recalculation",
+      "step3_b2_end": " in case of deviation from the trajectory",
+      "step3_b3_b": "Continuous update of the resilience score",
+      "step3_b3_end": " at group and site level, based on your actual implementations",
+      "step3_transverse_label": "Cross-cutting",
+      "step3_transverse_text": "Re-assurance for your leadership and stakeholders",
+      "step3_alt": "Trajectory tracking dashboard"
+    },
+    "csrd": {
+      "title": "Helping you reassure and re-engage your stakeholders",
+      "body": "The platform's outputs are structured to be shared without rework with your Board, insurers, bankers and investors — and to meet current regulatory requirements (CSRD, ESRS E1, TCFD, double materiality).",
+      "badges": ["Board", "Insurers", "Bankers", "Investors", "CSRD · ESRS E1", "TCFD"]
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Our mission",
+      "mission_pre": "Accelerate ",
+      "mission_hl1": "adaptation",
+      "mission_mid": " to strengthen the ",
+      "mission_hl2": "resilience",
+      "mission_end": " of our societies."
+    },
+    "team": {
+      "title": "Our team",
+      "cofounder_m": "Co-founder",
+      "cofounder_f": "Co-founder",
+      "linkedin": "LinkedIn",
+      "theo_bio": "Graduate of École Polytechnique and the University of Cambridge (UK), 5+ years of experience in decarbonization and adaptation strategies for industrials and investors. Ex-BCG Climate.",
+      "loraine_bio": "École Polytechnique graduate and UCL (UK) data scientist, 5+ years of experience in environmental transition modeling for industrials and investors. Ex-E-Cube data science.",
+      "maud_bio": "20+ years of experience in digital & environmental strategic advisory. Ex-P&G, Google & YouTube, co-founder & CEO WDNR, co-founder Climate House.",
+      "maximilien_bio": "25+ years of experience helping companies tackle environmental resilience challenges. Co-founder of BeCitizen, ExCom of Terrena, and regeneration expert at Axa Climate.",
+      "louise_role": "Vulnerability Lead",
+      "louise_bio": "Specialized in infrastructure vulnerability modeling and financial quantification of climate risks. Ex-founder of Resilient.",
+      "theogirard_role": "Resilience Lead",
+      "theogirard_bio": "6+ years of experience in infrastructure and raw-materials resilience, co-creator of the OCARA methodology and tool. Ex-Carbon 4."
+    },
+    "experts": {
+      "title": "Our expert network",
+      "intro": "We work with a network of sector experts, data scientists and climate-risk specialists who can be mobilized on each engagement.",
+      "list": [
+        { "name": "Arnaud Vanon", "role": "Expert in climate-risk prevention engineering" },
+        { "name": "Capucine Laurent", "role": "Expert in agronomy and decarbonization" },
+        { "name": "Thomas Rivet", "role": "Expert in risks for industrials, banks and insurers" },
+        { "name": "Serge Zaka", "role": "Expert in climate-change impacts on temperate crops — researcher" },
+        { "name": "Guillermo Mendoza", "role": "Expert in climate-change impacts on tropical crops — researcher" },
+        { "name": "Olivier Le Courtois", "role": "Expert in financial quantification of climate impacts — researcher" }
+      ]
+    },
+    "partners": {
+      "title": "Our partners"
+    },
+    "cta": {
+      "title": "Want to know more?",
+      "subtitle": "Let's talk for 30 minutes about your context and adaptation challenges.",
+      "btn_demo": "Request a demo",
+      "btn_join": "Join the team →"
+    }
+  },
+  "raw_materials": {
+    "hero": {
+      "title": "Natural resources are climate-sensitive. Anticipate before they become unavailable.",
+      "subtitle": "Strengthen the resilience of your resources and maximize your yields with our resilience & adaptation methodologies — risk mapping, loss quantification, identification and assessment of measures.",
+      "cta": "Analyze my critical resources"
+    },
+    "context": {
+      "quote": "Agricultural biogeography lets us model the vulnerability of several varieties of the same resource to climate change.",
+      "body": "Faced with climate hazards, it is essential to establish a solid diagnosis of the risks on your resources, model their fragilities against the climate, and anticipate potential disruptions to your supply chains.",
+      "video_fallback": "Your browser does not support video playback."
+    },
+    "steps": {
+      "title": "Our 4-step methodology",
+      "list": [
+        { "num": "01", "title": "Physical climate-risk mapping", "desc": "Assess the impacts on the geographic distribution and productivity of your resources under different climate scenarios." },
+        { "num": "02", "title": "Financial impact assessment", "desc": "Quantify the potential losses for you: volumes, revenues, territories, exposed suppliers." },
+        { "num": "03", "title": "Identification of adaptation measures", "desc": "Supplier commitments, regenerative practices, diversification, relocation, substitution — for each critical resource." },
+        { "num": "04", "title": "Assessment of adaptation measures", "desc": "Analyze the cost, effectiveness, feasibility, opportunity and implications of each identified measure." }
+      ]
+    },
+    "advantages": {
+      "title": "What you gain",
+      "image_alt": "Resource mapping",
+      "list": [
+        {
+          "title": "Secure your supplies",
+          "items": [
+            "Identify future territories favorable to your resources",
+            "Identify the resources most resilient to climate scenarios"
+          ]
+        },
+        {
+          "title": "Anticipate investments",
+          "items": [
+            "Invest in new regenerative agricultural practices",
+            "Invest in new agricultural infrastructure",
+            "Extend the supply chain toward more resilient production areas",
+            "Build new products adapted to future climate constraints"
+          ]
+        }
+      ]
+    },
+    "partners": {
+      "title": "Our scientific partners",
+      "list": [
+        {
+          "name": "AgroClimat2050 (Serge Zaka)",
+          "items": ["Expertise in agro-meteorology and agro-climatology", "Expertise in assessing climate impacts on crops"],
+          "geography": "Solutions for temperate geographies"
+        },
+        {
+          "name": "CDS Geoprospective Science",
+          "items": ["Expertise in modeling land-use change", "Expertise in impact and pressure analyses on biodiversity"],
+          "geography": "Solutions for tropical geographies"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Secure your resources against climate risks.",
+      "subtitle": "Contact our experts for a tailored diagnosis and join the organizations actively preparing for climate change.",
+      "btn": "Talk to an expert →"
+    }
+  },
+  "resources": {
+    "hero": {
+      "title": "News & publications",
+      "subtitle": "Methodology, field feedback and expert analyses on industrial climate resilience and adaptation to climate change."
+    },
+    "news": {
+      "title": "News",
+      "subtitle": "Follow our latest news, talks and weak signals on adaptation, straight from our LinkedIn feed.",
+      "cta": "Find us on LinkedIn →"
+    },
+    "cta": {
+      "title": "Want to know more about your adaptation journey?",
+      "subtitle": "Secure your assets against climate risks. Contact our experts for a tailored diagnosis and join the organizations actively preparing for climate change.",
+      "btn_contact": "Contact us →",
+      "btn_linkedin": "Follow on LinkedIn"
+    },
+    "publications": [
+      {
+        "category": "Sites & Infrastructure",
+        "type": "White paper",
+        "title": "Adapting industrial sites to heatwaves",
+        "authors": null,
+        "year": null,
+        "publisher": null,
+        "desc": "Heatwaves are no longer a cyclical risk but a systemic and growing threat to the industrial sector. Built for yesterday's climate, many production sites are now vulnerable, experiencing production stops, equipment failures, and increased risks to workers' health. This white paper offers methodological directions and action levers to analyze the exposure and vulnerability of an industrial site, simulate the impacts, and deploy an effective and resilient adaptation program.",
+        "cta": "Download the white paper (free)"
+      },
+      {
+        "category": "C3D Report",
+        "type": "Report",
+        "title": "Regeneration in service of business resilience",
+        "authors": "Maud Mielvaque and Maximilien Rouer, C3D and adaptation/s",
+        "year": "2025",
+        "publisher": null,
+        "desc": "The report highlights that nature regeneration is a powerful lever for mitigating negative environmental impacts and for resilient adaptation of businesses, by securing supplies and reducing risks.",
+        "cta": "Learn more"
+      },
+      {
+        "category": "Book",
+        "type": "Book",
+        "title": "La France Bleu Blanc Vert",
+        "authors": "Maximilien Rouer",
+        "year": "2024",
+        "publisher": "l'ADN édition",
+        "desc": "One of the few books in French about adaptation of territories to climate change, with an original angle: how to protect human, urban and agricultural activities? Backed by 20 interviews of experts and companies, several 'umbrella' solutions — already existing, robust and proven — are presented to adapt France to climate change by 2050: agrivoltaic canopies, hill reservoirs, agroforestry for rural areas; photovoltaic canopies, cool roofing, plant canopies for cities.",
+        "cta": "Learn more"
+      },
+      {
+        "category": "Book",
+        "type": "Book",
+        "title": "Les agriculteurs à la reconquête du monde",
+        "authors": "Hubert Garaud and Maximilien Rouer",
+        "year": "2016",
+        "publisher": "JC Lattès",
+        "desc": "The book advocates a \"triple revolution of consciousness\" for French agriculture: changing the relationship with the consumer by selling solutions rather than raw materials, transforming production conditions by adopting ecologically intensive agriculture, and rebalancing relations between farmers, processors and distributors.",
+        "cta": "Learn more"
+      },
+      {
+        "category": "Book",
+        "type": "Book",
+        "title": "Vous êtes libres de changer le monde",
+        "authors": "Anne Gouyon and Maximilien Rouer",
+        "year": "2014",
+        "publisher": null,
+        "desc": "A book that encourages readers to overcome their fears and conditioning to transform society. It offers a triple journey: through the testimonies of \"world-changers\", an exploration of the psychological mechanisms of action, and a personal journey structured around the four seasons of change (waking up, transgressing, enjoying, recruiting).",
+        "cta": "Learn more"
+      },
+      {
+        "category": "Book",
+        "type": "Book",
+        "title": "Réparer la planète",
+        "authors": "Anne Gouyon and Maximilien Rouer",
+        "year": "2007",
+        "publisher": "JC Lattès",
+        "desc": "This pioneering book lays the foundations of a so-called positive economy, because it repairs the environment. It illustrates with examples that every activity could store carbon, regenerate biodiversity, depollute air, water and soil, and produce resources.",
+        "cta": "Learn more"
+      }
+    ]
+  },
+  "advisory": {
+    "hero": {
+      "title": "We step in at the key moments of your journey.",
+      "subtitle": "adaptation/s is first and foremost a platform. But there are moments when a human expert saves your teams weeks: onboarding, complex-site diagnostics, ExCom or Board preparation. That's what our expert services are for."
+    },
+    "services": [
+      {
+        "num": "01",
+        "title": "Onboarding & platform setup",
+        "desc": "Scoping, data collection and qualification for your sites, configuration of site-specific failure chains. Typically 4 to 8 weeks depending on the number of sites."
+      },
+      {
+        "num": "02",
+        "title": "In-depth diagnosis of complex sites",
+        "desc": "For sites with non-standard typologies (petrochemicals, sterile pharma, high-density data centers), our experts complement the platform modeling with on-the-ground analysis."
+      },
+      {
+        "num": "03",
+        "title": "ExCom or Board preparation",
+        "desc": "Shaping platform outputs into decision-support material, sector benchmarks, answers to anticipated ExCom or Board questions."
+      }
+    ],
+    "note_pre": "Pricing:",
+    "note_body": " expert services are available on quote depending on the scope. No public pricing: each engagement is calibrated to your context.",
+    "cta": {
+      "title": "Let's discuss your context.",
+      "subtitle": "30 minutes to understand your challenges and identify the right entry point.",
+      "btn": "Talk to an expert"
+    }
+  },
+  "careers": {
+    "hero": {
+      "title": "Join the team building industrial climate resilience.",
+      "subtitle": "We are a team of committed founders convinced that adaptation to climate change is the industrial challenge of the decade. If you want to work on a problem that matters, with rigorous and ambitious people — you are in the right place.",
+      "btn": "See open positions →"
+    },
+    "values": {
+      "title": "What you'll find here",
+      "list": [
+        { "title": "Real impact", "desc": "We work on one of the most critical challenges of our time — protecting industrial infrastructure from climate change. Every line of code, every analysis matters." },
+        { "title": "Scientific rigor", "desc": "Our methods are grounded in building physics, climatology and risk economics. We don't approximate — we quantify." },
+        { "title": "Committed founding team", "desc": "Climate-change engineers, data scientists, entrepreneurs, business leaders and sector experts: a complementary team with decades of combined experience in decarbonization and resilience." },
+        { "title": "Startup environment", "desc": "We build fast, learn fast, decide fast. You'll have responsibility from day one and a direct impact on the product and the trajectory." }
+      ]
+    },
+    "team": {
+      "title": "You will join an experienced and complementary team.",
+      "body": "Théo (Polytechnique / Cambridge / ex-BCG Climate), Loraine (Polytechnique / UCL data science / ex-E-Cube data science), Maud (ex-P&G, Google & YouTube, co-founder Climate House, co-founder WDNR), Maximilien (co-founder BeCitizen, ex-Axa Climate, 30 years on resilience topics), Louise (ex-Resilient) and Théo Girard (ex-Carbon 4 adaptation). A team that comes from the field and builds for the long term."
+    },
+    "cta": {
+      "title": "Open positions are on Notion.",
+      "subtitle": "Permanent and internship roles. Partial remote possible. Paris.",
+      "btn": "Browse job openings →"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Ready to see the platform in action?",
+      "subtitle": "Spend 30 minutes with one of our experts to scope a demo tailored to your challenges. No generic demo — we start from your real-world case."
+    },
+    "info": {
+      "title": "Request a demo",
+      "body": "Tell us in a few lines about your sector, the number of sites involved, and the priority hazard you want to analyze. We'll get back to you within 48 hours.",
+      "label_email": "Email",
+      "label_linkedin": "LinkedIn"
+    }
+  },
+  "form": {
+    "first_name": "First name",
+    "last_name": "Last name",
+    "company": "Company",
+    "email_address": "Email address",
+    "message_title": "Message title",
+    "your_message": "Your message",
+    "send": "Send",
+    "sending": "Sending...",
+    "message_sent": "Message sent successfully!",
+    "error_occurred": "An error occurred. Please try again.",
+    "first_name_required": "First name is required",
+    "last_name_required": "Last name is required",
+    "email_required": "Email is required",
+    "invalid_email_format": "Invalid email format",
+    "message_required": "Message is required",
+    "message_too_short": "Message must be at least 10 characters long"
+  }
+}

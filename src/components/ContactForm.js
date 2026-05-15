@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 import { useTranslation } from 'react-i18next';
@@ -46,22 +46,22 @@ const ContactForm = () => {
   // Validate form before submission
   const validateForm = () => {
     const newErrors = {};
-    
+
     if (!formData.user_name.trim()) {
-      newErrors.user_name = 'First name is required';
+      newErrors.user_name = 'form.first_name_required';
     }
     if (!formData.user_lastname.trim()) {
-      newErrors.user_lastname = 'Last name is required';
+      newErrors.user_lastname = 'form.last_name_required';
     }
     if (!formData.user_email.trim()) {
-      newErrors.user_email = 'Email is required';
+      newErrors.user_email = 'form.email_required';
     } else if (!validateEmail(formData.user_email)) {
-      newErrors.user_email = 'Invalid email format';
+      newErrors.user_email = 'form.invalid_email_format';
     }
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors.message = 'form.message_required';
     } else if (formData.message.length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long';
+      newErrors.message = 'form.message_too_short';
     }
 
     setErrors(newErrors);
@@ -131,7 +131,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="user_name"
-            placeholder={t('first_name')}
+            placeholder={t('form.first_name')}
             value={formData.user_name}
             onChange={handleChange}
             className={errors.user_name ? 'error' : ''}
@@ -143,7 +143,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="user_lastname"
-            placeholder={t('last_name')}
+            placeholder={t('form.last_name')}
             value={formData.user_lastname}
             onChange={handleChange}
             className={errors.user_lastname ? 'error' : ''}
@@ -158,7 +158,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="company"
-            placeholder={t('company')}
+            placeholder={t('form.company')}
             value={formData.company}
             onChange={handleChange}
           />
@@ -167,7 +167,7 @@ const ContactForm = () => {
           <input
             type="email"
             name="user_email"
-            placeholder={t('email_address')}
+            placeholder={t('form.email_address')}
             value={formData.user_email}
             onChange={handleChange}
             className={errors.user_email ? 'error' : ''}
@@ -182,7 +182,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="title"
-            placeholder={t('message_title')}
+            placeholder={t('form.message_title')}
             value={formData.title}
             onChange={handleChange}
           />
@@ -193,7 +193,7 @@ const ContactForm = () => {
         <div className="form-group">
           <textarea
             name="message"
-            placeholder={t('your_message')}
+            placeholder={t('form.your_message')}
             value={formData.message}
             onChange={handleChange}
             className={errors.message ? 'error' : ''}
@@ -208,17 +208,17 @@ const ContactForm = () => {
         className="submit-btn"
         disabled={status === 'sending'}
       >
-        {status === 'sending' ? t('sending') : t('send')}
+        {status === 'sending' ? t('form.sending') : t('form.send')}
       </button>
       
       {status === 'success' && (
         <div className="status-message success">
-          {t('message_sent')}
+          {t('form.message_sent')}
         </div>
       )}
       {status === 'error' && (
         <div className="status-message error">
-          {t('error_occurred')}
+          {t('form.error_occurred')}
         </div>
       )}
     </form>

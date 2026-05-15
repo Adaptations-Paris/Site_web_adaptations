@@ -1,107 +1,45 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './RessourcesClimat.css';
 
-const STEPS = [
-  {
-    num: '01',
-    title: 'Cartographie du risque physique climatique',
-    desc: "Évaluer les impacts sur la répartition géographique et la productivité de vos ressources selon différents scénarios climatiques.",
-  },
-  {
-    num: '02',
-    title: "Évaluation de l'impact financier",
-    desc: "Quantifier les pertes potentielles pour vous : volumes, revenus, territoires, fournisseurs exposés.",
-  },
-  {
-    num: '03',
-    title: "Identification des mesures d'adaptation",
-    desc: "Engagements fournisseurs, pratiques régénératives, diversification, relocalisation, substitution — pour chaque ressource critique.",
-  },
-  {
-    num: '04',
-    title: "Évaluation des mesures d'adaptation",
-    desc: "Analyser coût, efficacité, faisabilité, opportunité et implications de chaque mesure identifiée.",
-  },
-];
-
-const ADVANTAGES = [
-  {
-    title: 'Sécurisez vos approvisionnements',
-    items: [
-      "Identifier les futurs territoires propices à vos ressources",
-      "Identifier les ressources les plus résilientes face aux scénarios climatiques",
-    ],
-  },
-  {
-    title: 'Anticipez les investissements',
-    items: [
-      "Investir dans de nouvelles pratiques agricoles régénératives",
-      "Investir dans de nouvelles infrastructures agricoles",
-      "Étendre la chaîne logistique vers des bassins de production plus résilients",
-      "Construire de nouveaux produits adaptés aux contraintes climatiques futures",
-    ],
-  },
-];
-
-const PARTNERS = [
-  {
-    name: 'AgroClimat2050 (Serge Zaka)',
-    logo: '/partenaires/agroclimat-logo.png',
-    items: [
-      "Expertise en agrométéorologie et agroclimatologie",
-      "Expertise sur l'évaluation des impacts climatique sur les cultures",
-    ],
-    geography: 'Solutions pour les géographies tempérées',
-    linkedin: 'https://www.linkedin.com/in/sergezaka/?skipRedirect=true',
-  },
-  {
-    name: 'CDS Geoprospective Science',
-    logo: '/partenaires/cds-logo.png',
-    logoDark: true,
-    items: [
-      "Expertise dans la modélisation des changements d'utilisation du sol",
-      "Expertise sur les analyses d'impacts et de pression sur la biodiversité",
-    ],
-    geography: 'Solutions pour les géographies tropicales',
-    linkedin: 'https://www.linkedin.com/company/cds-geoprospective-science/',
-  },
+const PARTNER_META = [
+  { logo: '/partenaires/agroclimat-logo.png', linkedin: 'https://www.linkedin.com/in/sergezaka/?skipRedirect=true' },
+  { logo: '/partenaires/cds-logo.png', logoDark: true, linkedin: 'https://www.linkedin.com/company/cds-geoprospective-science/' },
 ];
 
 const RessourcesClimatPage = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init({ duration: 600, once: true, disable: /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) });
     window.scrollTo(0, 0);
   }, []);
+
+  const steps = t('raw_materials.steps.list', { returnObjects: true });
+  const advantages = t('raw_materials.advantages.list', { returnObjects: true });
+  const partners = t('raw_materials.partners.list', { returnObjects: true }).map((p, i) => ({
+    ...p,
+    ...PARTNER_META[i],
+  }));
 
   return (
     <div className="rc-page">
 
       {/* Hero */}
       <section className="rc-hero" data-aos="fade-up">
-        <h1>Les ressources naturelles sont climato-sensibles. Anticipez avant qu'elles ne deviennent indisponibles.</h1>
-        <p>
-          Renforcez la résilience de vos ressources et maximisez votre rendement avec nos méthodologies
-          de résilience & d'adaptation — cartographie du risque, quantification des pertes, identification
-          et évaluation des mesures.
-        </p>
-        <Link to="/contact" className="btn-primary">Analyser mes ressources critiques</Link>
+        <h1>{t('raw_materials.hero.title')}</h1>
+        <p>{t('raw_materials.hero.subtitle')}</p>
+        <Link to="/contact" className="btn-primary">{t('raw_materials.hero.cta')}</Link>
       </section>
 
       {/* Contexte */}
       <section className="rc-context" data-aos="fade-up">
         <div className="rc-context-inner">
-          <blockquote>
-            "La biogéographie agricole permet de modéliser la vulnérabilité de plusieurs variétés d'une même
-            ressource au changement climatique."
-          </blockquote>
-          <p>
-            Face aux aléas climatiques, il est nécessaire d'établir un diagnostic solide concernant les risques
-            sur vos ressources, de modéliser leurs fragilités face au climat, et d'anticiper les perturbations
-            potentielles de vos chaînes d'approvisionnement.
-          </p>
+          <blockquote>"{t('raw_materials.context.quote')}"</blockquote>
+          <p>{t('raw_materials.context.body')}</p>
           <div className="rc-video">
             <video
               controls
@@ -110,7 +48,7 @@ const RessourcesClimatPage = () => {
               style={{ width: '100%', display: 'block', borderRadius: '12px' }}
             >
               <source src="/video/ressources.mp4#t=4" type="video/mp4" />
-              Votre navigateur ne supporte pas la lecture de vidéos.
+              {t('raw_materials.context.video_fallback')}
             </video>
           </div>
         </div>
@@ -118,9 +56,9 @@ const RessourcesClimatPage = () => {
 
       {/* Méthodologie */}
       <section className="rc-steps" data-aos="fade-up">
-        <h2>Notre méthodologie en 4 étapes</h2>
+        <h2>{t('raw_materials.steps.title')}</h2>
         <div className="rc-steps-grid">
-          {STEPS.map((s, i) => (
+          {steps.map((s, i) => (
             <div key={i} className="rc-step-card" data-aos="fade-up" data-aos-delay={i * 80}>
               <div className="rc-step-num">{s.num}</div>
               <h3>{s.title}</h3>
@@ -132,13 +70,13 @@ const RessourcesClimatPage = () => {
 
       {/* Avantages */}
       <section className="rc-advantages" data-aos="fade-up">
-        <h2>Ce que vous gagnez</h2>
+        <h2>{t('raw_materials.advantages.title')}</h2>
         <div className="rc-advantages-grid">
           <div className="rc-advantages-image">
-            <img src="/images/cartographie-ressources.png" alt="Cartographie des ressources" />
+            <img src="/images/cartographie-ressources.png" alt={t('raw_materials.advantages.image_alt')} />
           </div>
           <div className="rc-advantages-cards">
-            {ADVANTAGES.map((adv, i) => (
+            {advantages.map((adv, i) => (
               <div key={i} className="rc-advantage-card" data-aos="fade-up" data-aos-delay={i * 100}>
                 <h3>{adv.title}</h3>
                 <ul>
@@ -154,9 +92,9 @@ const RessourcesClimatPage = () => {
 
       {/* Partenaires */}
       <section className="rc-partners" data-aos="fade-up">
-        <h2>Nos partenaires scientifiques</h2>
+        <h2>{t('raw_materials.partners.title')}</h2>
         <div className="rc-partners-grid">
-          {PARTNERS.map((p, i) => (
+          {partners.map((p, i) => (
             <div key={i} className="rc-partner-card" data-aos="zoom-in" data-aos-delay={i * 100}>
               <div className="rc-partner-logo">
                 {p.logoDark ? (
@@ -184,12 +122,9 @@ const RessourcesClimatPage = () => {
 
       {/* CTA */}
       <section className="rc-cta" data-aos="fade-up">
-        <h2>Sécurisez vos ressources face aux risques climatiques.</h2>
-        <p>
-          Contactez nos experts pour un diagnostic personnalisé et rejoignez les organisations
-          qui se préparent activement au changement climatique.
-        </p>
-        <Link to="/contact" className="btn-lime">Contacter un expert →</Link>
+        <h2>{t('raw_materials.cta.title')}</h2>
+        <p>{t('raw_materials.cta.subtitle')}</p>
+        <Link to="/contact" className="btn-lime">{t('raw_materials.cta.btn')}</Link>
       </section>
 
     </div>

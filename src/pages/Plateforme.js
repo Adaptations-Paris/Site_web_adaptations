@@ -1,26 +1,16 @@
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Plateforme.css';
-
-const MODELED_SYSTEMS = [
-  { category: 'S1. Enveloppe du bâtiment', items: "Bâtiments, toitures, murs et ouvertures — caractéristiques structurelles et thermiques." },
-  { category: 'S2. Humains', items: "Effectifs présents sur site, conditions de travail et types d'impact sur la santé et la productivité." },
-  { category: 'S3. Équipements', items: "Équipements génériques, critiques et de production — seuils de fonctionnement et sensibilités." },
-  { category: 'S4. Stocks', items: "Matières premières, produits finis et intrants — conditions de stockage et valeurs exposées." },
-  { category: 'S5. Processus de production', items: "Lignes de production, connexions amont-aval et délais de substitution en cas de défaillance." },
-  { category: 'S6. Dépendances externes', items: "Réseaux d'eau, d'électricité, de gaz, de télécoms et routiers — niveaux de dépendance critiques." },
-  { category: 'S7. Espaces extérieurs', items: "Zones de parking, espaces verts et autres surfaces — étanchéité et exposition aux aléas." },
-  { category: 'S8. Gouvernance', items: "Pilotage organisationnel, budget, culture du risque." },
-  { category: 'S9. Prévention', items: "Couvertures d'assurance et protections existantes." },
-];
 
 const STEP1_DEFAULT_IMG = '/images/plateforme-cartographie1.png';
 const STEP2_DEFAULT_IMG = '/images/plateforme-trajectoire1.png';
 const STEP3_DEFAULT_IMG = '/images/plateforme-pilotage3.png';
 
 const PlateformePage = () => {
+  const { t } = useTranslation();
   const [step1Img, setStep1Img] = useState(STEP1_DEFAULT_IMG);
   const [step2Img, setStep2Img] = useState(STEP2_DEFAULT_IMG);
   const [step3Img, setStep3Img] = useState(STEP3_DEFAULT_IMG);
@@ -52,19 +42,18 @@ const PlateformePage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const systems = t('platform.systems.list', { returnObjects: true });
+  const badges = t('platform.csrd.badges', { returnObjects: true });
+
   return (
     <div className="plateforme-page">
 
       {/* Hero */}
       <section className="plat-hero" data-aos="fade-up">
-        <h1>La seule plateforme qui permet de faire de la vulnérabilité physique et financière</h1>
-        <p>
-          Là où les outils classiques s'arrêtent à l'aléa climatique ou à une vulnérabilité statistique peu
-          actionnable, adaptation/s modélise la vulnérabilité physique et financière de chacun de vos sites
-          — et la traduit en euros, en mesures et en ROI, pour vous permettre de piloter votre résilience.
-        </p>
+        <h1>{t('platform.hero.title')}</h1>
+        <p>{t('platform.hero.subtitle')}</p>
         <div className="plat-hero-video">
-          <h3>La meilleure façon de comprendre la plateforme, c'est encore de la voir.</h3>
+          <h3>{t('platform.hero.video_title')}</h3>
           <video
             controls
             preload="metadata"
@@ -72,55 +61,53 @@ const PlateformePage = () => {
             style={{ width: '100%', display: 'block', borderRadius: '12px' }}
           >
             <source src="/video/Plateforme.mp4#t=4" type="video/mp4" />
-            Votre navigateur ne supporte pas la lecture de vidéos.
+            {t('platform.hero.video_fallback')}
           </video>
         </div>
-        <Link to="/contact" className="btn-primary">Demander une démo personnalisée</Link>
+        <Link to="/contact" className="btn-primary">{t('platform.hero.cta')}</Link>
       </section>
 
       {/* Problème — comparatif visuel */}
       <section className="plat-problem" data-aos="fade-up">
-        <h2 className="plat-problem-title">Notre singularité : au-delà de l'exposition et de la vulnérabilité statistique, la vulnérabilité physique & financière.</h2>
+        <h2 className="plat-problem-title">{t('platform.problem.title')}</h2>
         <div className="problem-compare">
           <div className="problem-col problem-col-old" data-aos="fade-up">
-            <div className="problem-col-head">Outils actuels</div>
-            <div className="problem-col-tag">Vulnérabilité statistique</div>
+            <div className="problem-col-head">{t('platform.problem.old_head')}</div>
+            <div className="problem-col-tag">{t('platform.problem.old_tag')}</div>
             <p className="problem-col-sub">
-              Exposition × fonctions de dommage <strong>génériques</strong>, construites sur des événements
-              climatiques <strong>passés</strong>.
+              {t('platform.problem.old_sub_pre')}<strong>{t('platform.problem.old_sub_b1')}</strong>{t('platform.problem.old_sub_mid')}<strong>{t('platform.problem.old_sub_b2')}</strong>{t('platform.problem.old_sub_end')}
             </p>
             <ul className="problem-list">
-              <li>Analyse d'exposition</li>
-              <li>Coût de l'inaction <strong>générique</strong></li>
-              <li>Liste standard de mesures <strong>non priorisées</strong></li>
-              <li><strong>Pas de trajectoire</strong> opérationnelle et actionnable</li>
-              <li><strong>Pas de pilotage</strong> possible</li>
+              <li>{t('platform.problem.old_b1')}</li>
+              <li>{t('platform.problem.old_b2_pre')}<strong>{t('platform.problem.old_b2_b')}</strong>{t('platform.problem.old_b2_end_extra', { defaultValue: " de l'inaction" })}</li>
+              <li>{t('platform.problem.old_b3_pre')}<strong>{t('platform.problem.old_b3_b')}</strong>{t('platform.problem.old_b3_end_extra', { defaultValue: '' })}</li>
+              <li><strong>{t('platform.problem.old_b4_b')}</strong>{t('platform.problem.old_b4_end')}</li>
+              <li><strong>{t('platform.problem.old_b5_b')}</strong>{t('platform.problem.old_b5_end')}</li>
             </ul>
           </div>
           <div className="problem-arrow" aria-hidden="true">→</div>
           <div className="problem-col problem-col-new" data-aos="fade-up" data-aos-delay="100">
-            <div className="problem-col-head">adaptation/s</div>
-            <div className="problem-col-tag">Vulnérabilité physique et financière</div>
+            <div className="problem-col-head">{t('platform.problem.new_head')}</div>
+            <div className="problem-col-tag">{t('platform.problem.new_tag')}</div>
             <p className="problem-col-sub">
-              Exposition × <strong>vos</strong> fonctions de dommage <strong>spécifiques</strong> (via un
-              jumeau numérique et notre R&D), pertinentes pour les événements climatiques <strong>prospectifs</strong>.
+              {t('platform.problem.new_sub_pre')}<strong>{t('platform.problem.new_sub_yours')}</strong>{t('platform.problem.new_sub_mid1')}<strong>{t('platform.problem.new_sub_specific')}</strong>{t('platform.problem.new_sub_mid2')}<strong>{t('platform.problem.new_sub_prospective')}</strong>{t('platform.problem.new_sub_end')}
             </p>
             <ul className="problem-list">
-              <li><strong>Analyse d'exposition</strong> <em style={{ color: '#999', fontStyle: 'italic', fontWeight: 400 }}>: nous travaillons avec des partenaires internationaux</em></li>
-              <li>Coût <strong>réel</strong> de l'inaction + score de résilience</li>
-              <li>Mesures d'adaptation <strong>spécifiques</strong>, <strong>hiérarchisées</strong> par leur ROI</li>
-              <li>Stratégie et trajectoire <strong>actionnables, arbitrées par le ROI</strong></li>
-              <li><strong>Pilotage</strong> et suivi dans le temps</li>
+              <li><strong>{t('platform.problem.new_b1_b')}</strong> <em style={{ color: '#999', fontStyle: 'italic', fontWeight: 400 }}>{t('platform.problem.new_b1_note')}</em></li>
+              <li>{t('platform.problem.new_b2_pre')}<strong>{t('platform.problem.new_b2_b')}</strong>{t('platform.problem.new_b2_end')}</li>
+              <li>{t('platform.problem.new_b3_pre')}<strong>{t('platform.problem.new_b3_b1')}</strong>{t('platform.problem.new_b3_mid')}<strong>{t('platform.problem.new_b3_b2')}</strong>{t('platform.problem.new_b3_end')}</li>
+              <li>{t('platform.problem.new_b4_pre')}<strong>{t('platform.problem.new_b4_b')}</strong></li>
+              <li><strong>{t('platform.problem.new_b5_b')}</strong>{t('platform.problem.new_b5_end')}</li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* 8 systèmes modélisés */}
+      {/* 9 systèmes modélisés */}
       <section className="plat-systems" data-aos="fade-up">
-        <h2>Pour quantifier la vulnérabilité physique et financière de vos infrastructures, nous créons un jumeau numérique prenant en compte 9 systèmes, et pas uniquement l'enveloppe bâtimentaire.</h2>
+        <h2>{t('platform.systems.title')}</h2>
         <div className="plat-systems-list">
-          {MODELED_SYSTEMS.map((item, i) => (
+          {systems.map((item, i) => (
             <div key={i} className="plat-system-item" data-aos="fade-up" data-aos-delay={i * 40}>
               <div className="plat-system-category">{item.category}</div>
               <div className="plat-system-desc">{item.items}</div>
@@ -131,23 +118,23 @@ const PlateformePage = () => {
 
       {/* Comment ça marche — 3 étapes */}
       <section className="plat-steps" data-aos="fade-up">
-        <h2>Définir, quantifier et piloter votre stratégie d'adaptation dans le temps.</h2>
+        <h2>{t('platform.steps.title')}</h2>
 
         <div className="plat-step" data-aos="fade-up">
           <div className="plat-step-header">
             <span className="plat-step-num">01</span>
-            <h3>Une cartographie des risques de votre groupe à l'échelle de chacun de vos sites</h3>
+            <h3>{t('platform.steps.step1_title')}</h3>
           </div>
           <div className="plat-step-body" onMouseLeave={() => leaveBullets('step1', STEP1_DEFAULT_IMG)}>
             <div className="plat-step-text">
               <ul className="plat-list plat-list-interactive">
-                <li onMouseEnter={() => hoverBullet('step1', '/images/plateforme-cartographie1.png')}><strong>Calcul du coût de l'inaction</strong> au niveau site et groupe</li>
-                <li onMouseEnter={() => hoverBullet('step1', '/images/plateforme-cartographie2.png')}><strong>Cartographie consolidée</strong> de vos risques par site et au niveau groupe</li>
-                <li onMouseEnter={() => hoverBullet('step1', '/images/plateforme-cartographie3.png')}><strong>Calcul de votre score de résilience</strong> par site et au niveau groupe</li>
+                <li onMouseEnter={() => hoverBullet('step1', '/images/plateforme-cartographie1.png')}><strong>{t('platform.steps.step1_b1_b')}</strong>{t('platform.steps.step1_b1_end')}</li>
+                <li onMouseEnter={() => hoverBullet('step1', '/images/plateforme-cartographie2.png')}><strong>{t('platform.steps.step1_b2_b')}</strong>{t('platform.steps.step1_b2_end')}</li>
+                <li onMouseEnter={() => hoverBullet('step1', '/images/plateforme-cartographie3.png')}><strong>{t('platform.steps.step1_b3_b')}</strong>{t('platform.steps.step1_b3_end')}</li>
               </ul>
             </div>
             <div className="plat-step-visual">
-              <img src={step1Img} alt="Cartographie des risques par site" />
+              <img src={step1Img} alt={t('platform.steps.step1_alt')} />
             </div>
           </div>
         </div>
@@ -155,18 +142,18 @@ const PlateformePage = () => {
         <div className="plat-step" data-aos="fade-up">
           <div className="plat-step-header">
             <span className="plat-step-num">02</span>
-            <h3>La définition d'une stratégie et d'une trajectoire d'adaptation avec un ROI positif</h3>
+            <h3>{t('platform.steps.step2_title')}</h3>
           </div>
           <div className="plat-step-body" onMouseLeave={() => leaveBullets('step2', STEP2_DEFAULT_IMG)}>
             <div className="plat-step-text">
               <ul className="plat-list plat-list-interactive">
-                <li onMouseEnter={() => hoverBullet('step2', '/images/plateforme-trajectoire1.png')}><strong>Identification des solutions les plus adaptées</strong> aux défaillances site par site</li>
-                <li onMouseEnter={() => hoverBullet('step2', '/images/plateforme-trajectoire2.png')}><strong>Priorisation et sélection des solutions</strong> en fonction de leur ROI et de vos contraintes (ex : budget)</li>
-                <li onMouseEnter={() => hoverBullet('step2', '/images/plateforme-trajectoire3.png')}>Construction d'une <strong>trajectoire d'adaptation cible</strong></li>
+                <li onMouseEnter={() => hoverBullet('step2', '/images/plateforme-trajectoire1.png')}><strong>{t('platform.steps.step2_b1_b')}</strong>{t('platform.steps.step2_b1_end')}</li>
+                <li onMouseEnter={() => hoverBullet('step2', '/images/plateforme-trajectoire2.png')}><strong>{t('platform.steps.step2_b2_b')}</strong>{t('platform.steps.step2_b2_end')}</li>
+                <li onMouseEnter={() => hoverBullet('step2', '/images/plateforme-trajectoire3.png')}>{t('platform.steps.step2_b3_pre')}<strong>{t('platform.steps.step2_b3_b')}</strong></li>
               </ul>
             </div>
             <div className="plat-step-visual">
-              <img src={step2Img} alt="Plan d'investissement priorisé avec ROI" />
+              <img src={step2Img} alt={t('platform.steps.step2_alt')} />
             </div>
           </div>
         </div>
@@ -174,22 +161,22 @@ const PlateformePage = () => {
         <div className="plat-step" data-aos="fade-up">
           <div className="plat-step-header">
             <span className="plat-step-num">03</span>
-            <h3>Un pilotage et suivi de votre trajectoire d'adaptation pour renforcer votre résilience et engager vos parties prenantes</h3>
+            <h3>{t('platform.steps.step3_title')}</h3>
           </div>
           <div className="plat-step-body" onMouseLeave={() => leaveBullets('step3', STEP3_DEFAULT_IMG)}>
             <div className="plat-step-text">
               <ul className="plat-list plat-list-interactive">
-                <li onMouseEnter={() => hoverBullet('step3', '/images/plateforme-pilotage1.png')}><strong>Pilotage</strong> de la mise en place opérationnelle de la trajectoire cible</li>
-                <li onMouseEnter={() => hoverBullet('step3', '/images/plateforme-pilotage2.png')}><strong>Recalcul des pertes</strong> si déviation vs. la trajectoire</li>
-                <li onMouseEnter={() => hoverBullet('step3', '/images/plateforme-pilotage3.png')}><strong>Mise-à-jour continue du score de résilience</strong> niveau groupe et par site, avec vos implémentations réelles</li>
+                <li onMouseEnter={() => hoverBullet('step3', '/images/plateforme-pilotage1.png')}><strong>{t('platform.steps.step3_b1_b')}</strong>{t('platform.steps.step3_b1_end')}</li>
+                <li onMouseEnter={() => hoverBullet('step3', '/images/plateforme-pilotage2.png')}><strong>{t('platform.steps.step3_b2_b')}</strong>{t('platform.steps.step3_b2_end')}</li>
+                <li onMouseEnter={() => hoverBullet('step3', '/images/plateforme-pilotage3.png')}><strong>{t('platform.steps.step3_b3_b')}</strong>{t('platform.steps.step3_b3_end')}</li>
               </ul>
               <div className="plat-step-transverse">
-                <span className="plat-step-transverse-label">En transverse</span>
-                <strong>Réassurance de votre direction et de vos parties prenantes</strong>
+                <span className="plat-step-transverse-label">{t('platform.steps.step3_transverse_label')}</span>
+                <strong>{t('platform.steps.step3_transverse_text')}</strong>
               </div>
             </div>
             <div className="plat-step-visual">
-              <img src={step3Img} alt="Dashboard de suivi de trajectoire" />
+              <img src={step3Img} alt={t('platform.steps.step3_alt')} />
             </div>
           </div>
         </div>
@@ -198,19 +185,12 @@ const PlateformePage = () => {
       {/* CSRD */}
       <section className="plat-csrd" data-aos="fade-up">
         <div className="plat-csrd-inner">
-          <h2>Pour vous permettre de rassurer et ré-engager vos parties prenantes</h2>
-          <p>
-            Les outputs de la plateforme sont structurés pour être présentés sans retraitement à votre Board,
-            vos assureurs, banquiers et investisseurs — et pour répondre aux exigences des réglementations
-            en vigueur (CSRD, ESRS E1, TCFD, double matérialité).
-          </p>
+          <h2>{t('platform.csrd.title')}</h2>
+          <p>{t('platform.csrd.body')}</p>
           <div className="csrd-badges">
-            <span className="csrd-badge">Board</span>
-            <span className="csrd-badge">Assureurs</span>
-            <span className="csrd-badge">Banquiers</span>
-            <span className="csrd-badge">Investisseurs</span>
-            <span className="csrd-badge">CSRD · ESRS E1</span>
-            <span className="csrd-badge">TCFD</span>
+            {badges.map((b, i) => (
+              <span key={i} className="csrd-badge">{b}</span>
+            ))}
           </div>
         </div>
       </section>
