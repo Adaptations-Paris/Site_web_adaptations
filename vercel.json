@@ -3,5 +3,23 @@
     "env": {
       "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
     }
-  }
-} 
+  },
+  "redirects": [
+    { "source": "/sites-infrastructures", "destination": "/plateforme", "permanent": true },
+    { "source": "/chaine-dapprovisionnement", "destination": "/plateforme", "permanent": true },
+    { "source": "/design-innovation-2", "destination": "/conseil", "permanent": true },
+    { "source": "/equipe", "destination": "/a-propos", "permanent": true },
+    { "source": "/contact-2", "destination": "/contact", "permanent": true },
+    { "source": "/ressources", "destination": "/cas-usage/ressources", "permanent": true },
+    { "source": "/solutions", "destination": "/plateforme", "permanent": true },
+    { "source": "/en/home-page", "destination": "/", "permanent": true },
+    { "source": "/en/team", "destination": "/a-propos", "permanent": true },
+    { "source": "/en/news", "destination": "/actualites", "permanent": true },
+    { "source": "/en/supply-chain", "destination": "/plateforme", "permanent": true },
+    { "source": "/en/contact", "destination": "/contact", "permanent": true },
+    { "source": "/en/design-innovation", "destination": "/conseil", "permanent": true },
+    { "source": "/en/resources", "destination": "/cas-usage/ressources", "permanent": true },
+    { "source": "/en/sites-infrastructures-2", "destination": "/plateforme", "permanent": true },
+    { "source": "/en/solutions-2", "destination": "/plateforme", "permanent": true }
+  ]
+}

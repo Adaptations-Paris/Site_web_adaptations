@@ -62,7 +62,7 @@ export const Header = () => {
           </span>
           <div className="nav-dropdown-menu">
             <Link to="/a-propos" onClick={close}>{t('nav.about')}</Link>
-            <Link to="/ressources" onClick={close}>{t('nav.resources_news')}</Link>
+            <Link to="/actualites" onClick={close}>{t('nav.resources_news')}</Link>
             <Link to="/carrieres" onClick={close}>{t('nav.careers')}</Link>
             <Link to="/contact" onClick={close}>{t('nav.contact')}</Link>
           </div>
@@ -112,7 +112,7 @@ export const Footer = () => {
         <div className="footer-col">
           <h4>{t('footer.col_company')}</h4>
           <Link to="/a-propos">{t('nav.about')}</Link>
-          <Link to="/ressources">{t('nav.resources_news')}</Link>
+          <Link to="/actualites">{t('nav.resources_news')}</Link>
           <Link to="/carrieres">{t('nav.careers')}</Link>
           <Link to="/contact">{t('nav.contact')}</Link>
         </div>
