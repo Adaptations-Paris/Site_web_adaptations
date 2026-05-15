@@ -713,3 +713,10 @@
   .problem-col-old, .problem-col-new { grid-column: 1; }
   .problem-arrow { grid-column: 1; transform: rotate(90deg); }
 }
+
+@media (max-width: 600px) {
+  .plat-hero h1 { font-size: 26px; }
+  .plat-step { padding: 20px 16px 20px 22px; }
+  .plat-step-header h3 { font-size: 18px; }
+  .plat-step { margin-bottom: 16px; }
+}

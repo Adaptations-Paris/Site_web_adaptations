@@ -304,6 +304,10 @@
 }
 
 @media (max-width: 600px) {
-  .ressources-hero h1 { font-size: 26px; }
+  .ressources-hero h1 { font-size: 26px; letter-spacing: 0; }
   .pub-cover-year { font-size: 48px; }
+  .pub-visual img,
+  .pub-cover { max-width: 240px; }
+  .pub-row--highlight { padding: 24px 16px; }
+  .pub-content h2 { font-size: 20px; }
 }

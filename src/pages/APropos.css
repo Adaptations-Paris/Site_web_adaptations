@@ -415,4 +415,5 @@
   .team-grid { grid-template-columns: 1fr; }
   .team-single-row { grid-template-columns: 1fr; max-width: 260px; }
   .experts-grid { grid-template-columns: 1fr; }
+  .partners-logos-row { gap: 20px; }
 }

@@ -306,4 +306,5 @@
   .team-grid { grid-template-columns: 1fr; }
   .team-grid-employees { grid-template-columns: 1fr; }
   .light-hero h1 { font-size: 26px; }
+  .service-item { gap: 16px; padding: 20px 0; }
 }

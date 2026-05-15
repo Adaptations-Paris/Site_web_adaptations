@@ -937,7 +937,7 @@
     padding: 70px 24px 60px 24px;
   }
   .home-hero h1 {
-    font-size: 34px;
+    font-size: 30px;
   }
   .home-proof,
   .home-howitworks,
@@ -1008,5 +1008,23 @@
   }
   .home-cta-final p {
     white-space: normal;
+  }
+  .testimonial-block {
+    padding: 32px 20px 24px 24px;
+  }
+  .testimonial-block::before {
+    font-size: 60px;
+    top: 10px;
+    left: 14px;
+  }
+  .testimonial-block p {
+    font-size: 17px;
+  }
+  .logos-marquee {
+    mask-image: linear-gradient(to right, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+  }
+  .logos-track {
+    gap: 40px;
   }
 }
