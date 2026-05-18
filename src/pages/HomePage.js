@@ -40,23 +40,10 @@ const HomePage = () => {
       {/* Bloc 1 — Hero */}
       <section className="home-hero" data-aos="fade-up">
         <h1>
-          {t('home.hero.title_pre')}
-          <span className="hl">{t('home.hero.title_hl1')}</span>
-          {t('home.hero.title_mid')}
-          <span className="hl">{t('home.hero.title_hl2')}</span>
-          {t('home.hero.title_end')}
+          {t('home.hero.title_line1')}
+          <br />
+          {t('home.hero.title_line2')}
         </h1>
-        <p>
-          {t('home.hero.subtitle_pre')}
-          <strong>{t('home.hero.subtitle_b1')}</strong>
-          {t('home.hero.subtitle_mid')}
-          <strong>{t('home.hero.subtitle_b2')}</strong>
-          {t('home.hero.subtitle_end')}
-        </p>
-        <div className="hero-ctas">
-          <Link to="/contact" className="btn-primary">{t('home.hero.cta_demo')}</Link>
-          <Link to="/plateforme" className="btn-secondary">{t('home.hero.cta_platform')}</Link>
-        </div>
       </section>
 
       {/* Démo dédiée */}
@@ -73,6 +60,10 @@ const HomePage = () => {
             <source src={`${plateformeVideo}#t=4`} type="video/mp4" />
             {t('home.product.video_fallback')}
           </video>
+        </div>
+        <div className="hero-ctas">
+          <Link to="/contact" className="btn-primary">{t('home.hero.cta_demo')}</Link>
+          <Link to="/plateforme" className="btn-secondary">{t('home.hero.cta_platform')}</Link>
         </div>
       </section>
 
@@ -121,7 +112,7 @@ const HomePage = () => {
 
       {/* Bloc 3 — Comment ça marche */}
       <section className="home-howitworks" data-aos="fade-up">
-        <h2>{t('home.howitworks.title')}</h2>
+        <h2>{t('home.howitworks.title_line1')}<br />{t('home.howitworks.title_line2')}</h2>
         <div className="steps-grid">
           <div className="step-card" data-aos="fade-up" data-aos-delay="0">
             <div className="step-number">1</div>

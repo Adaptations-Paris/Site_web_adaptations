@@ -3,12 +3,12 @@
     "home": "Accueil",
     "solutions": "Solutions",
     "other_solutions": "Autres solutions",
-    "company": "Entreprise",
+    "company": "En savoir plus",
     "platform_infra": "Plateforme infrastructures",
     "raw_materials": "Matières premières",
     "strategic_support": "Accompagnement stratégique",
-    "about": "À propos",
-    "resources_news": "Ressources & Actualités",
+    "about": "L'équipe",
+    "resources_news": "Actualités",
     "careers": "Carrières",
     "contact": "Contact",
     "request_demo": "Demander une démo",
@@ -25,11 +25,8 @@
   },
   "home": {
     "hero": {
-      "title_pre": "Calculez ",
-      "title_hl1": "la vulnérabilité physique réelle de vos infrastructures",
-      "title_mid": " (et de vos fournisseurs) face aux aléas climatiques pour choisir et piloter des solutions d'adaptation spécifiques, efficaces et ",
-      "title_hl2": "priorisées par leur ROI",
-      "title_end": ".",
+      "title_line1": "Évaluez la vulnérabilité physique de vos infrastructures et de vos fournisseurs face aux aléas climatiques.",
+      "title_line2": "Pilotez des solutions d'adaptation ciblées, efficaces et priorisées par leur ROI.",
       "subtitle_pre": "adaptation/s est la plateforme SaaS qui modélise ",
       "subtitle_b1": "la vulnérabilité financière des infrastructures",
       "subtitle_mid": " face au chaos climatique pour ",
@@ -54,7 +51,7 @@
         "Sécheresse",
         "Érosion côtière"
       ],
-      "systems_title": "... mais surtout sur les 9 systèmes qui en font sa vulnérabilité",
+      "systems_title": "... mais surtout sur les 9 systèmes qui en font leur vulnérabilité",
       "systems_list": [
         "Enveloppe du bâtiment",
         "Humains",
@@ -81,7 +78,8 @@
       "quote_role": "Président de l'AMRAE"
     },
     "howitworks": {
-      "title": "De l'aléa climatique au pilotage financier de votre résilience : 3 modules pour une plateforme unique.",
+      "title_line1": "De l'aléa climatique au pilotage financier de votre résilience :",
+      "title_line2": "3 modules pour une plateforme unique",
       "step1_title": "Cartographie de vos vulnérabilités pour chacun de vos sites et au niveau portefeuille, partout dans le monde",
       "step1_method": "Analyse de vulnérabilité physique réelle complète : identification de vos défaillances opérationnelles sur 9 systèmes (enveloppe du bâtiment, humains, équipements, stocks, processus, dépendances externes, espaces extérieurs, gouvernance, prévention) via un jumeau numérique complet de votre/vos sites.",
       "step1_outputs_title": "Ce que vous obtenez :",
@@ -167,7 +165,7 @@
       "title_hl1": "modéliser et piloter financièrement",
       "title_mid": " votre résilience climatique",
       "title_hl2": "",
-      "title_end": ", à l'échelle",
+      "title_end": ", à l'échelle.",
       "subtitle": "Là où les outils classiques s'arrêtent à l'aléa climatique ou à une vulnérabilité statistique peu actionnable, adaptation/s modélise la vulnérabilité physique et financière de chacun de vos sites — et la traduit en euros, en mesures et en ROI, pour vous permettre de construire des stratégies d'adaptation finançables et actionnables et piloter votre résilience.",
       "video_title": "Découvrez notre plateforme",
       "video_fallback": "Votre navigateur ne supporte pas la lecture de vidéos.",
@@ -175,7 +173,7 @@
     },
     "problem": {
       "title": "Notre singularité : au-delà de l'exposition et de la vulnérabilité statistique, la vulnérabilité physique & financière.",
-      "old_head": "Outils actuels",
+      "old_head": "Solutions du marché",
       "old_tag": "Vulnérabilité statistique",
       "old_sub_pre": "Exposition × fonctions de dommage ",
       "old_sub_mid": ", construites sur des événements climatiques ",
@@ -287,12 +285,8 @@
   },
   "about": {
     "hero": {
-      "title": "Notre mission",
-      "mission_pre": "Accélérer ",
-      "mission_hl1": "l'adaptation",
-      "mission_mid": " pour renforcer la ",
-      "mission_hl2": "résilience",
-      "mission_end": " de nos sociétés.",
+      "title_line1": "Notre mission :",
+      "title_line2": "accélérer l'adaptation pour renforcer la résilience de nos sociétés.",
       "story_toggle": "Notre histoire",
       "story_p1": "Nous avons décidé de lancer adaptation/s sur une conviction forte : le secteur privé stagne sur l'adaptation faute de données financières actionnables. Sans un chiffrage précis du coût de l'inaction et sans pilotage du ROI des mesures, l'adaptation reste un concept abstrait.",
       "story_p2": "Il manquait une plateforme modélisant la vulnérabilité de manière réelle, physique pour en déduire les coûts de l'inaction et les coûts/bénéfices de l'adaptation. Nous avons donc retroussé nos manches pour la créer."
@@ -517,7 +511,7 @@
         { "title": "Impact réel", "desc": "Nous travaillons sur un des défis les plus critiques de notre époque — protéger les infrastructures industrielles face au changement climatique. Chaque ligne de code, chaque analyse compte." },
         { "title": "Rigueur scientifique", "desc": "Nos méthodes sont fondées sur la physique du bâtiment, la climatologie et l'économie du risque. Nous n'approximons pas — nous chiffrons." },
         { "title": "Équipe fondatrice engagée", "desc": "Ingénieurs en changement climatique, data-scientists, entrepreneurs, dirigeants d'entreprise et experts sectoriels : une équipe complémentaire avec des décennies d'expérience combinée en décarbonation et résilience." },
-        { "title": "Environnement startup", "desc": "Nous construisons vite, apprenons vite, décidons vite. Vous aurez de la responsabilité dès le premier jour et un impact direct sur le produit et la trajectoire." }
+        { "title": "Esprit entrepreneurial", "desc": "Nous construisons vite, apprenons vite, décidons vite. Vous aurez de la responsabilité dès le premier jour et un impact direct sur le produit et la trajectoire." }
       ]
     },
     "team": {

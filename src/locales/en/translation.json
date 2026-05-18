@@ -3,12 +3,12 @@
     "home": "Home",
     "solutions": "Solutions",
     "other_solutions": "Other solutions",
-    "company": "Company",
+    "company": "Learn more",
     "platform_infra": "Infrastructure Platform",
     "raw_materials": "Raw Materials",
     "strategic_support": "Strategic Advisory",
-    "about": "About",
-    "resources_news": "Resources & News",
+    "about": "The team",
+    "resources_news": "News",
     "careers": "Careers",
     "contact": "Contact",
     "request_demo": "Request a demo",
@@ -25,11 +25,8 @@
   },
   "home": {
     "hero": {
-      "title_pre": "Assess ",
-      "title_hl1": "the real physical vulnerability of your sites",
-      "title_mid": " (and of your suppliers) to climate hazards, to select and monitor specific, effective adaptation solutions ",
-      "title_hl2": "prioritized by their ROI",
-      "title_end": ".",
+      "title_line1": "Assess the physical vulnerability of your infrastructure and your suppliers to climate hazards.",
+      "title_line2": "Steer targeted, effective adaptation solutions prioritized by their ROI.",
       "subtitle_pre": "adaptation/s is the SaaS platform that models ",
       "subtitle_b1": "the financial vulnerability of infrastructure",
       "subtitle_mid": " in the face of climate chaos to ",
@@ -81,7 +78,8 @@
       "quote_role": "AMRAE President"
     },
     "howitworks": {
-      "title": "From climate hazard to financial resilience steering: 3 modules in a single platform.",
+      "title_line1": "From climate hazard to financial resilience steering:",
+      "title_line2": "3 modules in a single platform",
       "step1_title": "Map your vulnerabilities for each site and at portfolio level, anywhere in the world",
       "step1_method": "Complete real physical vulnerability analysis: identification of your operational failures across 9 systems (building envelope, people, equipment, stocks, processes, external dependencies, outdoor spaces, governance, prevention) through a complete digital twin of your site(s).",
       "step1_outputs_title": "What you get:",
@@ -168,7 +166,7 @@
       "title_hl1": "model and financially steer",
       "title_mid": " your climate resilience",
       "title_hl2": "",
-      "title_end": ", at scale",
+      "title_end": ", at scale.",
       "subtitle": "Where conventional tools stop at the climate hazard — or at a hardly actionable statistical vulnerability — adaptation/s models the physical and financial vulnerability of each of your sites, and translates it into euros, measures and ROI, so you can build financeable, actionable adaptation strategies and steer your resilience.",
       "video_title": "Discover our platform",
       "video_fallback": "Your browser does not support video playback.",
@@ -176,7 +174,7 @@
     },
     "problem": {
       "title": "Our edge: beyond exposure and statistical vulnerability, physical & financial vulnerability.",
-      "old_head": "Current tools",
+      "old_head": "Market solutions",
       "old_tag": "Statistical vulnerability",
       "old_sub_pre": "Exposure × ",
       "old_sub_mid": " damage functions, built on ",
@@ -288,12 +286,8 @@
   },
   "about": {
     "hero": {
-      "title": "Our mission",
-      "mission_pre": "Accelerate ",
-      "mission_hl1": "adaptation",
-      "mission_mid": " to strengthen the ",
-      "mission_hl2": "resilience",
-      "mission_end": " of our societies.",
+      "title_line1": "Our mission:",
+      "title_line2": "accelerate adaptation to strengthen the resilience of our societies.",
       "story_toggle": "Our story",
       "story_p1": "We decided to launch adaptation/s out of a strong conviction: the private sector is stagnating on adaptation for lack of actionable financial data. Without a precise quantification of the cost of inaction and without steering the ROI of measures, adaptation remains an abstract concept.",
       "story_p2": "What was missing: a platform that models vulnerability in a real, physical way to derive the costs of inaction and the costs/benefits of adaptation. So we rolled up our sleeves and built it."
@@ -518,7 +512,7 @@
         { "title": "Real impact", "desc": "We work on one of the most critical challenges of our time — protecting industrial infrastructure from climate change. Every line of code, every analysis matters." },
         { "title": "Scientific rigor", "desc": "Our methods are grounded in building physics, climatology and risk economics. We don't approximate — we quantify." },
         { "title": "Committed founding team", "desc": "Climate-change engineers, data scientists, entrepreneurs, business leaders and sector experts: a complementary team with decades of combined experience in decarbonization and resilience." },
-        { "title": "Startup environment", "desc": "We build fast, learn fast, decide fast. You'll have responsibility from day one and a direct impact on the product and the trajectory." }
+        { "title": "Entrepreneurial mindset", "desc": "We build fast, learn fast, decide fast. You'll have responsibility from day one and a direct impact on the product and the trajectory." }
       ]
     },
     "team": {

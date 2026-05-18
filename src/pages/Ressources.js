@@ -73,6 +73,25 @@ const RessourcesPage = () => {
         <p>{t('resources.hero.subtitle')}</p>
       </section>
 
+      {/* News — feed LinkedIn via Elfsight */}
+      <section className="ressources-news" data-aos="fade-up">
+        <div className="news-header">
+          <h2>{t('resources.news.title')}</h2>
+          <p>{t('resources.news.subtitle')}</p>
+        </div>
+        <div className="news-feed">
+          <ElfsightFeed />
+        </div>
+        <a
+          href="https://www.linkedin.com/company/adaptations-eu/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-lime"
+        >
+          {t('resources.news.cta')}
+        </a>
+      </section>
+
       {/* Publications */}
       <section className="ressources-publications">
         {publications.map((pub, i) => (
@@ -114,25 +133,6 @@ const RessourcesPage = () => {
             </div>
           </article>
         ))}
-      </section>
-
-      {/* News — feed LinkedIn via Elfsight */}
-      <section className="ressources-news" data-aos="fade-up">
-        <div className="news-header">
-          <h2>{t('resources.news.title')}</h2>
-          <p>{t('resources.news.subtitle')}</p>
-        </div>
-        <div className="news-feed">
-          <ElfsightFeed />
-        </div>
-        <a
-          href="https://www.linkedin.com/company/adaptations-eu/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-lime"
-        >
-          {t('resources.news.cta')}
-        </a>
       </section>
 
       {/* CTA */}
