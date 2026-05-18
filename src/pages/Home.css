@@ -1064,12 +1064,16 @@
     padding: 60px 24px;
   }
   .steps-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    display: block;
+    column-gap: 0;
   }
   .step-card {
     display: block;
     grid-row: auto;
+    margin-bottom: 16px;
+  }
+  .step-card:last-child {
+    margin-bottom: 0;
   }
   .steps-grid::before,
   .steps-grid::after {
