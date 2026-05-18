@@ -53,8 +53,16 @@ const HomePage = () => {
           <strong>{t('home.hero.subtitle_b2')}</strong>
           {t('home.hero.subtitle_end')}
         </p>
-        <div className="home-hero-video">
-          <h3>{t('home.product.video_pill')}</h3>
+        <div className="hero-ctas">
+          <Link to="/contact" className="btn-primary">{t('home.hero.cta_demo')}</Link>
+          <Link to="/plateforme" className="btn-secondary">{t('home.hero.cta_platform')}</Link>
+        </div>
+      </section>
+
+      {/* Démo dédiée */}
+      <section className="home-demo" data-aos="fade-up">
+        <h2 className="home-demo-title">{t('home.product.video_pill')}</h2>
+        <div className="home-demo-video">
           <video
             key={plateformeVideo}
             controls
@@ -65,10 +73,6 @@ const HomePage = () => {
             <source src={`${plateformeVideo}#t=4`} type="video/mp4" />
             {t('home.product.video_fallback')}
           </video>
-        </div>
-        <div className="hero-ctas">
-          <Link to="/contact" className="btn-primary">{t('home.hero.cta_demo')}</Link>
-          <Link to="/plateforme" className="btn-secondary">{t('home.hero.cta_platform')}</Link>
         </div>
       </section>
 

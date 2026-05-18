@@ -3,26 +3,29 @@
 
 /* Hero */
 .ressources-hero {
-  background-image: url('../fond_hero.png');
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)),
+    url('../fond_hero.png');
   background-size: cover;
-  background-position: center;
+  background-position: center 25%;
   padding: 100px 50px 80px 50px;
   text-align: center;
 }
 
 .ressources-hero h1 {
-  font-size: 46px;
-  font-weight: 800;
-  color: #111;
+  font-size: 34px;
+  font-weight: 900;
+  color: #000;
   max-width: 720px;
   margin: 0 auto 24px auto;
-  line-height: 1.15;
+  line-height: 1.25;
   letter-spacing: -0.5px;
 }
 
 .ressources-hero p {
   font-size: 18px;
-  color: #111;
+  font-weight: 700;
+  color: #000;
   max-width: 620px;
   margin: 0 auto;
   line-height: 1.6;
