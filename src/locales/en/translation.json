@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "solutions": "Solutions",
+    "other_solutions": "Other solutions",
     "company": "Company",
     "platform_infra": "Infrastructure Platform",
     "raw_materials": "Raw Materials",
@@ -20,18 +21,25 @@
     "col_follow": "Follow",
     "linkedin": "LinkedIn",
     "copyright": "© 2026 adaptation/s. All rights reserved.",
-    "tagline": "Climate resilience solutions."
+    "tagline": "Climate resilience solution."
   },
   "home": {
     "hero": {
-      "title_line1": "Measure how vulnerable your business and assets are to climate hazards.",
-      "title_line2": "Quantify the cost of inaction and the ROI of your adaptation strategy.",
-      "subtitle": "adaptation/s is the SaaS platform that models the financial and business impacts of climate hazards on your infrastructure, helping you make strategic adaptation decisions backed by ROI.",
+      "title_pre": "Assess ",
+      "title_hl1": "the real physical vulnerability of your sites",
+      "title_mid": " (and of your suppliers) to climate hazards, to select and monitor specific, effective adaptation solutions ",
+      "title_hl2": "driven by their ROI",
+      "title_end": ".",
+      "subtitle_pre": "adaptation/s is the SaaS platform that models ",
+      "subtitle_b1": "the financial vulnerability of infrastructure",
+      "subtitle_mid": " in the face of climate chaos to ",
+      "subtitle_b2": "steer their resilience through the ROI of adaptation",
+      "subtitle_end": ".",
       "cta_demo": "Request a demo",
       "cta_platform": "See how the platform works →"
     },
     "hazards": {
-      "title": "Across every physical hazard that matters for your sites.",
+      "title": "Across every physical hazard that matters for your sites…",
       "list": [
         "Heatwaves",
         "Cold spells",
@@ -45,11 +53,23 @@
         "Subsidence (incl. RGA)",
         "Drought",
         "Coastal erosion"
+      ],
+      "systems_title": "… but above all on the 9 systems that drive its vulnerability",
+      "systems_list": [
+        "Building envelope",
+        "People",
+        "Equipment",
+        "Stocks",
+        "Production processes",
+        "External dependencies (water, electricity, gas, telco, road network, ...)",
+        "Outdoor spaces",
+        "Governance",
+        "Prevention"
       ]
     },
     "proof": {
       "title": "Built for yesterday's climate. Exposed to tomorrow's.",
-      "body": "Over the past twenty years, economic losses from natural disasters have tripled. Many industrial sites still in operation today were designed for a climate that no longer exists. Shutdowns are multiplying, insurance premiums are climbing, and the question is no longer \"should we adapt?\" but \"how do we prioritize our investments?\".",
+      "body": "Over the past twenty years, economic losses from natural disasters have tripled. Many industrial sites and infrastructure still in operation today were designed for a climate that no longer exists. Shutdowns are multiplying, insurance premiums are climbing, and the question is no longer \"should we adapt?\" but \"how do we prioritize our investments?\".",
       "stat1_value": "×3",
       "stat1_label": "Economic losses from natural disasters over 20 years (BCG, 2023)",
       "stat2_value": "+$200B",
@@ -61,17 +81,39 @@
       "quote_role": "AMRAE President"
     },
     "howitworks": {
-      "title": "From hazard to resilience: three steps, one platform.",
-      "step1_title": "A risk map for every site and across your entire group",
+      "title": "From climate hazard to financial resilience steering: 3 modules in a single platform.",
+      "step1_title": "Map your vulnerabilities for each site and at portfolio level, anywhere in the world",
+      "step1_method": "Complete real physical vulnerability analysis: identification of your operational failures across 9 systems (building envelope, people, equipment, stocks, processes, external dependencies, outdoor spaces, governance, prevention) through a complete digital twin of your site(s).",
+      "step1_outputs_title": "What you get:",
+      "step1_outputs": [
+        "Exposure analysis of your infrastructure to climate hazards",
+        "Quantification of financial and business impacts",
+        "Cost-of-inaction calculation",
+        "Resilience score (Losses / EBITDA)"
+      ],
       "step1_desc": "Identification and modeling of operational failures at each site. Quantification of financial, business and human impacts. Resilience score calculation.",
-      "step2_title": "A strategy and adaptation roadmap built on a positive ROI",
+      "step2_title": "Identification of adaptation measures specific to your infrastructure, prioritized by ROI",
+      "step2_method": "Proposal of adaptation measures specific to your operational failures, ranked and then prioritized among themselves by their financial ROI.",
+      "step2_outputs_title": "What you get:",
+      "step2_outputs": [
+        "Recommendation of adaptation strategies and trajectories with a positive ROI",
+        "Construction of trajectories optimized for your budget constraints or your objectives",
+        "Construction of a reference adaptation strategy and trajectory"
+      ],
       "step2_desc": "Identification of the most relevant solutions for each site's vulnerabilities. Prioritization by financial impact and your constraints. Construction of a target trajectory.",
-      "step3_title": "Monitoring to strengthen resilience and re-engage your stakeholders",
+      "step3_title": "Monitoring of your strategy implementation through the steering of your trajectories and financial KPIs",
+      "step3_method": "Operational and strategic steering of the adaptation strategy implementation to reassure your stakeholders (Board, Insurers, Investors, …).",
+      "step3_outputs_title": "What you get:",
+      "step3_outputs": [
+        "Steering of your trajectories over time and your ROI, for a single site or your portfolio worldwide",
+        "Automatic tracking and update of your resilience score to reassure your stakeholders"
+      ],
       "step3_desc": "Implementation tracking and trajectory updates. Continuously updated resilience score. Stakeholder engagement (insurers, investors…) through the score.",
       "arrow_aria": "Chronological steps"
     },
     "product": {
-      "title": "One platform delivering a financial risk map at site and group level, operational action management, and strategic monitoring.",
+      "title": "Resilience is a strategic investment, not a cost.",
+      "video_pill": "The best way to understand the platform is still to see it.",
       "video_fallback": "Your browser does not support video playback.",
       "cta": "See the platform in a demo →"
     },
@@ -90,9 +132,13 @@
       "modal_close_aria": "Close"
     },
     "conseil": {
-      "title": "Our expert team steps in at key moments of your adaptation journey to complement the platform",
-      "desc": "Our expert team supports you at critical moments: onboarding, diagnostics for complex sites, ExCom preparation. The goal is not to sell you consulting, but to make sure the platform delivers actionable decisions.",
-      "cta": "Discover our advisory →"
+      "title": "A simple, turnkey platform designed to demand as little as possible from your teams",
+      "desc_pre": "An intuitive, turnkey platform designed to demand as little as possible from your central teams: ",
+      "desc_b1": "data collection is mostly automated from your documents",
+      "desc_mid": ", and we take care of the modeling. You'll receive complete training on the platform along with a ",
+      "desc_b2": "dedicated Customer Success Manager who will accompany you throughout the process",
+      "desc_end": " and answer all your questions.",
+      "cta": "Request a demo →"
     },
     "social_proof": {
       "title": "They trust us",
@@ -118,8 +164,12 @@
   },
   "platform": {
     "hero": {
-      "title": "The only platform that delivers physical & financial vulnerability assessment",
-      "subtitle": "Where conventional tools stop at the climate hazard — or at a hardly actionable statistical vulnerability — adaptation/s models the physical and financial vulnerability of each of your sites, and translates it into euros, measures and ROI, so you can steer your resilience.",
+      "title_pre": "The only platform to ",
+      "title_hl1": "model and financially steer",
+      "title_mid": " your climate resilience",
+      "title_hl2": "",
+      "title_end": ", at scale",
+      "subtitle": "Where conventional tools stop at the climate hazard — or at a hardly actionable statistical vulnerability — adaptation/s models the physical and financial vulnerability of each of your sites, and translates it into euros, measures and ROI, so you can build financeable, actionable adaptation strategies and steer your resilience.",
       "video_title": "The best way to understand the platform is still to see it.",
       "video_fallback": "Your browser does not support video playback.",
       "cta": "Request a personalized demo"
@@ -207,7 +257,7 @@
       "step3_b2_end": " in case of deviation from the trajectory",
       "step3_b3_b": "Continuous update of the resilience score",
       "step3_b3_end": " at group and site level, based on your actual implementations",
-      "step3_transverse_label": "Cross-cutting",
+      "step3_transverse_label": "Objective",
       "step3_transverse_text": "Re-assurance for your leadership and stakeholders",
       "step3_alt": "Trajectory tracking dashboard"
     },
@@ -215,6 +265,25 @@
       "title": "Helping you reassure and re-engage your stakeholders",
       "body": "The platform's outputs are structured to be shared without rework with your Board, insurers, bankers and investors — and to meet current regulatory requirements (CSRD, ESRS E1, TCFD, double materiality).",
       "badges": ["Board", "Insurers", "Bankers", "Investors", "CSRD · ESRS E1", "TCFD"]
+    },
+    "deployment": {
+      "title": "Two deployment options, designed to fit your operational constraints.",
+      "options": [
+        {
+          "num": "1.",
+          "title": "Turnkey integration",
+          "desc_pre": "We take care of the end-to-end implementation. We can collaborate transparently with your existing IT partners or rely on our ",
+          "desc_b": "own certified network",
+          "desc_end": "."
+        },
+        {
+          "num": "2.",
+          "title": "Web platform",
+          "desc_pre": "We provide immediate access to our online tool.",
+          "desc_b": "",
+          "desc_end": ""
+        }
+      ]
     }
   },
   "about": {
@@ -224,7 +293,10 @@
       "mission_hl1": "adaptation",
       "mission_mid": " to strengthen the ",
       "mission_hl2": "resilience",
-      "mission_end": " of our societies."
+      "mission_end": " of our societies.",
+      "story_toggle": "Our story",
+      "story_p1": "We decided to launch adaptation/s out of a strong conviction: the private sector is stagnating on adaptation for lack of actionable financial data. Without a precise quantification of the cost of inaction and without steering the ROI of measures, adaptation remains an abstract concept.",
+      "story_p2": "What was missing: a platform that models vulnerability in a real, physical way to derive the costs of inaction and the costs/benefits of adaptation. So we rolled up our sleeves and built it."
     },
     "team": {
       "title": "Our team",

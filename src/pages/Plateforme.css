@@ -13,13 +13,23 @@
 }
 
 .plat-hero h1 {
-  font-size: 44px;
+  font-size: 40px;
   font-weight: 800;
   color: #111;
-  max-width: 1100px;
+  max-width: 1500px;
   margin: 0 auto 24px auto;
-  line-height: 1.15;
-  letter-spacing: -0.5px;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+.plat-hero h1 .hl {
+  background: #ABFF00;
+  color: #111;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .plat-hero p {
@@ -547,6 +557,90 @@
 .plat-csrd {
   background: #E6E6E6;
   padding: 72px 50px;
+}
+
+/* Démo dédiée */
+.plat-demo {
+  background: #E6E6E6;
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.plat-demo-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #111;
+  margin: 0 auto 32px auto;
+  max-width: 900px;
+  line-height: 1.3;
+}
+
+.plat-demo-video {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .plat-demo { padding: 60px 24px; }
+}
+
+/* Options de déploiement */
+.plat-deployment {
+  background: #fff;
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.plat-deployment-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #111;
+  margin: 0 auto 48px auto;
+  max-width: 1000px;
+  line-height: 1.3;
+}
+
+.plat-deployment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.plat-deployment-card {
+  background: #9DACA9;
+  border-radius: 16px;
+  padding: 48px 36px;
+  text-align: center;
+  color: #111;
+}
+
+.plat-deployment-num {
+  font-size: 56px;
+  font-weight: 800;
+  color: #ABFF00;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.plat-deployment-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.plat-deployment-card p {
+  font-size: 15px;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .plat-deployment { padding: 60px 24px; }
+  .plat-deployment-grid { grid-template-columns: 1fr; gap: 20px; }
+  .plat-deployment-card { padding: 32px 24px; }
 }
 
 .plat-csrd-inner {

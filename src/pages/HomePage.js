@@ -19,21 +19,13 @@ const FaqItem = ({ q, a }) => {
 };
 
 const HomePage = () => {
-  const { t } = useTranslation();
-  const [videoOpen, setVideoOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const plateformeVideo = i18n.language === 'en' ? '/video/Plateforme-EN.mp4' : '/video/Plateforme-FR.mp4';
 
   useEffect(() => {
     AOS.init({ duration: 600, once: true, disable: /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) });
   }, []);
-
-  useEffect(() => {
-    if (videoOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => { document.body.style.overflow = ''; };
-  }, [videoOpen]);
 
   const hazards = t('home.hazards.list', { returnObjects: true });
   const faqItems = [
@@ -47,25 +39,40 @@ const HomePage = () => {
     <div>
       {/* Bloc 1 — Hero */}
       <section className="home-hero" data-aos="fade-up">
-        <h1>{t('home.hero.title_line1')}<br />{t('home.hero.title_line2')}</h1>
-        <p>{t('home.hero.subtitle')}</p>
+        <h1>
+          {t('home.hero.title_pre')}
+          <span className="hl">{t('home.hero.title_hl1')}</span>
+          {t('home.hero.title_mid')}
+          <span className="hl">{t('home.hero.title_hl2')}</span>
+          {t('home.hero.title_end')}
+        </h1>
+        <p>
+          {t('home.hero.subtitle_pre')}
+          <strong>{t('home.hero.subtitle_b1')}</strong>
+          {t('home.hero.subtitle_mid')}
+          <strong>{t('home.hero.subtitle_b2')}</strong>
+          {t('home.hero.subtitle_end')}
+        </p>
+        <div className="home-hero-video">
+          <h3>{t('home.product.video_pill')}</h3>
+          <video
+            key={plateformeVideo}
+            controls
+            preload="metadata"
+            playsInline
+            style={{ width: '100%', display: 'block', borderRadius: '12px' }}
+          >
+            <source src={`${plateformeVideo}#t=4`} type="video/mp4" />
+            {t('home.product.video_fallback')}
+          </video>
+        </div>
         <div className="hero-ctas">
           <Link to="/contact" className="btn-primary">{t('home.hero.cta_demo')}</Link>
           <Link to="/plateforme" className="btn-secondary">{t('home.hero.cta_platform')}</Link>
         </div>
       </section>
 
-      {/* Bloc 1.5 — Aléas physiques */}
-      <section className="home-hazards" data-aos="fade-up">
-        <h2>{t('home.hazards.title')}</h2>
-        <div className="hazards-chips">
-          {hazards.map((h, i) => (
-            <span key={i} className="hazard-chip">{h}</span>
-          ))}
-        </div>
-      </section>
-
-      {/* Bloc 2 — Sous-hero */}
+      {/* Bloc 2 — Sous-hero (Construits pour le climat d'hier) */}
       <section className="home-proof" data-aos="fade-up">
         <h2>{t('home.proof.title')}</h2>
         <p className="proof-body">{t('home.proof.body')}</p>
@@ -92,6 +99,22 @@ const HomePage = () => {
         </blockquote>
       </section>
 
+      {/* Bloc 1.5 — Aléas physiques */}
+      <section className="home-hazards" data-aos="fade-up">
+        <h2>{t('home.hazards.title')}</h2>
+        <div className="hazards-chips">
+          {hazards.map((h, i) => (
+            <span key={i} className="hazard-chip">{h}</span>
+          ))}
+        </div>
+        <h3 className="systems-title">{t('home.hazards.systems_title')}</h3>
+        <div className="hazards-chips systems-chips">
+          {t('home.hazards.systems_list', { returnObjects: true }).map((s, i) => (
+            <span key={i} className="hazard-chip system-chip">{s}</span>
+          ))}
+        </div>
+      </section>
+
       {/* Bloc 3 — Comment ça marche */}
       <section className="home-howitworks" data-aos="fade-up">
         <h2>{t('home.howitworks.title')}</h2>
@@ -99,17 +122,52 @@ const HomePage = () => {
           <div className="step-card" data-aos="fade-up" data-aos-delay="0">
             <div className="step-number">1</div>
             <h3>{t('home.howitworks.step1_title')}</h3>
-            <p>{t('home.howitworks.step1_desc')}</p>
+            <p className="step-method">→ {t('home.howitworks.step1_method')}</p>
+            <p className="step-outputs-label">{t('home.howitworks.step1_outputs_title')}</p>
+            <ul className="step-outputs">
+              {t('home.howitworks.step1_outputs', { returnObjects: true }).map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
           </div>
           <div className="step-card" data-aos="fade-up" data-aos-delay="80">
             <div className="step-number">2</div>
             <h3>{t('home.howitworks.step2_title')}</h3>
-            <p>{t('home.howitworks.step2_desc')}</p>
+            <p className="step-method">→ {t('home.howitworks.step2_method')}</p>
+            <p className="step-outputs-label">{t('home.howitworks.step2_outputs_title')}</p>
+            <ul className="step-outputs">
+              {t('home.howitworks.step2_outputs', { returnObjects: true }).map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
           </div>
           <div className="step-card" data-aos="fade-up" data-aos-delay="160">
             <div className="step-number">3</div>
             <h3>{t('home.howitworks.step3_title')}</h3>
-            <p>{t('home.howitworks.step3_desc')}</p>
+            <p className="step-method">→ {t('home.howitworks.step3_method')}</p>
+            <p className="step-outputs-label">{t('home.howitworks.step3_outputs_title')}</p>
+            <ul className="step-outputs">
+              {t('home.howitworks.step3_outputs', { returnObjects: true }).map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Bloc 7 — Conseil */}
+      <section className="home-conseil" data-aos="fade-up">
+        <div className="conseil-inner">
+          <div className="conseil-text">
+            <h2>{t('home.conseil.title')}</h2>
+            <p>
+              {t('home.conseil.desc_pre')}
+              <strong>{t('home.conseil.desc_b1')}</strong>
+              {t('home.conseil.desc_mid')}
+              <strong>{t('home.conseil.desc_b2')}</strong>
+              {t('home.conseil.desc_end')}
+            </p>
+            <Link to="/contact" className="btn-primary">{t('home.conseil.cta')}</Link>
           </div>
         </div>
       </section>
@@ -129,77 +187,6 @@ const HomePage = () => {
           </video>
         </div>
         <Link to="/contact" className="btn-primary">{t('home.product.cta')}</Link>
-      </section>
-
-      {/* Bloc 5 — Pour qui */}
-      <section className="home-forwho" data-aos="fade-up">
-        <h2>{t('home.forwho.title')}</h2>
-        <div className="verticals-grid">
-          <div className="vertical-card" data-aos="fade-up">
-            <div className="vertical-image">
-              <img src="/images/vertical-infrastructures.png" alt={t('home.forwho.infra_title')} />
-            </div>
-            <div className="vertical-body">
-              <h3>{t('home.forwho.infra_title')}</h3>
-              <p>{t('home.forwho.infra_desc')}</p>
-              <div className="vertical-mini-video">
-                <video
-                  src="/video/Plateforme.mp4#t=4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                />
-                <button
-                  type="button"
-                  className="vertical-video-expand"
-                  aria-label={t('home.forwho.video_expand_aria')}
-                  onClick={() => setVideoOpen(true)}
-                >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M15 3h6v6" />
-                    <path d="M9 21H3v-6" />
-                    <path d="M21 3l-7 7" />
-                    <path d="M3 21l7-7" />
-                  </svg>
-                </button>
-              </div>
-              <Link to="/plateforme" className="btn-link">{t('home.forwho.infra_cta')}</Link>
-            </div>
-          </div>
-          <div className="vertical-card" data-aos="fade-up" data-aos-delay="100">
-            <div className="vertical-image">
-              <img src="/images/vertical-matieres.png" alt={t('home.forwho.raw_title')} />
-            </div>
-            <div className="vertical-body">
-              <h3>{t('home.forwho.raw_title')}</h3>
-              <p>{t('home.forwho.raw_desc')}</p>
-              <Link to="/cas-usage/ressources" className="btn-link">{t('home.forwho.raw_cta')}</Link>
-            </div>
-          </div>
-          <div className="vertical-card vertical-card-coming" data-aos="fade-up" data-aos-delay="200">
-            <div className="vertical-image">
-              <img src="/images/supply.png" alt={t('home.forwho.supply_title')} />
-              <span className="vertical-coming-badge">{t('home.forwho.supply_badge')}</span>
-            </div>
-            <div className="vertical-body">
-              <h3>{t('home.forwho.supply_title')}</h3>
-              <p>{t('home.forwho.supply_desc')}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bloc 7 — Conseil */}
-      <section className="home-conseil" data-aos="fade-up">
-        <div className="conseil-inner">
-          <div className="conseil-text">
-            <h2>{t('home.conseil.title')}</h2>
-            <p>{t('home.conseil.desc')}</p>
-            <Link to="/conseil" className="btn-primary">{t('home.conseil.cta')}</Link>
-          </div>
-        </div>
       </section>
 
       {/* Bloc 6 — Preuve sociale */}
@@ -260,21 +247,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {videoOpen && (
-        <div className="video-modal" onClick={() => setVideoOpen(false)}>
-          <button
-            type="button"
-            className="video-modal-close"
-            aria-label={t('home.forwho.modal_close_aria')}
-            onClick={() => setVideoOpen(false)}
-          >
-            ✕
-          </button>
-          <div className="video-modal-inner" onClick={(e) => e.stopPropagation()}>
-            <video src="/video/Plateforme.mp4" controls autoPlay playsInline />
-          </div>
-        </div>
-      )}
     </div>
   );
 };

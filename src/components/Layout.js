@@ -28,6 +28,11 @@ export const Header = () => {
       <nav className={`header-nav${menuOpen ? ' open' : ''}`}>
         <NavLink to="/" onClick={close} end>{t('nav.home')}</NavLink>
 
+        <NavLink to="/plateforme" onClick={close} className="nav-flagship">
+          <img src="/logos/logo_adaptations_court.png" alt="" className="nav-flagship-icon" />
+          {t('nav.platform_infra')}
+        </NavLink>
+
         <div
           className={`nav-dropdown${solutionsOpen ? ' open' : ''}`}
           onMouseEnter={() => !menuOpen && setSolutionsOpen(true)}
@@ -37,15 +42,10 @@ export const Header = () => {
             className="nav-dropdown-trigger"
             onClick={() => setSolutionsOpen(!solutionsOpen)}
           >
-            {t('nav.solutions')} <span className="chevron">▾</span>
+            {t('nav.other_solutions')} <span className="chevron">▾</span>
           </span>
           <div className="nav-dropdown-menu">
-            <Link to="/plateforme" onClick={close} className="dropdown-flagship">
-              <img src="/logos/logo_adaptations_court.png" alt="" className="dropdown-icon" />
-              {t('nav.platform_infra')}
-            </Link>
             <Link to="/cas-usage/ressources" onClick={close}>{t('nav.raw_materials')}</Link>
-            <Link to="/conseil" onClick={close}>{t('nav.strategic_support')}</Link>
           </div>
         </div>
 
@@ -106,7 +106,6 @@ export const Footer = () => {
             {t('nav.platform_infra')}
           </Link>
           <Link to="/cas-usage/ressources">{t('nav.raw_materials')}</Link>
-          <Link to="/conseil">{t('nav.strategic_support')}</Link>
         </div>
 
         <div className="footer-col">

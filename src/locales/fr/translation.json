@@ -2,6 +2,7 @@
   "nav": {
     "home": "Accueil",
     "solutions": "Solutions",
+    "other_solutions": "Autres solutions",
     "company": "Entreprise",
     "platform_infra": "Plateforme infrastructures",
     "raw_materials": "Matières premières",
@@ -20,18 +21,25 @@
     "col_follow": "Suivre",
     "linkedin": "LinkedIn",
     "copyright": "© 2026 adaptation/s. Tous droits réservés.",
-    "tagline": "Solutions de résilience climatique."
+    "tagline": "Solution de résilience climatique."
   },
   "home": {
     "hero": {
-      "title_line1": "Calculez le niveau de vulnérabilité de votre entreprise et de vos actifs face aux aléas climatiques.",
-      "title_line2": "Chiffrez votre coût de l'inaction & votre ROI de l'adaptation.",
-      "subtitle": "adaptation/s est la plateforme SaaS qui modélise les impacts financiers et business des aléas climatiques sur vos infrastructures pour vous aider à prendre des décisions stratégiques d'adaptation arbitrées par leur ROI.",
+      "title_pre": "Calculez ",
+      "title_hl1": "la vulnérabilité physique réelle de vos infrastructures",
+      "title_mid": " (et celles de vos fournisseurs) face aux aléas climatiques pour choisir et piloter des solutions d'adaptation spécifiques, efficaces et ",
+      "title_hl2": "pilotées par leur ROI",
+      "title_end": ".",
+      "subtitle_pre": "adaptation/s est la plateforme SaaS qui modélise ",
+      "subtitle_b1": "la vulnérabilité financière des infrastructures",
+      "subtitle_mid": " face au chaos climatique pour ",
+      "subtitle_b2": "piloter leur résilience par le ROI de l'adaptation",
+      "subtitle_end": ".",
       "cta_demo": "Demander une démo",
       "cta_platform": "Voir comment fonctionne la plateforme →"
     },
     "hazards": {
-      "title": "Sur tous les aléas physiques qui comptent pour vos sites.",
+      "title": "Sur tous les aléas physiques qui comptent pour vos sites...",
       "list": [
         "Vagues de chaleur",
         "Vagues de froid",
@@ -45,11 +53,23 @@
         "Affaissements de terrain (dont RGA)",
         "Sécheresse",
         "Érosion côtière"
+      ],
+      "systems_title": "... mais surtout sur les 9 systèmes qui en font sa vulnérabilité",
+      "systems_list": [
+        "Enveloppe du bâtiment",
+        "Humains",
+        "Équipements",
+        "Stocks",
+        "Processus de production",
+        "Dépendances externes (eau, électricité, gaz, telco, réseau routier, ...)",
+        "Espaces extérieurs",
+        "Gouvernance",
+        "Prévention"
       ]
     },
     "proof": {
       "title": "Construits pour le climat d'hier. Exposés à celui de demain.",
-      "body": "En vingt ans, les pertes économiques liées aux catastrophes naturelles ont été multipliées par trois. Beaucoup de sites industriels en production aujourd'hui ont été dimensionnés pour un climat qui n'existe plus. Les arrêts se multiplient, les primes d'assurance grimpent, et la question n'est plus « faut-il s'adapter ? » mais « comment prioriser nos investissements ? ».",
+      "body": "En vingt ans, les pertes économiques liées aux catastrophes naturelles ont été multipliées par trois. Beaucoup de sites et infrastructures en production aujourd'hui ont été dimensionnés pour un climat qui n'existe plus. Les arrêts se multiplient, les primes d'assurance grimpent, et la question n'est plus « faut-il s'adapter ? » mais « comment prioriser nos investissements ? ».",
       "stat1_value": "×3",
       "stat1_label": "Pertes économiques dues aux catastrophes naturelles en 20 ans (BCG, 2023)",
       "stat2_value": "+200 Md$",
@@ -61,16 +81,38 @@
       "quote_role": "Président de l'AMRAE"
     },
     "howitworks": {
-      "title": "De l'aléa au pilotage de votre résilience : trois étapes, une plateforme.",
-      "step1_title": "Une cartographie des risques à l'échelle de chacun de vos sites et au niveau du groupe",
+      "title": "De l'aléa climatique au pilotage financier de votre résilience : 3 modules pour une plateforme unique.",
+      "step1_title": "Cartographie de vos vulnérabilités pour chacun de vos sites et au niveau portefeuille, partout dans le monde",
+      "step1_method": "Analyse de vulnérabilité physique réelle complète : identification de vos défaillances opérationnelles sur 9 systèmes (enveloppe du bâtiment, humains, équipements, stocks, processus, dépendances externes, espaces extérieurs, gouvernance, prévention) via un jumeau numérique complet de votre/vos sites.",
+      "step1_outputs_title": "Ce que vous obtenez :",
+      "step1_outputs": [
+        "Analyse d'exposition de vos infrastructures face aux aléas climatiques",
+        "Quantification des impacts financiers et business",
+        "Calcul du coût de l'inaction",
+        "Calcul de votre score de résilience (Pertes / EBITDA)"
+      ],
       "step1_desc": "Identification et modélisation des défaillances opérationnelles de chaque site. Quantification des impacts financiers, business et humains. Calcul de votre score de résilience.",
-      "step2_title": "Une stratégie et trajectoire d'adaptation construites avec un ROI positif",
+      "step2_title": "Identification des mesures d'adaptation spécifiques pour votre infrastructure, priorisées par le ROI",
+      "step2_method": "Proposition de mesures d'adaptation spécifiques à vos défaillances opérationnelles, hiérarchisées et priorisées ensuite entre-elles par leur ROI financier.",
+      "step2_outputs_title": "Ce que vous obtenez :",
+      "step2_outputs": [
+        "Recommandation de stratégies et de trajectoires d'adaptation avec un ROI positif",
+        "Construction de trajectoires optimisées selon vos contraintes budgétaires ou vos objectifs",
+        "Construction d'une stratégie et trajectoire d'adaptation de référence"
+      ],
       "step2_desc": "Identification des solutions les plus adaptées aux défaillances du site. Priorisation selon l'impact financier et vos contraintes. Construction d'une trajectoire cible.",
-      "step3_title": "Une aide au pilotage pour renforcer votre résilience et ré-engager vos parties prenantes",
+      "step3_title": "Suivi de l'implémentation de votre stratégie grâce au pilotage de vos trajectoires et de vos indicateurs financiers",
+      "step3_method": "Pilotage opérationnel et stratégique de l'implémentation des stratégies d'adaptation afin de ré-assurer vos parties prenantes (Board, Assureurs, Investisseurs, ...).",
+      "step3_outputs_title": "Ce que vous obtenez :",
+      "step3_outputs": [
+        "Pilotage de vos trajectoires dans le temps et de votre ROI, pour un site ou votre portefeuille au niveau mondial",
+        "Suivi et mise à jour automatique de votre score de résilience pour rassurer vos parties prenantes"
+      ],
       "step3_desc": "Suivi de l'implémentation et révision de la trajectoire. Score de résilience mis à jour en continu. Engagement de vos parties prenantes (assureur, investisseurs, ...) grâce au score."
     },
     "product": {
-      "title": "Une plateforme permettant d'avoir une cartographie des risques financiers au niveau des sites et du groupe, un pilotage des actions au niveau opérationnel et un suivi stratégique.",
+      "title": "La résilience est un investissement stratégique, pas un coût.",
+      "video_pill": "La meilleure façon de comprendre la plateforme, c'est encore de la voir.",
       "video_fallback": "Votre navigateur ne supporte pas la lecture de vidéos.",
       "cta": "Voir la plateforme en démo →"
     },
@@ -89,9 +131,13 @@
       "modal_close_aria": "Fermer"
     },
     "conseil": {
-      "title": "Notre équipe d'experts intervient au moment clés de votre parcours d'adaptation en complément de la plateforme",
-      "desc": "Notre équipe d'experts intervient aux moments clés de votre parcours : onboarding, diagnostic de sites complexes, préparation COMEX. L'objectif n'est pas de vous vendre du conseil, mais de garantir que la plateforme produit des décisions actionnables.",
-      "cta": "Découvrir notre accompagnement →"
+      "title": "Une plateforme simple, clé en main, conçue pour solliciter un minimum vos équipes",
+      "desc_pre": "Plateforme intuitive et clé en main, conçue pour solliciter au minimum vos équipes centrales : ",
+      "desc_b1": "la collecte des données s'effectue majoritairement automatiquement à partir de vos documents",
+      "desc_mid": ", et nous prenons en charge la modélisation. Vous bénéficierez d'une formation complète sur la plateforme ainsi que d'un ",
+      "desc_b2": "Customer Success Manager dédié qui vous accompagnera tout au long du processus",
+      "desc_end": " et répondra à toutes vos questions.",
+      "cta": "Demander une démo →"
     },
     "social_proof": {
       "title": "Ils nous font confiance",
@@ -117,8 +163,12 @@
   },
   "platform": {
     "hero": {
-      "title": "La seule plateforme qui permet de faire de la vulnérabilité physique et financière",
-      "subtitle": "Là où les outils classiques s'arrêtent à l'aléa climatique ou à une vulnérabilité statistique peu actionnable, adaptation/s modélise la vulnérabilité physique et financière de chacun de vos sites — et la traduit en euros, en mesures et en ROI, pour vous permettre de piloter votre résilience.",
+      "title_pre": "La seule plateforme pour ",
+      "title_hl1": "modéliser et piloter financièrement",
+      "title_mid": " votre résilience climatique",
+      "title_hl2": "",
+      "title_end": ", à l'échelle",
+      "subtitle": "Là où les outils classiques s'arrêtent à l'aléa climatique ou à une vulnérabilité statistique peu actionnable, adaptation/s modélise la vulnérabilité physique et financière de chacun de vos sites — et la traduit en euros, en mesures et en ROI, pour vous permettre de construire des stratégies d'adaptation finançables et actionnables et piloter votre résilience.",
       "video_title": "La meilleure façon de comprendre la plateforme, c'est encore de la voir.",
       "video_fallback": "Votre navigateur ne supporte pas la lecture de vidéos.",
       "cta": "Demander une démo personnalisée"
@@ -135,8 +185,10 @@
       "old_b1": "Analyse d'exposition",
       "old_b2_pre": "Coût de l'inaction ",
       "old_b2_b": "générique",
+      "old_b2_end_extra": "",
       "old_b3_pre": "Liste standard de mesures ",
       "old_b3_b": "non priorisées",
+      "old_b3_end_extra": "",
       "old_b4_b": "Pas de trajectoire",
       "old_b4_end": " opérationnelle et actionnable",
       "old_b5_b": "Pas de pilotage",
@@ -204,7 +256,7 @@
       "step3_b2_end": " si déviation vs. la trajectoire",
       "step3_b3_b": "Mise-à-jour continue du score de résilience",
       "step3_b3_end": " niveau groupe et par site, avec vos implémentations réelles",
-      "step3_transverse_label": "En transverse",
+      "step3_transverse_label": "Objectif",
       "step3_transverse_text": "Réassurance de votre direction et de vos parties prenantes",
       "step3_alt": "Dashboard de suivi de trajectoire"
     },
@@ -212,6 +264,25 @@
       "title": "Pour vous permettre de rassurer et ré-engager vos parties prenantes",
       "body": "Les outputs de la plateforme sont structurés pour être présentés sans retraitement à votre Board, vos assureurs, banquiers et investisseurs — et pour répondre aux exigences des réglementations en vigueur (CSRD, ESRS E1, TCFD, double matérialité).",
       "badges": ["Board", "Assureurs", "Banquiers", "Investisseurs", "CSRD · ESRS E1", "TCFD"]
+    },
+    "deployment": {
+      "title": "Deux options de déploiement, pensées pour s'adapter à vos contraintes opérationnelles.",
+      "options": [
+        {
+          "num": "1.",
+          "title": "Intégration clé en main",
+          "desc_pre": "Nous prenons en charge la mise en œuvre de bout en bout. Nous pouvons collaborer en toute transparence avec vos partenaires informatiques actuels ou faire appel à notre ",
+          "desc_b": "propre réseau certifié",
+          "desc_end": "."
+        },
+        {
+          "num": "2.",
+          "title": "Plateforme web",
+          "desc_pre": "Nous offrons un accès immédiat à notre outil en ligne.",
+          "desc_b": "",
+          "desc_end": ""
+        }
+      ]
     }
   },
   "about": {
@@ -221,7 +292,10 @@
       "mission_hl1": "l'adaptation",
       "mission_mid": " pour renforcer la ",
       "mission_hl2": "résilience",
-      "mission_end": " de nos sociétés."
+      "mission_end": " de nos sociétés.",
+      "story_toggle": "Notre histoire",
+      "story_p1": "Nous avons décidé de lancer adaptation/s sur une conviction forte : le secteur privé stagne sur l'adaptation faute de données financières actionnables. Sans un chiffrage précis du coût de l'inaction et sans pilotage du ROI des mesures, l'adaptation reste un concept abstrait.",
+      "story_p2": "Il manquait une plateforme modélisant la vulnérabilité de manière réelle, physique pour en déduire les coûts de l'inaction et les coûts/bénéfices de l'adaptation. Nous avons donc retroussé nos manches pour la créer."
     },
     "team": {
       "title": "Notre équipe",

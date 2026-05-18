@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
@@ -25,6 +25,7 @@ const EXPERT_IMGS = [
 
 const AProposPage = () => {
   const { t } = useTranslation();
+  const [storyOpen, setStoryOpen] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 600, once: true, disable: /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) });
@@ -52,6 +53,21 @@ const AProposPage = () => {
         <p className="apropos-hero-mission">
           {t('about.hero.mission_pre')}<span className="hl">{t('about.hero.mission_hl1')}</span>{t('about.hero.mission_mid')}<span className="hl">{t('about.hero.mission_hl2')}</span>{t('about.hero.mission_end')}
         </p>
+        <button
+          type="button"
+          className={`apropos-story-toggle${storyOpen ? ' open' : ''}`}
+          onClick={() => setStoryOpen(!storyOpen)}
+          aria-expanded={storyOpen}
+        >
+          <span className="apropos-story-toggle-icon">{storyOpen ? '−' : '+'}</span>
+          {t('about.hero.story_toggle')}
+        </button>
+        {storyOpen && (
+          <div className="apropos-hero-story" data-aos="fade-up">
+            <p>{t('about.hero.story_p1')}</p>
+            <p>{t('about.hero.story_p2')}</p>
+          </div>
+        )}
       </section>
 
       {/* Notre équipe */}

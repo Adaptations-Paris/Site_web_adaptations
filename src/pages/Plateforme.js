@@ -10,7 +10,8 @@ const STEP2_DEFAULT_IMG = '/images/plateforme-trajectoire1.png';
 const STEP3_DEFAULT_IMG = '/images/plateforme-pilotage3.png';
 
 const PlateformePage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const plateformeVideo = i18n.language === 'en' ? '/video/Plateforme-EN.mp4' : '/video/Plateforme-FR.mp4';
   const [step1Img, setStep1Img] = useState(STEP1_DEFAULT_IMG);
   const [step2Img, setStep2Img] = useState(STEP2_DEFAULT_IMG);
   const [step3Img, setStep3Img] = useState(STEP3_DEFAULT_IMG);
@@ -50,21 +51,31 @@ const PlateformePage = () => {
 
       {/* Hero */}
       <section className="plat-hero" data-aos="fade-up">
-        <h1>{t('platform.hero.title')}</h1>
+        <h1>
+          {t('platform.hero.title_pre')}
+          <span className="hl">{t('platform.hero.title_hl1')}</span>
+          {t('platform.hero.title_mid')}
+          {t('platform.hero.title_end')}
+        </h1>
         <p>{t('platform.hero.subtitle')}</p>
-        <div className="plat-hero-video">
-          <h3>{t('platform.hero.video_title')}</h3>
+        <Link to="/contact" className="btn-primary">{t('platform.hero.cta')}</Link>
+      </section>
+
+      {/* Démo dédiée */}
+      <section className="plat-demo" data-aos="fade-up">
+        <h2 className="plat-demo-title">{t('platform.hero.video_title')}</h2>
+        <div className="plat-demo-video">
           <video
+            key={plateformeVideo}
             controls
             preload="metadata"
             playsInline
             style={{ width: '100%', display: 'block', borderRadius: '12px' }}
           >
-            <source src="/video/Plateforme.mp4#t=4" type="video/mp4" />
+            <source src={`${plateformeVideo}#t=4`} type="video/mp4" />
             {t('platform.hero.video_fallback')}
           </video>
         </div>
-        <Link to="/contact" className="btn-primary">{t('platform.hero.cta')}</Link>
       </section>
 
       {/* Problème — comparatif visuel */}
@@ -192,6 +203,24 @@ const PlateformePage = () => {
               <span key={i} className="csrd-badge">{b}</span>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Options de déploiement */}
+      <section className="plat-deployment" data-aos="fade-up">
+        <h2 className="plat-deployment-title">{t('platform.deployment.title')}</h2>
+        <div className="plat-deployment-grid">
+          {t('platform.deployment.options', { returnObjects: true }).map((opt, i) => (
+            <div key={i} className="plat-deployment-card" data-aos="fade-up" data-aos-delay={i * 80}>
+              <div className="plat-deployment-num">{opt.num}</div>
+              <h3>{opt.title}</h3>
+              <p>
+                {opt.desc_pre}
+                {opt.desc_b && <strong>{opt.desc_b}</strong>}
+                {opt.desc_end}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
