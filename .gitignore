@@ -26,9 +26,4 @@ yarn-error.log*
 # build output (Vercel rebuilds on push)
 /build
 
-# videos hébergées sur CDN externe (trop volumineux pour Git)
-/public/video/*.mp4
-/public/video/*.webm
-/public/video/*.mov
-
 .vercel
