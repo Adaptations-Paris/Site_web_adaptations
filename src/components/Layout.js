@@ -15,9 +15,14 @@ export const Header = () => {
     setEntrepriseOpen(false);
   };
 
+  const goHome = () => {
+    close();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className="header">
-      <Link to="/" className="header-logo" onClick={close}>
+      <Link to="/" className="header-logo" onClick={goHome}>
         <img src="/logos/logo_adaptations_long.png" alt="adaptation/s" />
       </Link>
 
@@ -26,7 +31,7 @@ export const Header = () => {
       </button>
 
       <nav className={`header-nav${menuOpen ? ' open' : ''}`}>
-        <NavLink to="/" onClick={close} end>{t('nav.home')}</NavLink>
+        <NavLink to="/" onClick={goHome} end>{t('nav.home')}</NavLink>
 
         <NavLink to="/plateforme" onClick={close} className="nav-flagship">
           <img src="/logos/logo_adaptations_court.png" alt="" className="nav-flagship-icon" />
