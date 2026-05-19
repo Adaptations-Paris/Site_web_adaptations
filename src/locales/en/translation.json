@@ -27,6 +27,7 @@
     "hero": {
       "title_line1": "Assess the physical vulnerability of your infrastructure and your suppliers to climate hazards.",
       "title_line2": "Steer targeted, effective adaptation solutions prioritized by their ROI.",
+      "intro": "In the face of climate chaos, adaptation/s is the tech platform that models the financial vulnerability of infrastructure and lets you steer their resilience strategy over time, at scale.",
       "subtitle_pre": "adaptation/s is the SaaS platform that models ",
       "subtitle_b1": "the financial vulnerability of infrastructure",
       "subtitle_mid": " in the face of climate chaos to ",
@@ -51,7 +52,7 @@
         "Drought",
         "Coastal erosion"
       ],
-      "systems_title": "… but above all on the 9 systems that drive its vulnerability",
+      "systems_title": "… but above all on the 9 systems that make them vulnerable",
       "systems_list": [
         "Building envelope",
         "People",

@@ -13,12 +13,12 @@
 }
 
 .home-hero h1 {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 900;
   color: #000;
-  max-width: 1500px;
+  max-width: 900px;
   margin: 0 auto 24px auto;
-  line-height: 1.3;
+  line-height: 1.4;
   letter-spacing: -0.3px;
 }
 
@@ -37,6 +37,7 @@
   margin: 0 auto 40px auto;
   line-height: 1.6;
 }
+
 
 .hero-ctas {
   display: flex;
@@ -273,10 +274,10 @@
 .steps-grid::before {
   content: '';
   position: absolute;
-  top: 64px;
+  top: 80px;
   left: calc(50% - 50vw);
-  right: calc(50% - 50vw + 30px);
-  height: 8px;
+  right: calc(50% - 50vw + 40px);
+  height: 12px;
   background: #ABFF00;
   border-radius: 0;
   z-index: 1;
@@ -285,13 +286,13 @@
 .steps-grid::after {
   content: '';
   position: absolute;
-  top: 50px;
+  top: 62px;
   right: calc(50% - 50vw);
   width: 0;
   height: 0;
-  border-top: 18px solid transparent;
-  border-bottom: 18px solid transparent;
-  border-left: 36px solid #ABFF00;
+  border-top: 24px solid transparent;
+  border-bottom: 24px solid transparent;
+  border-left: 48px solid #ABFF00;
   z-index: 1;
 }
 
@@ -310,17 +311,32 @@
 }
 
 .step-number {
+  font-size: 72px;
+  font-weight: 900;
+  color: #ABFF00;
+  line-height: 1;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  position: relative;
+  display: block;
+  letter-spacing: -2px;
+  background: transparent;
+  width: auto;
+  height: auto;
+}
+
+.step-number::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
   background: #ABFF00;
-  color: #111;
-  font-size: 13px;
-  font-weight: 800;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+}
+
+.step-card h3 {
+  text-align: center;
 }
 
 .step-card h3 {

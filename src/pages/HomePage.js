@@ -39,11 +39,7 @@ const HomePage = () => {
     <div>
       {/* Bloc 1 — Hero */}
       <section className="home-hero" data-aos="fade-up">
-        <h1>
-          {t('home.hero.title_line1')}
-          <br />
-          {t('home.hero.title_line2')}
-        </h1>
+        <h1>{t('home.hero.intro')}</h1>
       </section>
 
       {/* Démo dédiée */}
@@ -238,7 +234,6 @@ const HomePage = () => {
         <p>{t('home.cta_final.subtitle')}</p>
         <div className="cta-final-btns">
           <Link to="/contact" className="btn-lime">{t('home.cta_final.cta_demo')}</Link>
-          <a href="https://form.typeform.com/to/LQhEZDuu?typeform-source=lnkd.in" target="_blank" rel="noopener noreferrer" className="btn-outline-white">{t('home.cta_final.cta_whitepaper')}</a>
         </div>
       </section>
 

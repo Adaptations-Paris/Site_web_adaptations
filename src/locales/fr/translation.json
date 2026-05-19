@@ -27,6 +27,7 @@
     "hero": {
       "title_line1": "Évaluez la vulnérabilité physique de vos infrastructures et de vos fournisseurs face aux aléas climatiques.",
       "title_line2": "Pilotez des solutions d'adaptation ciblées, efficaces et priorisées par leur ROI.",
+      "intro": "Face au chaos climatique, adaptation/s est la plateforme tech qui modélise la vulnérabilité financière des infrastructures et permet de piloter dans le temps leur stratégie de résilience à l'échelle.",
       "subtitle_pre": "adaptation/s est la plateforme SaaS qui modélise ",
       "subtitle_b1": "la vulnérabilité financière des infrastructures",
       "subtitle_mid": " face au chaos climatique pour ",
@@ -51,7 +52,7 @@
         "Sécheresse",
         "Érosion côtière"
       ],
-      "systems_title": "... mais surtout sur les 9 systèmes qui en font leur vulnérabilité",
+      "systems_title": "... mais surtout sur les 9 systèmes qui les rendent vulnérables",
       "systems_list": [
         "Enveloppe du bâtiment",
         "Humains",
@@ -80,8 +81,8 @@
     "howitworks": {
       "title_line1": "De l'aléa climatique au pilotage financier de votre résilience :",
       "title_line2": "3 modules pour une plateforme unique",
-      "step1_title": "Cartographie de vos vulnérabilités pour chacun de vos sites et au niveau portefeuille, partout dans le monde",
-      "step1_method": "Analyse de vulnérabilité physique réelle complète : identification de vos défaillances opérationnelles sur 9 systèmes (enveloppe du bâtiment, humains, équipements, stocks, processus, dépendances externes, espaces extérieurs, gouvernance, prévention) via un jumeau numérique complet de votre/vos sites.",
+      "step1_title": "Cartographie des vulnérabilités de chacun de vos sites et au niveau portefeuille, partout dans le monde",
+      "step1_method": "Analyse de vulnérabilité physique réelle complète : identification de vos défaillances opérationnelles sur 9 systèmes (enveloppe bâtimentaire, humains, équipements, stocks, processus, dépendances externes, espaces extérieurs, gouvernance, prévention) via un jumeau numérique de votre/vos sites.",
       "step1_outputs_title": "Ce que vous obtenez :",
       "step1_outputs": [
         "Analyse d'exposition de vos infrastructures face aux aléas climatiques",

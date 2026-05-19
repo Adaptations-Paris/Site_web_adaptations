@@ -81,6 +81,7 @@
 .problem-compare {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: repeat(4, auto);
   gap: 32px;
   align-items: stretch;
   max-width: 1200px;
@@ -95,12 +96,15 @@
 .problem-col {
   border-radius: 16px;
   padding: 32px 32px 36px 32px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  row-gap: 0;
 }
 
 .problem-col-old {
   background: #f5f5f5;
+  border: 2px solid #555;
   grid-column: 1;
 }
 
@@ -191,6 +195,7 @@
   color: #9DACA9;
   font-weight: 700;
   grid-column: 2;
+  grid-row: span 4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -804,9 +809,10 @@
   .plat-steps { padding: 60px 24px; }
   .plat-step { padding: 28px 20px; }
   .plat-step-body { grid-template-columns: 1fr; gap: 24px; }
-  .problem-compare { grid-template-columns: 1fr; gap: 16px; }
+  .problem-compare { grid-template-columns: 1fr; grid-template-rows: none; gap: 16px; }
+  .problem-col { display: flex; flex-direction: column; grid-row: auto; }
   .problem-col-old, .problem-col-new { grid-column: 1; }
-  .problem-arrow { grid-column: 1; transform: rotate(90deg); }
+  .problem-arrow { grid-column: 1; grid-row: auto; transform: rotate(90deg); }
 }
 
 @media (max-width: 600px) {
