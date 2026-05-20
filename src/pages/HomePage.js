@@ -19,9 +19,9 @@ const FaqItem = ({ q, a }) => {
 };
 
 const HomePage = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  const plateformeVideo = i18n.language === 'en' ? '/video/Plateforme-EN.mp4' : '/video/Plateforme-FR.mp4';
+  const plateformeVideo = '/video/Plateforme-short.mp4';
 
   useEffect(() => {
     AOS.init({ duration: 600, once: true, disable: /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) });

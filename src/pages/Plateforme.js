@@ -10,8 +10,8 @@ const STEP2_DEFAULT_IMG = '/images/plateforme-trajectoire1.png';
 const STEP3_DEFAULT_IMG = '/images/plateforme-pilotage3.png';
 
 const PlateformePage = () => {
-  const { t, i18n } = useTranslation();
-  const plateformeVideo = i18n.language === 'en' ? '/video/Plateforme-EN.mp4' : '/video/Plateforme-FR.mp4';
+  const { t } = useTranslation();
+  const plateformeVideo = '/video/Plateforme-short.mp4';
   const [step1Img, setStep1Img] = useState(STEP1_DEFAULT_IMG);
   const [step2Img, setStep2Img] = useState(STEP2_DEFAULT_IMG);
   const [step3Img, setStep3Img] = useState(STEP3_DEFAULT_IMG);
