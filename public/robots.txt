@@ -3,3 +3,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://adaptations.eu/sitemap.xml
+Sitemap: https://adaptations.eu/sitemap-v2.xml
