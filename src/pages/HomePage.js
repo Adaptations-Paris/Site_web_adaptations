@@ -196,6 +196,12 @@ const HomePage = () => {
               '/confiance/saipol.png',
               '/confiance/liebot.png',
               '/confiance/picard.png',
+              '/confiance/agcristo.png',
+              '/confiance/agrial.jpg',
+              '/confiance/coop-U.png',
+              '/confiance/febea.jpg',
+              '/confiance/shift.png',
+              '/confiance/sofiproteol.png',
               '/confiance/elie-bleu.png',
               '/confiance/wilco.png',
               '/confiance/lbp.png',
@@ -206,6 +212,12 @@ const HomePage = () => {
               '/confiance/saipol.png',
               '/confiance/liebot.png',
               '/confiance/picard.png',
+              '/confiance/agcristo.png',
+              '/confiance/agrial.jpg',
+              '/confiance/coop-U.png',
+              '/confiance/febea.jpg',
+              '/confiance/shift.png',
+              '/confiance/sofiproteol.png',
             ].map((src, i) => (
               <div key={i} className="logos-item">
                 <img src={src} alt="" />
