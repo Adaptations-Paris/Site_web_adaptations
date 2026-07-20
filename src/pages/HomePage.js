@@ -63,6 +63,56 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Bloc 6 — Preuve sociale (remontée juste après la démo) */}
+      <section className="home-social-proof" data-aos="fade-up">
+        <h2>{t('home.social_proof.title')}</h2>
+        <div className="logos-marquee">
+          <div className="logos-track">
+            {[
+              '/confiance/elie-bleu.png',
+              '/confiance/wilco.png',
+              '/confiance/lbp.png',
+              '/confiance/perifem.png',
+              '/confiance/BPI.png',
+              '/confiance/TSUN.png',
+              '/confiance/FML.png',
+              '/confiance/saipol.png',
+              '/confiance/liebot.png',
+              '/confiance/picard.png',
+              '/confiance/agcristo.png',
+              '/confiance/agrial.jpg',
+              '/confiance/coop-U.png',
+              '/confiance/febea.jpg',
+              '/confiance/shift.png',
+              '/confiance/sofiproteol.png',
+              '/confiance/elie-bleu.png',
+              '/confiance/wilco.png',
+              '/confiance/lbp.png',
+              '/confiance/perifem.png',
+              '/confiance/BPI.png',
+              '/confiance/TSUN.png',
+              '/confiance/FML.png',
+              '/confiance/saipol.png',
+              '/confiance/liebot.png',
+              '/confiance/picard.png',
+              '/confiance/agcristo.png',
+              '/confiance/agrial.jpg',
+              '/confiance/coop-U.png',
+              '/confiance/febea.jpg',
+              '/confiance/shift.png',
+              '/confiance/sofiproteol.png',
+            ].map((src, i) => (
+              <div key={i} className="logos-item">
+                <img src={src} alt="" />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="testimonial-block">
+          <p>{t('home.social_proof.testimonial')}</p>
+        </div>
+      </section>
+
       {/* Bloc 2 — Sous-hero (Construits pour le climat d'hier) */}
       <section className="home-proof" data-aos="fade-up">
         <h2>{t('home.proof.title')}</h2>
@@ -178,56 +228,6 @@ const HomePage = () => {
           </video>
         </div>
         <Link to="/contact" className="btn-primary">{t('home.product.cta')}</Link>
-      </section>
-
-      {/* Bloc 6 — Preuve sociale */}
-      <section className="home-social-proof" data-aos="fade-up">
-        <h2>{t('home.social_proof.title')}</h2>
-        <div className="logos-marquee">
-          <div className="logos-track">
-            {[
-              '/confiance/elie-bleu.png',
-              '/confiance/wilco.png',
-              '/confiance/lbp.png',
-              '/confiance/perifem.png',
-              '/confiance/BPI.png',
-              '/confiance/TSUN.png',
-              '/confiance/FML.png',
-              '/confiance/saipol.png',
-              '/confiance/liebot.png',
-              '/confiance/picard.png',
-              '/confiance/agcristo.png',
-              '/confiance/agrial.jpg',
-              '/confiance/coop-U.png',
-              '/confiance/febea.jpg',
-              '/confiance/shift.png',
-              '/confiance/sofiproteol.png',
-              '/confiance/elie-bleu.png',
-              '/confiance/wilco.png',
-              '/confiance/lbp.png',
-              '/confiance/perifem.png',
-              '/confiance/BPI.png',
-              '/confiance/TSUN.png',
-              '/confiance/FML.png',
-              '/confiance/saipol.png',
-              '/confiance/liebot.png',
-              '/confiance/picard.png',
-              '/confiance/agcristo.png',
-              '/confiance/agrial.jpg',
-              '/confiance/coop-U.png',
-              '/confiance/febea.jpg',
-              '/confiance/shift.png',
-              '/confiance/sofiproteol.png',
-            ].map((src, i) => (
-              <div key={i} className="logos-item">
-                <img src={src} alt="" />
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="testimonial-block">
-          <p>{t('home.social_proof.testimonial')}</p>
-        </div>
       </section>
 
       {/* Bloc 9 — FAQ */}

@@ -83,7 +83,7 @@
 
 /* Bloc 1.5 — Aléas physiques */
 .home-hazards {
-  background: #fff;
+  background: #E6E6E6;
   padding: 72px 50px;
   text-align: center;
 }
@@ -145,7 +145,7 @@
 
 /* Bloc 2 — Sous-hero (chiffres) */
 .home-proof {
-  background: #E6E6E6;
+  background: #fff;
   padding: 72px 50px;
   text-align: center;
 }
@@ -235,6 +235,21 @@
   color: #111;
   line-height: 1;
   margin-bottom: 8px;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.proof-stat .stat-value::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: #ABFF00;
+  border-radius: 2px;
 }
 
 .proof-stat .stat-label {
@@ -246,7 +261,7 @@
 
 /* Bloc 3 — Comment ça marche */
 .home-howitworks {
-  background: #E6E6E6;
+  background: #fff;
   padding: 80px 50px;
   text-align: center;
 }
@@ -395,7 +410,7 @@
 
 /* Bloc 4 — Capture produit */
 .home-product {
-  background: #E6E6E6;
+  background: #fff;
   padding: 80px 50px;
   text-align: center;
 }
@@ -717,7 +732,7 @@
 
 /* Bloc 6 — Preuve sociale */
 .home-social-proof {
-  background: #fff;
+  background: #E6E6E6;
   padding: 80px 50px;
   text-align: center;
 }
@@ -782,6 +797,12 @@
   max-width: 200px;
 }
 
+.logos-item img[src*="sofiproteol"],
+.logos-item img[src*="febea"] {
+  max-height: 72px;
+  max-width: 170px;
+}
+
 .logos-item img:hover {
   transform: scale(1.25);
 }
@@ -836,7 +857,7 @@
 
 /* Bloc 7 — Conseil */
 .home-conseil {
-  background: #fff;
+  background: #E6E6E6;
   padding: 72px 50px;
 }
 
