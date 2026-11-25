@@ -1,14 +1,89 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 import { useTranslation } from 'react-i18next';
 
+// Clé publique reCAPTCHA v2 (case « Je ne suis pas un robot ») — pas un secret.
+const RECAPTCHA_SITE_KEY =
+  process.env.REACT_APP_RECAPTCHA_SITE_KEY || '6LeaxjEuAAAAAKg61MatQRvQAGRqhY4pbBOfaTim';
+
+// Charge le script Google une seule fois, même si plusieurs formulaires sont montés.
+let recaptchaScriptPromise = null;
+const loadRecaptcha = (lang) => {
+  if (window.grecaptcha && window.grecaptcha.render) {
+    return Promise.resolve(window.grecaptcha);
+  }
+  if (!recaptchaScriptPromise) {
+    recaptchaScriptPromise = new Promise((resolve, reject) => {
+      window.onRecaptchaLoad = () => resolve(window.grecaptcha);
+      const script = document.createElement('script');
+      script.src = `https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit&hl=${lang}`;
+      script.async = true;
+      script.defer = true;
+      script.onerror = () => {
+        recaptchaScriptPromise = null;
+        reject(new Error('reCAPTCHA script failed to load'));
+      };
+      document.head.appendChild(script);
+    });
+  }
+  return recaptchaScriptPromise;
+};
+
 const ContactForm = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   // Initialize EmailJS with public key
   useEffect(() => {
     emailjs.init(process.env.REACT_APP_EMAILJS_ID);
   }, []);
+
+  const recaptchaRef = useRef(null);
+  const widgetIdRef = useRef(null);
+  const [captchaToken, setCaptchaToken] = useState('');
+
+  useEffect(() => {
+    let cancelled = false;
+    const lang = (i18n.language || 'fr').startsWith('en') ? 'en' : 'fr';
+    loadRecaptcha(lang)
+      .then((grecaptcha) => {
+        if (cancelled || !recaptchaRef.current || widgetIdRef.current !== null) return;
+        widgetIdRef.current = grecaptcha.render(recaptchaRef.current, {
+          sitekey: RECAPTCHA_SITE_KEY,
+          callback: (token) => {
+            setCaptchaToken(token);
+            setErrors((prev) => ({ ...prev, captcha: '' }));
+          },
+          'expired-callback': () => setCaptchaToken(''),
+          'error-callback': () => setCaptchaToken(''),
+        });
+      })
+      .catch((err) => console.error(err));
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Google fixe la langue au chargement du script : quand on bascule FR/EN,
+  // on met à jour la langue dans l'iframe du widget (la case se décoche au passage).
+  useEffect(() => {
+    const lang = (i18n.language || 'fr').startsWith('en') ? 'en' : 'fr';
+    const iframe = recaptchaRef.current && recaptchaRef.current.querySelector('iframe');
+    if (!iframe || !iframe.src) return;
+    const url = new URL(iframe.src);
+    if (url.searchParams.get('hl') === lang) return;
+    url.searchParams.set('hl', lang);
+    iframe.src = url.toString();
+    setCaptchaToken('');
+  }, [i18n.language]);
+
+  // Un jeton reCAPTCHA n'est valable qu'une fois : on remet la case à zéro après chaque envoi.
+  const resetCaptcha = () => {
+    setCaptchaToken('');
+    if (window.grecaptcha && widgetIdRef.current !== null) {
+      window.grecaptcha.reset(widgetIdRef.current);
+    }
+  };
 
   const [status, setStatus] = useState('');
   const [formData, setFormData] = useState({
@@ -63,6 +138,9 @@ const ContactForm = () => {
     } else if (formData.message.length < 10) {
       newErrors.message = 'form.message_too_short';
     }
+    if (!captchaToken) {
+      newErrors.captcha = 'form.captcha_required';
+    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -86,7 +164,9 @@ const ContactForm = () => {
         company: formData.company,
         message: formData.message,
         time: new Date().toLocaleString(),
-        to_email: process.env.REACT_APP_CONTACT_EMAIL
+        to_email: process.env.REACT_APP_CONTACT_EMAIL,
+        // Vérifié côté EmailJS si « reCAPTCHA V2 » est activé sur le template
+        'g-recaptcha-response': captchaToken
       };
 
       await emailjs.send(
@@ -116,9 +196,11 @@ const ContactForm = () => {
         title: '',
         message: ''
       });
+      resetCaptcha();
       setTimeout(() => setStatus(''), 3000);
     } catch (error) {
       console.error('Error:', error);
+      resetCaptcha();
       setStatus('error');
       setTimeout(() => setStatus(''), 3000);
     }
@@ -203,7 +285,14 @@ const ContactForm = () => {
         </div>
       </div>
 
-      <button 
+      <div className="form-row">
+        <div className="form-group recaptcha-group">
+          <div ref={recaptchaRef} />
+          {errors.captcha && <span className="error-message">{t(errors.captcha)}</span>}
+        </div>
+      </div>
+
+      <button
         type="submit" 
         className="submit-btn"
         disabled={status === 'sending'}

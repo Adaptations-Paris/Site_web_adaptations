@@ -554,6 +554,7 @@
     "email_required": "Email is required",
     "invalid_email_format": "Invalid email format",
     "message_required": "Message is required",
-    "message_too_short": "Message must be at least 10 characters long"
+    "message_too_short": "Message must be at least 10 characters long",
+    "captcha_required": "Please tick \"I'm not a robot\""
   }
 }
